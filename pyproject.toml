@@ -8,6 +8,7 @@ dependencies = []          # core package is stdlib-only; FluidGym/torch are imp
 [project.optional-dependencies]
 dev = ["pytest", "numpy", "matplotlib"]
 analysis = ["numpy", "matplotlib"]
+data = ["huggingface_hub>=1.0.0"]
 
 [project.scripts]
 fluidgym-physics = "fluidgym_physics.cli:main"

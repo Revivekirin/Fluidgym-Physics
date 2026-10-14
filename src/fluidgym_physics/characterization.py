@@ -9,6 +9,11 @@ from pathlib import Path
 from .inventory import registrations
 from .upstream import read_lock
 
+PRIMARY_ENV_IDS = (
+    'CylinderJet2D-easy-v0', 'CylinderJet2D-medium-v0', 'CylinderJet2D-hard-v0',
+    'RBC2D-easy-v0', 'RBC2D-medium-v0', 'RBC2D-hard-v0',
+)
+
 
 def digest(path: Path) -> str:
     h = hashlib.sha256()
@@ -36,7 +41,10 @@ def load_matrix(path):
     m = json.loads(Path(path).read_text())
     expected = {'schema_version','matrix_id','upstream_commit','review_status','mode','action',
                 'protocols','replicates','budget','environments','deferred_3d'}
-    if set(m) != expected or m['schema_version'] != 1 or m['upstream_commit'] != read_lock().commit:
+    version = m.get('schema_version')
+    if version == 2:
+        expected |= {'scope','deferred_2d'}
+    if set(m) != expected or version not in (1,2) or m['upstream_commit'] != read_lock().commit:
         raise ValueError('unknown matrix schema/keys or upstream revision')
     if m['mode'] not in ('train','val','test') or m['action'] != 'zero':
         raise ValueError('only nominal zero-action characterization is supported')
@@ -58,8 +66,14 @@ def load_matrix(path):
         lo, hi = row['seconds_per_step_scenario']
         _positive(lo); _positive(hi)
         if lo > hi: raise ValueError('inverted timing scenario')
-    if seen != {e for e, i in reg.items() if i['ndims'] == 2}:
+    all_2d = {e for e, i in reg.items() if i['ndims'] == 2}
+    if version == 1 and seen != all_2d:
         raise ValueError('matrix must cover every registered 2D variant')
+    if version == 2:
+        if m['scope'] != 'primary_cylinderjet2d_rbc2d' or seen != set(PRIMARY_ENV_IDS):
+            raise ValueError('primary matrix must contain exactly three CylinderJet2D and three standard RBC2D variants')
+        if set(m['deferred_2d']) != all_2d - seen:
+            raise ValueError('primary matrix must explicitly retain other 2D variants as future expansion targets')
     if set(m['deferred_3d']) != {e for e, i in reg.items() if i['ndims'] == 3}:
         raise ValueError('matrix must explicitly defer every 3D variant')
     labels = set()

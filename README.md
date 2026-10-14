@@ -23,3 +23,5 @@ The user reports **25 passing tests on the CUDA server, including three real-env
 - [Controlled-shift feasibility assessment](docs/SHIFT_FEASIBILITY_ASSESSMENT.md)
 
 Core inventory/planning uses only the Python standard library. Analysis/test extras add NumPy/matplotlib/pytest. Runtime requires the exact editable upstream checkout, supported Python >=3.10,<3.14, torch 2.9.*, CUDA/PISOtorch, and explicitly prepared local datasets. Output directories and completed artifacts are never overwritten by the tools.
+
+Current primary scope is **CylinderJet2D and RBC2D, each easy/medium/hard**. Preserve the complete 15-variant matrix for acquisition/preflight; `prepare-primary` generates a separate six-environment draft only after full preflight passes. See [server execution commands](docs/SERVER_EXECUTION.md). Primary estimate: 60 runs, 58,200 steps, 2.392 GiB output, uncalibrated 1.2125–48.5 GPU-hours. Both scopes remain unapproved until explicit review.

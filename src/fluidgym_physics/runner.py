@@ -109,7 +109,7 @@ def _installed_upstream():
         )
 
 
-def preflight(matrix):
+def preflight(matrix, data_root=None):
     upstream = verify_upstream()
     if not (3,10) <= sys.version_info[:2] < (3,14):
         raise ValueError('Pinned FluidGym requires Python >=3.10,<3.14 for runtime')
@@ -119,6 +119,11 @@ def preflight(matrix):
     if not torch.__version__.split('+')[0].startswith('2.9.'):
         raise ValueError('UPSTREAM.lock requires torch 2.9.*')
     import fluidgym
+    if data_root is not None:
+        root = Path(data_root).expanduser().resolve()
+        if root.name != 'initial_domains':
+            raise ValueError('--data-root must end in initial_domains (upstream data layout)')
+        fluidgym.config.update('local_data_path', str(root.parent))
     reg = registrations()
     report = input_report(matrix, fluidgym.config.initial_domains_path)
     if report['missing_file_count']:
@@ -150,7 +155,8 @@ def preflight(matrix):
     # Exact compiled backend is part of provenance, not just its Python package version.
     from fluidgym.simulation.extensions import PISOtorch
     binary = Path(PISOtorch.__file__).resolve()
-    return {'upstream':upstream,'platform':collect_platform(),'packages':packages,
+    return {'status':'passed','data_root':str(Path(fluidgym.config.initial_domains_path).resolve()),
+            'upstream':upstream,'platform':collect_platform(),'packages':packages,
             'gpu':{'name':props.name,'total_memory':props.total_memory,'cuda':torch.version.cuda,
                    'driver_query':driver}, 'backend':{'path':str(binary),'sha256':digest(binary)},
             'input_manifest':manifest,'implementation_sha256':code,'source_inventory':reg,
@@ -358,19 +364,28 @@ def execute_run(run, item, directory, provenance, campaign, budget, started):
             if close is not None: close()
 
 
-def run_matrix(matrix_path, output, reviewed_sha256):
+def run_matrix(matrix_path, output, reviewed_sha256=None, data_root=None, approval_path=None):
     path, output = Path(matrix_path), Path(output)
     m=load_matrix(path)
+    approval = None
+    if approval_path is not None:
+        from .review import check_approval
+        approval = check_approval(approval_path, path)
+        reviewed_sha256 = approval['reviewed_matrix_sha256']
+        if data_root is None: data_root = approval['data_root']
     if digest(path)!=reviewed_sha256 or m['review_status']!='reviewed':
         raise ValueError('Review full matrix/budget, set review_status=reviewed and supply exact matrix SHA-256')
     budget=m['budget']; est=estimate(m)
     if est['wall_hours_scenario'][1] > budget['max_wall_hours'] or est['output_gib_estimate'] > budget['max_output_gib']:
         raise ValueError('planning estimate exceeds campaign caps; review budget first')
     if output.exists(): raise FileExistsError('campaign output already exists; no resume/overwrite')
-    provenance=preflight(m)  # Entire matrix checked before the first reset.
+    provenance=preflight(m, data_root=data_root)  # Entire matrix checked before the first reset.
+    if approval is not None:
+        check_approval(approval_path,path,provenance)
     output.mkdir(parents=True)
     started=time.monotonic()
     write_json(output/'matrix.json',m)
+    if approval is not None: write_json(output/'approval.json',approval)
     write_json(output/'provenance.json',{**provenance,'matrix_sha256':digest(path),'estimate':est})
     try:
         reg=registrations()

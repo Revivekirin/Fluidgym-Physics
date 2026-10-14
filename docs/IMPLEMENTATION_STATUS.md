@@ -31,3 +31,13 @@ The error now reports interpreter, actual/expected import paths and the editable
 ## Subsequent server report: local datasets
 
 The server now resolves FluidGym to the pinned submodule and passes the import check. Preflight stops on missing/empty Re250 cylinder statistics and all ten test JSON/NPZ pairs at `/home/jhkim/.local/share/FluidGym/initial_domains`. The old fail-fast listing does not establish availability of later datasets. Added a CUDA-free `input-report` command and whole-matrix missing-input summary, deduplicating 15 environment rows into 12 dataset directories. No data was downloaded or regenerated; runtime characterization remains pending.
+
+## Explicit acquisition and six-environment primary preparation
+
+Added `fetch-inputs` for explicitly requested official data acquisition, with one remote commit per operation, metadata/size/disk checks, existing-file verification, staging and exclusive publication, per-file integrity checks, and immutable acquisition records. No network download is hidden in runtime/preflight. `--data-root` now consistently configures preflight/run as well as inspection/acquisition; `--output` saves preflight and planning evidence.
+
+The original 15-variant matrix is unchanged. After successful full preflight, `prepare-primary` creates a separate **draft_not_authorized** matrix for CylinderJet2D easy/medium/hard and RBC2D easy/medium/hard. It retains both protocols and initialization controls, and lists nine other 2D variants as future expansion targets. Recalculated primary estimate: 60 runs, 58,200 steps, 2.392 GiB output, uncalibrated 1.2125–48.5 GPU-hours; proposed caps 72 hours and 20 GiB output.
+
+`approve-matrix --accept-budget` is implemented for a future explicitly authorized review, binding a separate reviewed copy to a successful preflight and input hashes. It has not been invoked on either study matrix. CFD remains unexecuted. The local environment is not the CUDA server: real official transfer/full preflight remain server-side steps, not completed evidence. Tests use a fake Hub for transfer failures, official hash validation, revision pinning, overwrite protection and primary-subset provenance; they are not a live dataset availability check.
+
+See [SERVER_EXECUTION.md](SERVER_EXECUTION.md) for the exact authorized preparation sequence and separately labeled future campaign commands.

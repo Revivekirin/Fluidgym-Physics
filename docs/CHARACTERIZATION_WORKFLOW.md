@@ -112,3 +112,9 @@ python -m fluidgym_physics.cli input-report \
 Substitute the server's actual data directory. `--data-root` only selects the directory to inspect; it does not change FluidGym's runtime configuration. Present files are labeled `present_not_validated` until full preflight validates them. Preflight now summarizes missing files for every unique dataset before stopping, rather than exposing only the first missing variant.
 
 If data already exists elsewhere, locate it and configure the runtime data root consistently before proceeding. Otherwise, dataset acquisition must be an explicit operation using the official dataset repository; neither command downloads nor regenerates states. This report does not authorize a CFD campaign or prove that available initial states are physically adequate.
+
+## Current primary scope and server preparation
+
+The original 15-variant matrix remains unchanged and is the scope for official acquisition/full preflight. The primary nominal study is **CylinderJet2D easy/medium/hard plus standard RBC2D easy/medium/hard**, not CylinderJet2D alone. After full preflight succeeds, `prepare-primary` creates a separate schema-v2 draft with those six registered IDs and lists the other nine 2D variants as future expansion targets. It never approves either matrix.
+
+See [SERVER_EXECUTION.md](SERVER_EXECUTION.md) for the explicit `fetch-inputs` → full preflight → primary preparation → primary preflight/plan commands, official dataset provenance, recalculated six-environment budget, and the future approval/run interface. The primary proposal is 60 runs / 58,200 steps / about 2.392 GiB output / an uncalibrated 1.2125–48.5 GPU-hour range. No physical dynamics shifts or campaigns are authorized by these preparation commands.
