@@ -1,5 +1,7 @@
 # CylinderJet2D physics execution map
 
+> Historical CylinderJet2D source audit. Current evidence: the user reports 25 passing CUDA-server tests (three real-environment tests); artifacts are not present here. Earlier “not run” statements describe the original authoring host only. See ENVIRONMENT_PHYSICS_INVENTORY.md and CHARACTERIZATION_WORKFLOW.md for the current complete scope. `env.time_passed` is nominal step-count time, not measured solver time; the new runner checks `env._sim.total_time`. Reset episodes must never be concatenated.
+
 Upstream: commit `50071140b73a2a917fb96d33522a769f903f8c27` (v0.1.2-7). `UP/` = `third_party/fluidgym/src/fluidgym/`.
 Labels: **[SRC]** verified by reading source · **[RUN]** verified at runtime · **[ASM]** assumption · **[?]** unresolved.
 As of this document **no [RUN] claim exists**: the authoring sandbox had no torch/CUDA/PISOtorch.

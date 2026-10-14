@@ -1,7 +1,7 @@
 """Runtime (CUDA-only) nominal environment construction and read-only inspection.
 
-NOT EXECUTED in the authoring sandbox (no torch/CUDA). Written from source reading; must be run on the
-CUDA server. torch/fluidgym are imported lazily so the rest of the package stays CPU-importable.
+The user reports 25 passing tests on the CUDA server, including three real-environment tests.
+Those artifacts are not present in this checkout; local CUDA verification remains unavailable. torch/fluidgym are imported lazily so the rest of the package stays CPU-importable.
 """
 from __future__ import annotations
 
@@ -23,11 +23,13 @@ def _require_cuda():
 def check_initial_domains_present(cfg: NominalEnvConfig) -> Path:
     """Upstream's constructor calls prepare_initial_domains(), which downloads from HuggingFace when the
     directory is empty (util/data_utils.py:23-46). We therefore refuse to construct unless data is local."""
-    import fluidgym.config as fg_config  # lazy
+    from fluidgym.config import config as fg_config  # lazy
 
     domain_id = nominal_source_summary(cfg.env_id)["derived_from_source"]["initial_domain_id"]
     d = Path(fg_config.initial_domains_path) / domain_id
-    if not (d.exists() and any(d.iterdir())):
+    required = [d / "domain_statistics.json"] + [d / str(i) / f"{cfg.mode}.{ext}"
+        for i in (range(10) if cfg.randomize_initial_state else [0]) for ext in ("json", "npz")]
+    if not all(p.is_file() and p.stat().st_size > 0 for p in required):
         raise MissingInitialDomainError(
             f"initial domains for {domain_id} not found at {d}; not downloading automatically. "
             "Fetch them explicitly (see docs/NUMERICAL_VALIDATION_PLAN.md, command C0)."
@@ -36,11 +38,15 @@ def check_initial_domains_present(cfg: NominalEnvConfig) -> Path:
 
 
 def make_nominal_env(cfg: NominalEnvConfig):
+    from .upstream import verify_upstream
+    from .runner import _installed_upstream
+    verify_upstream()
+    _installed_upstream()
     _require_cuda()
     check_initial_domains_present(cfg)
     import fluidgym  # lazy
 
-    env = fluidgym.make(cfg.env_id)
+    env = fluidgym.make(cfg.env_id, randomize_initial_state=cfg.randomize_initial_state)
     getattr(env, cfg.mode)()          # env.train()/val()/test()
     env.seed(cfg.seed)
     return env

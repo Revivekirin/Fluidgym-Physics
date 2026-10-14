@@ -1,0 +1,1761 @@
+{
+  "schema_version": 1,
+  "upstream_commit": "50071140b73a2a917fb96d33522a769f903f8c27",
+  "evidence": "source-declared; loaded grids and effective solver settings require runtime checks",
+  "environments": {
+    "CylinderJet2D-easy-v0": {
+      "entry_point": "CylinderJetEnv2D",
+      "family": "cylinder",
+      "ndims": 2,
+      "config": {
+        "reynolds_number": 100,
+        "resolution": 24,
+        "dt": 0.01,
+        "adaptive_cfl": 0.8,
+        "step_length": 0.25,
+        "episode_length": 80,
+        "lift_penalty": 1.0,
+        "use_marl": false,
+        "dtype": "float32",
+        "load_initial_domain": true,
+        "load_domain_statistics": true,
+        "randomize_initial_state": true,
+        "enable_actions": true,
+        "differentiable": false
+      },
+      "variant_overrides": {
+        "reynolds_number": 100,
+        "resolution": 24
+      },
+      "sources": [
+        "src/fluidgym/__init__.py:28",
+        "src/fluidgym/envs/cylinder/jet_cylinder_env_2d.py:8"
+      ],
+      "initial_domain_id": "cylinder_2D_Re100_Res24",
+      "render_shape_xyz": [
+        515,
+        96
+      ],
+      "native_cells_source_estimate": null,
+      "snapshot_bytes_float32": 593280,
+      "snapshot_fields": [
+        "velocity",
+        "pressure"
+      ]
+    },
+    "CylinderJet2D-medium-v0": {
+      "entry_point": "CylinderJetEnv2D",
+      "family": "cylinder",
+      "ndims": 2,
+      "config": {
+        "reynolds_number": 250,
+        "resolution": 32,
+        "dt": 0.01,
+        "adaptive_cfl": 0.8,
+        "step_length": 0.25,
+        "episode_length": 80,
+        "lift_penalty": 1.0,
+        "use_marl": false,
+        "dtype": "float32",
+        "load_initial_domain": true,
+        "load_domain_statistics": true,
+        "randomize_initial_state": true,
+        "enable_actions": true,
+        "differentiable": false
+      },
+      "variant_overrides": {
+        "reynolds_number": 250,
+        "resolution": 32
+      },
+      "sources": [
+        "src/fluidgym/__init__.py:36",
+        "src/fluidgym/envs/cylinder/jet_cylinder_env_2d.py:8"
+      ],
+      "initial_domain_id": "cylinder_2D_Re250_Res32",
+      "render_shape_xyz": [
+        686,
+        128
+      ],
+      "native_cells_source_estimate": null,
+      "snapshot_bytes_float32": 1053696,
+      "snapshot_fields": [
+        "velocity",
+        "pressure"
+      ]
+    },
+    "CylinderJet2D-hard-v0": {
+      "entry_point": "CylinderJetEnv2D",
+      "family": "cylinder",
+      "ndims": 2,
+      "config": {
+        "reynolds_number": 500,
+        "resolution": 32,
+        "dt": 0.01,
+        "adaptive_cfl": 0.8,
+        "step_length": 0.25,
+        "episode_length": 80,
+        "lift_penalty": 1.0,
+        "use_marl": false,
+        "dtype": "float32",
+        "load_initial_domain": true,
+        "load_domain_statistics": true,
+        "randomize_initial_state": true,
+        "enable_actions": true,
+        "differentiable": false
+      },
+      "variant_overrides": {
+        "reynolds_number": 500,
+        "resolution": 32
+      },
+      "sources": [
+        "src/fluidgym/__init__.py:44",
+        "src/fluidgym/envs/cylinder/jet_cylinder_env_2d.py:8"
+      ],
+      "initial_domain_id": "cylinder_2D_Re500_Res32",
+      "render_shape_xyz": [
+        686,
+        128
+      ],
+      "native_cells_source_estimate": null,
+      "snapshot_bytes_float32": 1053696,
+      "snapshot_fields": [
+        "velocity",
+        "pressure"
+      ]
+    },
+    "CylinderRot2D-easy-v0": {
+      "entry_point": "CylinderRotEnv2D",
+      "family": "cylinder",
+      "ndims": 2,
+      "config": {
+        "reynolds_number": 100,
+        "resolution": 24,
+        "dt": 0.01,
+        "adaptive_cfl": 0.8,
+        "step_length": 0.25,
+        "episode_length": 80,
+        "lift_penalty": 1.0,
+        "use_marl": false,
+        "dtype": "float32",
+        "load_initial_domain": true,
+        "load_domain_statistics": true,
+        "randomize_initial_state": true,
+        "enable_actions": true,
+        "differentiable": false
+      },
+      "variant_overrides": {
+        "reynolds_number": 100,
+        "resolution": 24
+      },
+      "sources": [
+        "src/fluidgym/__init__.py:52",
+        "src/fluidgym/envs/cylinder/rotating_cylinder_env_2d.py:7"
+      ],
+      "initial_domain_id": "cylinder_2D_Re100_Res24",
+      "render_shape_xyz": [
+        515,
+        96
+      ],
+      "native_cells_source_estimate": null,
+      "snapshot_bytes_float32": 593280,
+      "snapshot_fields": [
+        "velocity",
+        "pressure"
+      ]
+    },
+    "CylinderRot2D-medium-v0": {
+      "entry_point": "CylinderRotEnv2D",
+      "family": "cylinder",
+      "ndims": 2,
+      "config": {
+        "reynolds_number": 250,
+        "resolution": 32,
+        "dt": 0.01,
+        "adaptive_cfl": 0.8,
+        "step_length": 0.25,
+        "episode_length": 80,
+        "lift_penalty": 1.0,
+        "use_marl": false,
+        "dtype": "float32",
+        "load_initial_domain": true,
+        "load_domain_statistics": true,
+        "randomize_initial_state": true,
+        "enable_actions": true,
+        "differentiable": false
+      },
+      "variant_overrides": {
+        "reynolds_number": 250,
+        "resolution": 32
+      },
+      "sources": [
+        "src/fluidgym/__init__.py:60",
+        "src/fluidgym/envs/cylinder/rotating_cylinder_env_2d.py:7"
+      ],
+      "initial_domain_id": "cylinder_2D_Re250_Res32",
+      "render_shape_xyz": [
+        686,
+        128
+      ],
+      "native_cells_source_estimate": null,
+      "snapshot_bytes_float32": 1053696,
+      "snapshot_fields": [
+        "velocity",
+        "pressure"
+      ]
+    },
+    "CylinderRot2D-hard-v0": {
+      "entry_point": "CylinderRotEnv2D",
+      "family": "cylinder",
+      "ndims": 2,
+      "config": {
+        "reynolds_number": 500,
+        "resolution": 32,
+        "dt": 0.01,
+        "adaptive_cfl": 0.8,
+        "step_length": 0.25,
+        "episode_length": 80,
+        "lift_penalty": 1.0,
+        "use_marl": false,
+        "dtype": "float32",
+        "load_initial_domain": true,
+        "load_domain_statistics": true,
+        "randomize_initial_state": true,
+        "enable_actions": true,
+        "differentiable": false
+      },
+      "variant_overrides": {
+        "reynolds_number": 500,
+        "resolution": 32
+      },
+      "sources": [
+        "src/fluidgym/__init__.py:68",
+        "src/fluidgym/envs/cylinder/rotating_cylinder_env_2d.py:7"
+      ],
+      "initial_domain_id": "cylinder_2D_Re500_Res32",
+      "render_shape_xyz": [
+        686,
+        128
+      ],
+      "native_cells_source_estimate": null,
+      "snapshot_bytes_float32": 1053696,
+      "snapshot_fields": [
+        "velocity",
+        "pressure"
+      ]
+    },
+    "CylinderJet3D-easy-v0": {
+      "entry_point": "CylinderJetEnv3D",
+      "family": "cylinder",
+      "ndims": 3,
+      "config": {
+        "n_jets": 8,
+        "reynolds_number": 100,
+        "resolution": 24,
+        "dt": 0.01,
+        "adaptive_cfl": 0.8,
+        "step_length": 0.25,
+        "lift_penalty": 1.0,
+        "episode_length": 80,
+        "local_obs_window": 3,
+        "local_reward_weight": 0.8,
+        "local_2d_obs": false,
+        "use_marl": false,
+        "dtype": "float32",
+        "load_initial_domain": true,
+        "load_domain_statistics": true,
+        "randomize_initial_state": true,
+        "enable_actions": true,
+        "differentiable": false
+      },
+      "variant_overrides": {
+        "reynolds_number": 100,
+        "resolution": 24
+      },
+      "sources": [
+        "src/fluidgym/__init__.py:79",
+        "src/fluidgym/envs/cylinder/jet_cylinder_env_3d.py:22"
+      ],
+      "initial_domain_id": "cylinder_3D_Re100_Res24",
+      "render_shape_xyz": [
+        515,
+        96,
+        96
+      ],
+      "native_cells_source_estimate": null,
+      "snapshot_bytes_float32": 75939840,
+      "snapshot_fields": [
+        "velocity",
+        "pressure"
+      ]
+    },
+    "CylinderJet3D-medium-v0": {
+      "entry_point": "CylinderJetEnv3D",
+      "family": "cylinder",
+      "ndims": 3,
+      "config": {
+        "n_jets": 8,
+        "reynolds_number": 250,
+        "resolution": 32,
+        "dt": 0.01,
+        "adaptive_cfl": 0.8,
+        "step_length": 0.25,
+        "lift_penalty": 1.0,
+        "episode_length": 80,
+        "local_obs_window": 3,
+        "local_reward_weight": 0.8,
+        "local_2d_obs": false,
+        "use_marl": false,
+        "dtype": "float32",
+        "load_initial_domain": true,
+        "load_domain_statistics": true,
+        "randomize_initial_state": true,
+        "enable_actions": true,
+        "differentiable": false
+      },
+      "variant_overrides": {
+        "reynolds_number": 250,
+        "resolution": 32
+      },
+      "sources": [
+        "src/fluidgym/__init__.py:87",
+        "src/fluidgym/envs/cylinder/jet_cylinder_env_3d.py:22"
+      ],
+      "initial_domain_id": "cylinder_3D_Re250_Res32",
+      "render_shape_xyz": [
+        686,
+        128,
+        128
+      ],
+      "native_cells_source_estimate": null,
+      "snapshot_bytes_float32": 179830784,
+      "snapshot_fields": [
+        "velocity",
+        "pressure"
+      ]
+    },
+    "CylinderJet3D-hard-v0": {
+      "entry_point": "CylinderJetEnv3D",
+      "family": "cylinder",
+      "ndims": 3,
+      "config": {
+        "n_jets": 8,
+        "reynolds_number": 500,
+        "resolution": 48,
+        "dt": 0.01,
+        "adaptive_cfl": 0.8,
+        "step_length": 0.25,
+        "lift_penalty": 1.0,
+        "episode_length": 80,
+        "local_obs_window": 3,
+        "local_reward_weight": 0.8,
+        "local_2d_obs": false,
+        "use_marl": false,
+        "dtype": "float32",
+        "load_initial_domain": true,
+        "load_domain_statistics": true,
+        "randomize_initial_state": true,
+        "enable_actions": true,
+        "differentiable": false
+      },
+      "variant_overrides": {
+        "reynolds_number": 500,
+        "resolution": 48
+      },
+      "sources": [
+        "src/fluidgym/__init__.py:95",
+        "src/fluidgym/envs/cylinder/jet_cylinder_env_3d.py:22"
+      ],
+      "initial_domain_id": "cylinder_3D_Re500_Res48",
+      "render_shape_xyz": [
+        1030,
+        192,
+        192
+      ],
+      "native_cells_source_estimate": null,
+      "snapshot_bytes_float32": 607518720,
+      "snapshot_fields": [
+        "velocity",
+        "pressure"
+      ]
+    },
+    "RBC2D-easy-v0": {
+      "entry_point": "RBCEnv2D",
+      "family": "rbc",
+      "ndims": 2,
+      "config": {
+        "rayleigh_number": 80000.0,
+        "prandtl_number": 0.7,
+        "n_heaters": 12,
+        "resolution": 8,
+        "dt": 0.05,
+        "adaptive_cfl": 0.8,
+        "step_length": 1.0,
+        "episode_length": 200,
+        "local_obs_window": 11,
+        "local_reward_weight": 0.2,
+        "uniform_grid": false,
+        "aspect_ratio": 1.0,
+        "use_marl": false,
+        "dtype": "float32",
+        "load_initial_domain": true,
+        "load_domain_statistics": true,
+        "randomize_initial_state": true,
+        "enable_actions": true,
+        "differentiable": false
+      },
+      "variant_overrides": {
+        "rayleigh_number": 80000.0,
+        "adaptive_cfl": 0.8
+      },
+      "sources": [
+        "src/fluidgym/__init__.py:106",
+        "src/fluidgym/envs/rbc/rbc_env_2d.py:11"
+      ],
+      "initial_domain_id": "rbc_2d_Ra80000.0_Pr0.7_NH12_HW8",
+      "render_shape_xyz": [
+        240,
+        76
+      ],
+      "native_cells_source_estimate": 5856,
+      "snapshot_bytes_float32": 291840,
+      "snapshot_fields": [
+        "velocity",
+        "pressure",
+        "temperature"
+      ]
+    },
+    "RBC2D-medium-v0": {
+      "entry_point": "RBCEnv2D",
+      "family": "rbc",
+      "ndims": 2,
+      "config": {
+        "rayleigh_number": 400000.0,
+        "prandtl_number": 0.7,
+        "n_heaters": 12,
+        "resolution": 8,
+        "dt": 0.05,
+        "adaptive_cfl": 0.5,
+        "step_length": 1.0,
+        "episode_length": 200,
+        "local_obs_window": 11,
+        "local_reward_weight": 0.2,
+        "uniform_grid": false,
+        "aspect_ratio": 1.0,
+        "use_marl": false,
+        "dtype": "float32",
+        "load_initial_domain": true,
+        "load_domain_statistics": true,
+        "randomize_initial_state": true,
+        "enable_actions": true,
+        "differentiable": false
+      },
+      "variant_overrides": {
+        "rayleigh_number": 400000.0,
+        "adaptive_cfl": 0.5
+      },
+      "sources": [
+        "src/fluidgym/__init__.py:114",
+        "src/fluidgym/envs/rbc/rbc_env_2d.py:11"
+      ],
+      "initial_domain_id": "rbc_2d_Ra400000.0_Pr0.7_NH12_HW8",
+      "render_shape_xyz": [
+        240,
+        76
+      ],
+      "native_cells_source_estimate": 5856,
+      "snapshot_bytes_float32": 291840,
+      "snapshot_fields": [
+        "velocity",
+        "pressure",
+        "temperature"
+      ]
+    },
+    "RBC2D-hard-v0": {
+      "entry_point": "RBCEnv2D",
+      "family": "rbc",
+      "ndims": 2,
+      "config": {
+        "rayleigh_number": 800000.0,
+        "prandtl_number": 0.7,
+        "n_heaters": 12,
+        "resolution": 8,
+        "dt": 0.05,
+        "adaptive_cfl": 0.5,
+        "step_length": 1.0,
+        "episode_length": 200,
+        "local_obs_window": 11,
+        "local_reward_weight": 0.2,
+        "uniform_grid": false,
+        "aspect_ratio": 1.0,
+        "use_marl": false,
+        "dtype": "float32",
+        "load_initial_domain": true,
+        "load_domain_statistics": true,
+        "randomize_initial_state": true,
+        "enable_actions": true,
+        "differentiable": false
+      },
+      "variant_overrides": {
+        "rayleigh_number": 800000.0,
+        "adaptive_cfl": 0.5
+      },
+      "sources": [
+        "src/fluidgym/__init__.py:122",
+        "src/fluidgym/envs/rbc/rbc_env_2d.py:11"
+      ],
+      "initial_domain_id": "rbc_2d_Ra800000.0_Pr0.7_NH12_HW8",
+      "render_shape_xyz": [
+        240,
+        76
+      ],
+      "native_cells_source_estimate": 5856,
+      "snapshot_bytes_float32": 291840,
+      "snapshot_fields": [
+        "velocity",
+        "pressure",
+        "temperature"
+      ]
+    },
+    "RBC2D-wide-easy-v0": {
+      "entry_point": "RBCEnv2D",
+      "family": "rbc",
+      "ndims": 2,
+      "config": {
+        "rayleigh_number": 80000.0,
+        "prandtl_number": 0.7,
+        "n_heaters": 24,
+        "resolution": 8,
+        "dt": 0.05,
+        "adaptive_cfl": 0.8,
+        "step_length": 1.0,
+        "episode_length": 200,
+        "local_obs_window": 11,
+        "local_reward_weight": 0.2,
+        "uniform_grid": false,
+        "aspect_ratio": 2,
+        "use_marl": false,
+        "dtype": "float32",
+        "load_initial_domain": true,
+        "load_domain_statistics": true,
+        "randomize_initial_state": true,
+        "enable_actions": true,
+        "differentiable": false
+      },
+      "variant_overrides": {
+        "aspect_ratio": 2,
+        "n_heaters": 24,
+        "rayleigh_number": 80000.0
+      },
+      "sources": [
+        "src/fluidgym/__init__.py:130",
+        "src/fluidgym/envs/rbc/rbc_env_2d.py:11"
+      ],
+      "initial_domain_id": "rbc_2d_Ra80000.0_Pr0.7_NH24_HW8",
+      "render_shape_xyz": [
+        480,
+        76
+      ],
+      "native_cells_source_estimate": 11712,
+      "snapshot_bytes_float32": 583680,
+      "snapshot_fields": [
+        "velocity",
+        "pressure",
+        "temperature"
+      ]
+    },
+    "RBC2D-wide-medium-v0": {
+      "entry_point": "RBCEnv2D",
+      "family": "rbc",
+      "ndims": 2,
+      "config": {
+        "rayleigh_number": 400000.0,
+        "prandtl_number": 0.7,
+        "n_heaters": 24,
+        "resolution": 8,
+        "dt": 0.05,
+        "adaptive_cfl": 0.5,
+        "step_length": 1.0,
+        "episode_length": 200,
+        "local_obs_window": 11,
+        "local_reward_weight": 0.2,
+        "uniform_grid": false,
+        "aspect_ratio": 2,
+        "use_marl": false,
+        "dtype": "float32",
+        "load_initial_domain": true,
+        "load_domain_statistics": true,
+        "randomize_initial_state": true,
+        "enable_actions": true,
+        "differentiable": false
+      },
+      "variant_overrides": {
+        "aspect_ratio": 2,
+        "n_heaters": 24,
+        "rayleigh_number": 400000.0,
+        "adaptive_cfl": 0.5
+      },
+      "sources": [
+        "src/fluidgym/__init__.py:139",
+        "src/fluidgym/envs/rbc/rbc_env_2d.py:11"
+      ],
+      "initial_domain_id": "rbc_2d_Ra400000.0_Pr0.7_NH24_HW8",
+      "render_shape_xyz": [
+        480,
+        76
+      ],
+      "native_cells_source_estimate": 11712,
+      "snapshot_bytes_float32": 583680,
+      "snapshot_fields": [
+        "velocity",
+        "pressure",
+        "temperature"
+      ]
+    },
+    "RBC2D-wide-hard-v0": {
+      "entry_point": "RBCEnv2D",
+      "family": "rbc",
+      "ndims": 2,
+      "config": {
+        "rayleigh_number": 800000.0,
+        "prandtl_number": 0.7,
+        "n_heaters": 24,
+        "resolution": 8,
+        "dt": 0.05,
+        "adaptive_cfl": 0.5,
+        "step_length": 1.0,
+        "episode_length": 200,
+        "local_obs_window": 11,
+        "local_reward_weight": 0.2,
+        "uniform_grid": false,
+        "aspect_ratio": 2,
+        "use_marl": false,
+        "dtype": "float32",
+        "load_initial_domain": true,
+        "load_domain_statistics": true,
+        "randomize_initial_state": true,
+        "enable_actions": true,
+        "differentiable": false
+      },
+      "variant_overrides": {
+        "aspect_ratio": 2,
+        "n_heaters": 24,
+        "rayleigh_number": 800000.0,
+        "adaptive_cfl": 0.5
+      },
+      "sources": [
+        "src/fluidgym/__init__.py:149",
+        "src/fluidgym/envs/rbc/rbc_env_2d.py:11"
+      ],
+      "initial_domain_id": "rbc_2d_Ra800000.0_Pr0.7_NH24_HW8",
+      "render_shape_xyz": [
+        480,
+        76
+      ],
+      "native_cells_source_estimate": 11712,
+      "snapshot_bytes_float32": 583680,
+      "snapshot_fields": [
+        "velocity",
+        "pressure",
+        "temperature"
+      ]
+    },
+    "RBC3D-easy-v0": {
+      "entry_point": "RBCEnv3D",
+      "family": "rbc",
+      "ndims": 3,
+      "config": {
+        "rayleigh_number": 6000.0,
+        "prandtl_number": 0.7,
+        "n_heaters": 8,
+        "resolution": 8,
+        "dt": 0.05,
+        "adaptive_cfl": 0.5,
+        "step_length": 1.0,
+        "episode_length": 200,
+        "local_obs_window": 3,
+        "local_reward_weight": 0.0015,
+        "uniform_grid": false,
+        "aspect_ratio": 1.0,
+        "use_marl": true,
+        "dtype": "float32",
+        "load_initial_domain": true,
+        "load_domain_statistics": true,
+        "randomize_initial_state": true,
+        "enable_actions": true,
+        "differentiable": false
+      },
+      "variant_overrides": {
+        "rayleigh_number": 6000.0,
+        "adaptive_cfl": 0.5
+      },
+      "sources": [
+        "src/fluidgym/__init__.py:162",
+        "src/fluidgym/envs/rbc/rbc_env_3d.py:16"
+      ],
+      "initial_domain_id": "rbc_3d_Ra6000.0_Pr0.7_NH8_HW8",
+      "render_shape_xyz": [
+        160,
+        51,
+        160
+      ],
+      "native_cells_source_estimate": 167936,
+      "snapshot_bytes_float32": 26112000,
+      "snapshot_fields": [
+        "velocity",
+        "pressure",
+        "temperature"
+      ]
+    },
+    "RBC3D-medium-v0": {
+      "entry_point": "RBCEnv3D",
+      "family": "rbc",
+      "ndims": 3,
+      "config": {
+        "rayleigh_number": 8000.0,
+        "prandtl_number": 0.7,
+        "n_heaters": 8,
+        "resolution": 8,
+        "dt": 0.05,
+        "adaptive_cfl": 0.5,
+        "step_length": 1.0,
+        "episode_length": 200,
+        "local_obs_window": 3,
+        "local_reward_weight": 0.0015,
+        "uniform_grid": false,
+        "aspect_ratio": 1.0,
+        "use_marl": true,
+        "dtype": "float32",
+        "load_initial_domain": true,
+        "load_domain_statistics": true,
+        "randomize_initial_state": true,
+        "enable_actions": true,
+        "differentiable": false
+      },
+      "variant_overrides": {
+        "rayleigh_number": 8000.0,
+        "adaptive_cfl": 0.5
+      },
+      "sources": [
+        "src/fluidgym/__init__.py:170",
+        "src/fluidgym/envs/rbc/rbc_env_3d.py:16"
+      ],
+      "initial_domain_id": "rbc_3d_Ra8000.0_Pr0.7_NH8_HW8",
+      "render_shape_xyz": [
+        160,
+        51,
+        160
+      ],
+      "native_cells_source_estimate": 167936,
+      "snapshot_bytes_float32": 26112000,
+      "snapshot_fields": [
+        "velocity",
+        "pressure",
+        "temperature"
+      ]
+    },
+    "RBC3D-hard-v0": {
+      "entry_point": "RBCEnv3D",
+      "family": "rbc",
+      "ndims": 3,
+      "config": {
+        "rayleigh_number": 10000.0,
+        "prandtl_number": 0.7,
+        "n_heaters": 8,
+        "resolution": 8,
+        "dt": 0.05,
+        "adaptive_cfl": 0.5,
+        "step_length": 1.0,
+        "episode_length": 200,
+        "local_obs_window": 3,
+        "local_reward_weight": 0.0015,
+        "uniform_grid": false,
+        "aspect_ratio": 1.0,
+        "use_marl": true,
+        "dtype": "float32",
+        "load_initial_domain": true,
+        "load_domain_statistics": true,
+        "randomize_initial_state": true,
+        "enable_actions": true,
+        "differentiable": false
+      },
+      "variant_overrides": {
+        "rayleigh_number": 10000.0,
+        "adaptive_cfl": 0.5
+      },
+      "sources": [
+        "src/fluidgym/__init__.py:178",
+        "src/fluidgym/envs/rbc/rbc_env_3d.py:16"
+      ],
+      "initial_domain_id": "rbc_3d_Ra10000.0_Pr0.7_NH8_HW8",
+      "render_shape_xyz": [
+        160,
+        51,
+        160
+      ],
+      "native_cells_source_estimate": 167936,
+      "snapshot_bytes_float32": 26112000,
+      "snapshot_fields": [
+        "velocity",
+        "pressure",
+        "temperature"
+      ]
+    },
+    "RBC3D-wide-easy-v0": {
+      "entry_point": "RBCEnv3D",
+      "family": "rbc",
+      "ndims": 3,
+      "config": {
+        "rayleigh_number": 6000.0,
+        "prandtl_number": 0.7,
+        "n_heaters": 16,
+        "resolution": 8,
+        "dt": 0.05,
+        "adaptive_cfl": 0.5,
+        "step_length": 1.0,
+        "episode_length": 200,
+        "local_obs_window": 3,
+        "local_reward_weight": 0.0015,
+        "uniform_grid": false,
+        "aspect_ratio": 2,
+        "use_marl": true,
+        "dtype": "float32",
+        "load_initial_domain": true,
+        "load_domain_statistics": true,
+        "randomize_initial_state": true,
+        "enable_actions": true,
+        "differentiable": false
+      },
+      "variant_overrides": {
+        "aspect_ratio": 2,
+        "n_heaters": 16,
+        "rayleigh_number": 6000.0,
+        "adaptive_cfl": 0.5
+      },
+      "sources": [
+        "src/fluidgym/__init__.py:186",
+        "src/fluidgym/envs/rbc/rbc_env_3d.py:16"
+      ],
+      "initial_domain_id": "rbc_3d_Ra6000.0_Pr0.7_NH16_HW8",
+      "render_shape_xyz": [
+        320,
+        51,
+        320
+      ],
+      "native_cells_source_estimate": 671744,
+      "snapshot_bytes_float32": 104448000,
+      "snapshot_fields": [
+        "velocity",
+        "pressure",
+        "temperature"
+      ]
+    },
+    "RBC3D-wide-medium-v0": {
+      "entry_point": "RBCEnv3D",
+      "family": "rbc",
+      "ndims": 3,
+      "config": {
+        "rayleigh_number": 8000.0,
+        "prandtl_number": 0.7,
+        "n_heaters": 16,
+        "resolution": 8,
+        "dt": 0.05,
+        "adaptive_cfl": 0.5,
+        "step_length": 1.0,
+        "episode_length": 200,
+        "local_obs_window": 3,
+        "local_reward_weight": 0.0015,
+        "uniform_grid": false,
+        "aspect_ratio": 2,
+        "use_marl": true,
+        "dtype": "float32",
+        "load_initial_domain": true,
+        "load_domain_statistics": true,
+        "randomize_initial_state": true,
+        "enable_actions": true,
+        "differentiable": false
+      },
+      "variant_overrides": {
+        "aspect_ratio": 2,
+        "n_heaters": 16,
+        "rayleigh_number": 8000.0,
+        "adaptive_cfl": 0.5
+      },
+      "sources": [
+        "src/fluidgym/__init__.py:196",
+        "src/fluidgym/envs/rbc/rbc_env_3d.py:16"
+      ],
+      "initial_domain_id": "rbc_3d_Ra8000.0_Pr0.7_NH16_HW8",
+      "render_shape_xyz": [
+        320,
+        51,
+        320
+      ],
+      "native_cells_source_estimate": 671744,
+      "snapshot_bytes_float32": 104448000,
+      "snapshot_fields": [
+        "velocity",
+        "pressure",
+        "temperature"
+      ]
+    },
+    "RBC3D-wide-hard-v0": {
+      "entry_point": "RBCEnv3D",
+      "family": "rbc",
+      "ndims": 3,
+      "config": {
+        "rayleigh_number": 10000.0,
+        "prandtl_number": 0.7,
+        "n_heaters": 16,
+        "resolution": 8,
+        "dt": 0.05,
+        "adaptive_cfl": 0.5,
+        "step_length": 1.0,
+        "episode_length": 200,
+        "local_obs_window": 3,
+        "local_reward_weight": 0.0015,
+        "uniform_grid": false,
+        "aspect_ratio": 2,
+        "use_marl": true,
+        "dtype": "float32",
+        "load_initial_domain": true,
+        "load_domain_statistics": true,
+        "randomize_initial_state": true,
+        "enable_actions": true,
+        "differentiable": false
+      },
+      "variant_overrides": {
+        "aspect_ratio": 2,
+        "n_heaters": 16,
+        "rayleigh_number": 10000.0,
+        "adaptive_cfl": 0.5
+      },
+      "sources": [
+        "src/fluidgym/__init__.py:206",
+        "src/fluidgym/envs/rbc/rbc_env_3d.py:16"
+      ],
+      "initial_domain_id": "rbc_3d_Ra10000.0_Pr0.7_NH16_HW8",
+      "render_shape_xyz": [
+        320,
+        51,
+        320
+      ],
+      "native_cells_source_estimate": 671744,
+      "snapshot_bytes_float32": 104448000,
+      "snapshot_fields": [
+        "velocity",
+        "pressure",
+        "temperature"
+      ]
+    },
+    "TCFSmall3D-bottom-easy-v0": {
+      "entry_point": "TCF3DBottomEnv",
+      "family": "tcf",
+      "ndims": 3,
+      "config": {
+        "resolution_y": 65,
+        "resolution_x_z": 64,
+        "actor_size": 2,
+        "L": 3.141592653589793,
+        "D": 1.5707963267948966,
+        "reynolds_number_wall": 180,
+        "adaptive_cfl": 0.1,
+        "step_length": 0.6,
+        "episode_length": 1000,
+        "local_obs_window": 1,
+        "local_reward_weight": 0.0,
+        "use_marl": true,
+        "C_smag": 0.0,
+        "use_van_driest": false,
+        "init_with_noise": true,
+        "dtype": "float32",
+        "load_initial_domain": true,
+        "load_domain_statistics": true,
+        "randomize_initial_state": true,
+        "enable_actions": true,
+        "differentiable": false
+      },
+      "variant_overrides": {
+        "reynolds_number_wall": 180
+      },
+      "sources": [
+        "src/fluidgym/__init__.py:219",
+        "src/fluidgym/envs/tcf/tcf_env.py:62"
+      ],
+      "initial_domain_id": "channel_flow3D_L3.14_Re180_Res64_Ref1",
+      "render_shape_xyz": [
+        128,
+        81,
+        64
+      ],
+      "native_cells_source_estimate": 262144,
+      "snapshot_bytes_float32": 10616832,
+      "snapshot_fields": [
+        "velocity",
+        "pressure"
+      ]
+    },
+    "TCFSmall3D-bottom-medium-v0": {
+      "entry_point": "TCF3DBottomEnv",
+      "family": "tcf",
+      "ndims": 3,
+      "config": {
+        "resolution_y": 65,
+        "resolution_x_z": 64,
+        "actor_size": 2,
+        "L": 3.141592653589793,
+        "D": 1.5707963267948966,
+        "reynolds_number_wall": 330,
+        "adaptive_cfl": 0.1,
+        "step_length": 0.6,
+        "episode_length": 1000,
+        "local_obs_window": 1,
+        "local_reward_weight": 0.0,
+        "use_marl": true,
+        "C_smag": 0.0,
+        "use_van_driest": false,
+        "init_with_noise": true,
+        "dtype": "float32",
+        "load_initial_domain": true,
+        "load_domain_statistics": true,
+        "randomize_initial_state": true,
+        "enable_actions": true,
+        "differentiable": false
+      },
+      "variant_overrides": {
+        "reynolds_number_wall": 330
+      },
+      "sources": [
+        "src/fluidgym/__init__.py:226",
+        "src/fluidgym/envs/tcf/tcf_env.py:62"
+      ],
+      "initial_domain_id": "channel_flow3D_L3.14_Re330_Res64_Ref1",
+      "render_shape_xyz": [
+        128,
+        81,
+        64
+      ],
+      "native_cells_source_estimate": 262144,
+      "snapshot_bytes_float32": 10616832,
+      "snapshot_fields": [
+        "velocity",
+        "pressure"
+      ]
+    },
+    "TCFSmall3D-bottom-hard-v0": {
+      "entry_point": "TCF3DBottomEnv",
+      "family": "tcf",
+      "ndims": 3,
+      "config": {
+        "resolution_y": 65,
+        "resolution_x_z": 64,
+        "actor_size": 2,
+        "L": 3.141592653589793,
+        "D": 1.5707963267948966,
+        "reynolds_number_wall": 550,
+        "adaptive_cfl": 0.1,
+        "step_length": 0.6,
+        "episode_length": 1000,
+        "local_obs_window": 1,
+        "local_reward_weight": 0.0,
+        "use_marl": true,
+        "C_smag": 0.0,
+        "use_van_driest": false,
+        "init_with_noise": true,
+        "dtype": "float32",
+        "load_initial_domain": true,
+        "load_domain_statistics": true,
+        "randomize_initial_state": true,
+        "enable_actions": true,
+        "differentiable": false
+      },
+      "variant_overrides": {
+        "reynolds_number_wall": 550
+      },
+      "sources": [
+        "src/fluidgym/__init__.py:233",
+        "src/fluidgym/envs/tcf/tcf_env.py:62"
+      ],
+      "initial_domain_id": "channel_flow3D_L3.14_Re550_Res64_Ref1",
+      "render_shape_xyz": [
+        128,
+        81,
+        64
+      ],
+      "native_cells_source_estimate": 262144,
+      "snapshot_bytes_float32": 10616832,
+      "snapshot_fields": [
+        "velocity",
+        "pressure"
+      ]
+    },
+    "TCFSmall3D-both-easy-v0": {
+      "entry_point": "TCF3DBothEnv",
+      "family": "tcf",
+      "ndims": 3,
+      "config": {
+        "resolution_y": 65,
+        "resolution_x_z": 64,
+        "actor_size": 2,
+        "L": 3.141592653589793,
+        "D": 1.5707963267948966,
+        "reynolds_number_wall": 180,
+        "adaptive_cfl": 0.1,
+        "step_length": 0.6,
+        "episode_length": 1000,
+        "local_obs_window": 1,
+        "local_reward_weight": 0.0,
+        "use_marl": true,
+        "C_smag": 0.0,
+        "use_van_driest": false,
+        "init_with_noise": true,
+        "dtype": "float32",
+        "load_initial_domain": true,
+        "load_domain_statistics": true,
+        "randomize_initial_state": true,
+        "enable_actions": true,
+        "differentiable": false
+      },
+      "variant_overrides": {
+        "reynolds_number_wall": 180
+      },
+      "sources": [
+        "src/fluidgym/__init__.py:240",
+        "src/fluidgym/envs/tcf/tcf_env.py:62"
+      ],
+      "initial_domain_id": "channel_flow3D_L3.14_Re180_Res64_Ref1",
+      "render_shape_xyz": [
+        128,
+        81,
+        64
+      ],
+      "native_cells_source_estimate": 262144,
+      "snapshot_bytes_float32": 10616832,
+      "snapshot_fields": [
+        "velocity",
+        "pressure"
+      ]
+    },
+    "TCFSmall3D-both-medium-v0": {
+      "entry_point": "TCF3DBothEnv",
+      "family": "tcf",
+      "ndims": 3,
+      "config": {
+        "resolution_y": 65,
+        "resolution_x_z": 64,
+        "actor_size": 2,
+        "L": 3.141592653589793,
+        "D": 1.5707963267948966,
+        "reynolds_number_wall": 330,
+        "adaptive_cfl": 0.1,
+        "step_length": 0.6,
+        "episode_length": 1000,
+        "local_obs_window": 1,
+        "local_reward_weight": 0.0,
+        "use_marl": true,
+        "C_smag": 0.0,
+        "use_van_driest": false,
+        "init_with_noise": true,
+        "dtype": "float32",
+        "load_initial_domain": true,
+        "load_domain_statistics": true,
+        "randomize_initial_state": true,
+        "enable_actions": true,
+        "differentiable": false
+      },
+      "variant_overrides": {
+        "reynolds_number_wall": 330
+      },
+      "sources": [
+        "src/fluidgym/__init__.py:247",
+        "src/fluidgym/envs/tcf/tcf_env.py:62"
+      ],
+      "initial_domain_id": "channel_flow3D_L3.14_Re330_Res64_Ref1",
+      "render_shape_xyz": [
+        128,
+        81,
+        64
+      ],
+      "native_cells_source_estimate": 262144,
+      "snapshot_bytes_float32": 10616832,
+      "snapshot_fields": [
+        "velocity",
+        "pressure"
+      ]
+    },
+    "TCFSmall3D-both-hard-v0": {
+      "entry_point": "TCF3DBothEnv",
+      "family": "tcf",
+      "ndims": 3,
+      "config": {
+        "resolution_y": 65,
+        "resolution_x_z": 64,
+        "actor_size": 2,
+        "L": 3.141592653589793,
+        "D": 1.5707963267948966,
+        "reynolds_number_wall": 550,
+        "adaptive_cfl": 0.1,
+        "step_length": 0.6,
+        "episode_length": 1000,
+        "local_obs_window": 1,
+        "local_reward_weight": 0.0,
+        "use_marl": true,
+        "C_smag": 0.0,
+        "use_van_driest": false,
+        "init_with_noise": true,
+        "dtype": "float32",
+        "load_initial_domain": true,
+        "load_domain_statistics": true,
+        "randomize_initial_state": true,
+        "enable_actions": true,
+        "differentiable": false
+      },
+      "variant_overrides": {
+        "reynolds_number_wall": 550
+      },
+      "sources": [
+        "src/fluidgym/__init__.py:254",
+        "src/fluidgym/envs/tcf/tcf_env.py:62"
+      ],
+      "initial_domain_id": "channel_flow3D_L3.14_Re550_Res64_Ref1",
+      "render_shape_xyz": [
+        128,
+        81,
+        64
+      ],
+      "native_cells_source_estimate": 262144,
+      "snapshot_bytes_float32": 10616832,
+      "snapshot_fields": [
+        "velocity",
+        "pressure"
+      ]
+    },
+    "TCFLarge3D-bottom-easy-v0": {
+      "entry_point": "TCF3DBottomEnv",
+      "family": "tcf",
+      "ndims": 3,
+      "config": {
+        "resolution_y": 65,
+        "resolution_x_z": 128,
+        "actor_size": 2,
+        "L": 6.283185307179586,
+        "D": 3.141592653589793,
+        "reynolds_number_wall": 180,
+        "adaptive_cfl": 0.1,
+        "step_length": 0.6,
+        "episode_length": 1000,
+        "local_obs_window": 1,
+        "local_reward_weight": 0.0,
+        "use_marl": true,
+        "C_smag": 0.0,
+        "use_van_driest": false,
+        "init_with_noise": true,
+        "dtype": "float32",
+        "load_initial_domain": true,
+        "load_domain_statistics": true,
+        "randomize_initial_state": true,
+        "enable_actions": true,
+        "differentiable": false
+      },
+      "variant_overrides": {
+        "reynolds_number_wall": 180
+      },
+      "sources": [
+        "src/fluidgym/__init__.py:264",
+        "src/fluidgym/envs/tcf/tcf_env.py:86"
+      ],
+      "initial_domain_id": "channel_flow3D_L6.28_Re180_Res128_Ref1",
+      "render_shape_xyz": [
+        256,
+        81,
+        128
+      ],
+      "native_cells_source_estimate": 1048576,
+      "snapshot_bytes_float32": 42467328,
+      "snapshot_fields": [
+        "velocity",
+        "pressure"
+      ]
+    },
+    "TCFLarge3D-bottom-medium-v0": {
+      "entry_point": "TCF3DBottomEnv",
+      "family": "tcf",
+      "ndims": 3,
+      "config": {
+        "resolution_y": 65,
+        "resolution_x_z": 128,
+        "actor_size": 2,
+        "L": 6.283185307179586,
+        "D": 3.141592653589793,
+        "reynolds_number_wall": 330,
+        "adaptive_cfl": 0.1,
+        "step_length": 0.6,
+        "episode_length": 1000,
+        "local_obs_window": 1,
+        "local_reward_weight": 0.0,
+        "use_marl": true,
+        "C_smag": 0.0,
+        "use_van_driest": false,
+        "init_with_noise": true,
+        "dtype": "float32",
+        "load_initial_domain": true,
+        "load_domain_statistics": true,
+        "randomize_initial_state": true,
+        "enable_actions": true,
+        "differentiable": false
+      },
+      "variant_overrides": {
+        "reynolds_number_wall": 330
+      },
+      "sources": [
+        "src/fluidgym/__init__.py:271",
+        "src/fluidgym/envs/tcf/tcf_env.py:86"
+      ],
+      "initial_domain_id": "channel_flow3D_L6.28_Re330_Res128_Ref1",
+      "render_shape_xyz": [
+        256,
+        81,
+        128
+      ],
+      "native_cells_source_estimate": 1048576,
+      "snapshot_bytes_float32": 42467328,
+      "snapshot_fields": [
+        "velocity",
+        "pressure"
+      ]
+    },
+    "TCFLarge3D-bottom-hard-v0": {
+      "entry_point": "TCF3DBottomEnv",
+      "family": "tcf",
+      "ndims": 3,
+      "config": {
+        "resolution_y": 65,
+        "resolution_x_z": 128,
+        "actor_size": 2,
+        "L": 6.283185307179586,
+        "D": 3.141592653589793,
+        "reynolds_number_wall": 550,
+        "adaptive_cfl": 0.1,
+        "step_length": 0.6,
+        "episode_length": 1000,
+        "local_obs_window": 1,
+        "local_reward_weight": 0.0,
+        "use_marl": true,
+        "C_smag": 0.0,
+        "use_van_driest": false,
+        "init_with_noise": true,
+        "dtype": "float32",
+        "load_initial_domain": true,
+        "load_domain_statistics": true,
+        "randomize_initial_state": true,
+        "enable_actions": true,
+        "differentiable": false
+      },
+      "variant_overrides": {
+        "reynolds_number_wall": 550
+      },
+      "sources": [
+        "src/fluidgym/__init__.py:278",
+        "src/fluidgym/envs/tcf/tcf_env.py:86"
+      ],
+      "initial_domain_id": "channel_flow3D_L6.28_Re550_Res128_Ref1",
+      "render_shape_xyz": [
+        256,
+        81,
+        128
+      ],
+      "native_cells_source_estimate": 1048576,
+      "snapshot_bytes_float32": 42467328,
+      "snapshot_fields": [
+        "velocity",
+        "pressure"
+      ]
+    },
+    "TCFLarge3D-both-easy-v0": {
+      "entry_point": "TCF3DBothEnv",
+      "family": "tcf",
+      "ndims": 3,
+      "config": {
+        "resolution_y": 65,
+        "resolution_x_z": 128,
+        "actor_size": 2,
+        "L": 6.283185307179586,
+        "D": 3.141592653589793,
+        "reynolds_number_wall": 180,
+        "adaptive_cfl": 0.1,
+        "step_length": 0.6,
+        "episode_length": 1000,
+        "local_obs_window": 1,
+        "local_reward_weight": 0.0,
+        "use_marl": true,
+        "C_smag": 0.0,
+        "use_van_driest": false,
+        "init_with_noise": true,
+        "dtype": "float32",
+        "load_initial_domain": true,
+        "load_domain_statistics": true,
+        "randomize_initial_state": true,
+        "enable_actions": true,
+        "differentiable": false
+      },
+      "variant_overrides": {
+        "reynolds_number_wall": 180
+      },
+      "sources": [
+        "src/fluidgym/__init__.py:285",
+        "src/fluidgym/envs/tcf/tcf_env.py:86"
+      ],
+      "initial_domain_id": "channel_flow3D_L6.28_Re180_Res128_Ref1",
+      "render_shape_xyz": [
+        256,
+        81,
+        128
+      ],
+      "native_cells_source_estimate": 1048576,
+      "snapshot_bytes_float32": 42467328,
+      "snapshot_fields": [
+        "velocity",
+        "pressure"
+      ]
+    },
+    "TCFLarge3D-both-medium-v0": {
+      "entry_point": "TCF3DBothEnv",
+      "family": "tcf",
+      "ndims": 3,
+      "config": {
+        "resolution_y": 65,
+        "resolution_x_z": 128,
+        "actor_size": 2,
+        "L": 6.283185307179586,
+        "D": 3.141592653589793,
+        "reynolds_number_wall": 330,
+        "adaptive_cfl": 0.1,
+        "step_length": 0.6,
+        "episode_length": 1000,
+        "local_obs_window": 1,
+        "local_reward_weight": 0.0,
+        "use_marl": true,
+        "C_smag": 0.0,
+        "use_van_driest": false,
+        "init_with_noise": true,
+        "dtype": "float32",
+        "load_initial_domain": true,
+        "load_domain_statistics": true,
+        "randomize_initial_state": true,
+        "enable_actions": true,
+        "differentiable": false
+      },
+      "variant_overrides": {
+        "reynolds_number_wall": 330
+      },
+      "sources": [
+        "src/fluidgym/__init__.py:292",
+        "src/fluidgym/envs/tcf/tcf_env.py:86"
+      ],
+      "initial_domain_id": "channel_flow3D_L6.28_Re330_Res128_Ref1",
+      "render_shape_xyz": [
+        256,
+        81,
+        128
+      ],
+      "native_cells_source_estimate": 1048576,
+      "snapshot_bytes_float32": 42467328,
+      "snapshot_fields": [
+        "velocity",
+        "pressure"
+      ]
+    },
+    "TCFLarge3D-both-hard-v0": {
+      "entry_point": "TCF3DBothEnv",
+      "family": "tcf",
+      "ndims": 3,
+      "config": {
+        "resolution_y": 65,
+        "resolution_x_z": 128,
+        "actor_size": 2,
+        "L": 6.283185307179586,
+        "D": 3.141592653589793,
+        "reynolds_number_wall": 550,
+        "adaptive_cfl": 0.1,
+        "step_length": 0.6,
+        "episode_length": 1000,
+        "local_obs_window": 1,
+        "local_reward_weight": 0.0,
+        "use_marl": true,
+        "C_smag": 0.0,
+        "use_van_driest": false,
+        "init_with_noise": true,
+        "dtype": "float32",
+        "load_initial_domain": true,
+        "load_domain_statistics": true,
+        "randomize_initial_state": true,
+        "enable_actions": true,
+        "differentiable": false
+      },
+      "variant_overrides": {
+        "reynolds_number_wall": 550
+      },
+      "sources": [
+        "src/fluidgym/__init__.py:299",
+        "src/fluidgym/envs/tcf/tcf_env.py:86"
+      ],
+      "initial_domain_id": "channel_flow3D_L6.28_Re550_Res128_Ref1",
+      "render_shape_xyz": [
+        256,
+        81,
+        128
+      ],
+      "native_cells_source_estimate": 1048576,
+      "snapshot_bytes_float32": 42467328,
+      "snapshot_fields": [
+        "velocity",
+        "pressure"
+      ]
+    },
+    "Airfoil2D-easy-v0": {
+      "entry_point": "AirfoilEnv2D",
+      "family": "airfoil",
+      "ndims": 2,
+      "config": {
+        "reynolds_number": 1000.0,
+        "dt": 0.05,
+        "step_length": 0.25,
+        "adaptive_cfl": 0.8,
+        "episode_length": 300,
+        "attack_angle_deg": 10.0,
+        "use_marl": false,
+        "dtype": "float32",
+        "load_initial_domain": true,
+        "load_domain_statistics": true,
+        "randomize_initial_state": true,
+        "enable_actions": true,
+        "differentiable": false
+      },
+      "variant_overrides": {
+        "reynolds_number": 1000.0
+      },
+      "sources": [
+        "src/fluidgym/__init__.py:309",
+        "src/fluidgym/envs/airfoil/airfoil_env_2d.py:10"
+      ],
+      "initial_domain_id": "airfoil_2D_Re1000",
+      "render_shape_xyz": [
+        600,
+        150
+      ],
+      "native_cells_source_estimate": null,
+      "snapshot_bytes_float32": 1080000,
+      "snapshot_fields": [
+        "velocity",
+        "pressure"
+      ]
+    },
+    "Airfoil2D-medium-v0": {
+      "entry_point": "AirfoilEnv2D",
+      "family": "airfoil",
+      "ndims": 2,
+      "config": {
+        "reynolds_number": 3000.0,
+        "dt": 0.05,
+        "step_length": 0.25,
+        "adaptive_cfl": 0.8,
+        "episode_length": 300,
+        "attack_angle_deg": 10.0,
+        "use_marl": false,
+        "dtype": "float32",
+        "load_initial_domain": true,
+        "load_domain_statistics": true,
+        "randomize_initial_state": true,
+        "enable_actions": true,
+        "differentiable": false
+      },
+      "variant_overrides": {
+        "reynolds_number": 3000.0
+      },
+      "sources": [
+        "src/fluidgym/__init__.py:316",
+        "src/fluidgym/envs/airfoil/airfoil_env_2d.py:10"
+      ],
+      "initial_domain_id": "airfoil_2D_Re3000",
+      "render_shape_xyz": [
+        600,
+        150
+      ],
+      "native_cells_source_estimate": null,
+      "snapshot_bytes_float32": 1080000,
+      "snapshot_fields": [
+        "velocity",
+        "pressure"
+      ]
+    },
+    "Airfoil2D-hard-v0": {
+      "entry_point": "AirfoilEnv2D",
+      "family": "airfoil",
+      "ndims": 2,
+      "config": {
+        "reynolds_number": 5000.0,
+        "dt": 0.05,
+        "step_length": 0.25,
+        "adaptive_cfl": 0.8,
+        "episode_length": 300,
+        "attack_angle_deg": 10.0,
+        "use_marl": false,
+        "dtype": "float32",
+        "load_initial_domain": true,
+        "load_domain_statistics": true,
+        "randomize_initial_state": true,
+        "enable_actions": true,
+        "differentiable": false
+      },
+      "variant_overrides": {
+        "reynolds_number": 5000.0
+      },
+      "sources": [
+        "src/fluidgym/__init__.py:323",
+        "src/fluidgym/envs/airfoil/airfoil_env_2d.py:10"
+      ],
+      "initial_domain_id": "airfoil_2D_Re5000",
+      "render_shape_xyz": [
+        600,
+        150
+      ],
+      "native_cells_source_estimate": null,
+      "snapshot_bytes_float32": 1080000,
+      "snapshot_fields": [
+        "velocity",
+        "pressure"
+      ]
+    },
+    "Airfoil3D-easy-v0": {
+      "entry_point": "AirfoilEnv3D",
+      "family": "airfoil",
+      "ndims": 3,
+      "config": {
+        "n_agents": 4,
+        "reynolds_number": 1000.0,
+        "dt": 0.05,
+        "adaptive_cfl": 0.8,
+        "step_length": 0.25,
+        "episode_length": 200,
+        "attack_angle_deg": 10.0,
+        "local_obs_window": 1,
+        "use_marl": false,
+        "local_reward_weight": 0.5,
+        "local_2d_obs": false,
+        "init_from_2d": true,
+        "dtype": "float32",
+        "load_initial_domain": true,
+        "load_domain_statistics": true,
+        "randomize_initial_state": true,
+        "enable_actions": true,
+        "differentiable": false
+      },
+      "variant_overrides": {
+        "reynolds_number": 1000.0
+      },
+      "sources": [
+        "src/fluidgym/__init__.py:333",
+        "src/fluidgym/envs/airfoil/airfoil_env_3d.py:28"
+      ],
+      "initial_domain_id": "airfoil_3D_Re1000",
+      "render_shape_xyz": [
+        600,
+        150,
+        150
+      ],
+      "native_cells_source_estimate": null,
+      "snapshot_bytes_float32": 216000000,
+      "snapshot_fields": [
+        "velocity",
+        "pressure"
+      ]
+    },
+    "Airfoil3D-medium-v0": {
+      "entry_point": "AirfoilEnv3D",
+      "family": "airfoil",
+      "ndims": 3,
+      "config": {
+        "n_agents": 4,
+        "reynolds_number": 3000.0,
+        "dt": 0.05,
+        "adaptive_cfl": 0.8,
+        "step_length": 0.25,
+        "episode_length": 200,
+        "attack_angle_deg": 10.0,
+        "local_obs_window": 1,
+        "use_marl": false,
+        "local_reward_weight": 0.5,
+        "local_2d_obs": false,
+        "init_from_2d": true,
+        "dtype": "float32",
+        "load_initial_domain": true,
+        "load_domain_statistics": true,
+        "randomize_initial_state": true,
+        "enable_actions": true,
+        "differentiable": false
+      },
+      "variant_overrides": {
+        "reynolds_number": 3000.0
+      },
+      "sources": [
+        "src/fluidgym/__init__.py:340",
+        "src/fluidgym/envs/airfoil/airfoil_env_3d.py:28"
+      ],
+      "initial_domain_id": "airfoil_3D_Re3000",
+      "render_shape_xyz": [
+        600,
+        150,
+        150
+      ],
+      "native_cells_source_estimate": null,
+      "snapshot_bytes_float32": 216000000,
+      "snapshot_fields": [
+        "velocity",
+        "pressure"
+      ]
+    },
+    "Airfoil3D-hard-v0": {
+      "entry_point": "AirfoilEnv3D",
+      "family": "airfoil",
+      "ndims": 3,
+      "config": {
+        "n_agents": 4,
+        "reynolds_number": 5000.0,
+        "dt": 0.05,
+        "adaptive_cfl": 0.8,
+        "step_length": 0.25,
+        "episode_length": 200,
+        "attack_angle_deg": 10.0,
+        "local_obs_window": 1,
+        "use_marl": false,
+        "local_reward_weight": 0.5,
+        "local_2d_obs": false,
+        "init_from_2d": true,
+        "dtype": "float32",
+        "load_initial_domain": true,
+        "load_domain_statistics": true,
+        "randomize_initial_state": true,
+        "enable_actions": true,
+        "differentiable": false
+      },
+      "variant_overrides": {
+        "reynolds_number": 5000.0
+      },
+      "sources": [
+        "src/fluidgym/__init__.py:347",
+        "src/fluidgym/envs/airfoil/airfoil_env_3d.py:28"
+      ],
+      "initial_domain_id": "airfoil_3D_Re5000",
+      "render_shape_xyz": [
+        600,
+        150,
+        150
+      ],
+      "native_cells_source_estimate": null,
+      "snapshot_bytes_float32": 216000000,
+      "snapshot_fields": [
+        "velocity",
+        "pressure"
+      ]
+    }
+  }
+}

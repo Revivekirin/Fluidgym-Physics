@@ -1,5 +1,7 @@
 # Physical parameter capabilities (read-only vs mutable)
 
+> Historical CylinderJet2D source audit. Current evidence: the user reports 25 passing CUDA-server tests (three real-environment tests); artifacts are not present here. Earlier “not run” statements describe the original authoring host only. See ENVIRONMENT_PHYSICS_INVENTORY.md and CHARACTERIZATION_WORKFLOW.md for the current complete scope. `env.time_passed` is nominal step-count time, not measured solver time; the new runner checks `env._sim.total_time`. Reset episodes must never be concatenated.
+
 Legend: **R** readable from a live env (private attribute, read-only here) · **C** settable only at construction · **Fixed** hard-coded upstream. None of the "R" paths has been executed yet (no CUDA in sandbox).
 
 | Quantity | Where | Status |

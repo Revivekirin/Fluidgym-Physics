@@ -6,7 +6,8 @@ requires-python = ">=3.10"
 dependencies = []          # core package is stdlib-only; FluidGym/torch are imported lazily and only on CUDA hosts
 
 [project.optional-dependencies]
-dev = ["pytest"]
+dev = ["pytest", "numpy", "matplotlib"]
+analysis = ["numpy", "matplotlib"]
 
 [project.scripts]
 fluidgym-physics = "fluidgym_physics.cli:main"

@@ -61,7 +61,8 @@ class ProvenanceRecord:
         if path.exists():
             raise FileExistsError(f"refusing to overwrite {path}")
         path.parent.mkdir(parents=True, exist_ok=True)
-        path.write_text(json.dumps(asdict(self), indent=2, sort_keys=True))
+        with path.open("x") as stream:
+            json.dump(asdict(self), stream, indent=2, sort_keys=True, allow_nan=False)
         return path
 
 

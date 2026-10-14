@@ -1,0 +1,225 @@
+{
+  "schema_version": 1,
+  "matrix_id": "nominal-physics-v1",
+  "upstream_commit": "50071140b73a2a917fb96d33522a769f903f8c27",
+  "review_status": "draft_not_authorized",
+  "mode": "test",
+  "action": "zero",
+  "protocols": [
+    "benchmark",
+    "extended"
+  ],
+  "replicates": [
+    {
+      "label": "repeat-a",
+      "seed": 0,
+      "randomize": false
+    },
+    {
+      "label": "repeat-b",
+      "seed": 0,
+      "randomize": false
+    },
+    {
+      "label": "ic-1",
+      "seed": 11,
+      "randomize": true
+    },
+    {
+      "label": "ic-2",
+      "seed": 22,
+      "randomize": true
+    },
+    {
+      "label": "ic-3",
+      "seed": 33,
+      "randomize": true
+    }
+  ],
+  "budget": {
+    "max_wall_hours": 240,
+    "max_output_gib": 100,
+    "minimum_free_gib": 5,
+    "max_gpu_allocated_gib": 20,
+    "timing_margin": 1.5,
+    "note": "Uncalibrated planning scenarios, not GPU benchmarks; includes 50% time margin, excludes dataset storage. Review on target GPU before execution."
+  },
+  "environments": [
+    {
+      "env_id": "CylinderJet2D-easy-v0",
+      "extended_steps": 2400,
+      "discard_steps": 400,
+      "snapshot_stride": 20,
+      "seconds_per_step_scenario": [
+        0.05,
+        2.0
+      ]
+    },
+    {
+      "env_id": "CylinderJet2D-medium-v0",
+      "extended_steps": 2400,
+      "discard_steps": 400,
+      "snapshot_stride": 20,
+      "seconds_per_step_scenario": [
+        0.05,
+        2.0
+      ]
+    },
+    {
+      "env_id": "CylinderJet2D-hard-v0",
+      "extended_steps": 2400,
+      "discard_steps": 400,
+      "snapshot_stride": 20,
+      "seconds_per_step_scenario": [
+        0.05,
+        2.0
+      ]
+    },
+    {
+      "env_id": "CylinderRot2D-easy-v0",
+      "extended_steps": 2400,
+      "discard_steps": 400,
+      "snapshot_stride": 20,
+      "seconds_per_step_scenario": [
+        0.05,
+        2.0
+      ]
+    },
+    {
+      "env_id": "CylinderRot2D-medium-v0",
+      "extended_steps": 2400,
+      "discard_steps": 400,
+      "snapshot_stride": 20,
+      "seconds_per_step_scenario": [
+        0.05,
+        2.0
+      ]
+    },
+    {
+      "env_id": "CylinderRot2D-hard-v0",
+      "extended_steps": 2400,
+      "discard_steps": 400,
+      "snapshot_stride": 20,
+      "seconds_per_step_scenario": [
+        0.05,
+        2.0
+      ]
+    },
+    {
+      "env_id": "RBC2D-easy-v0",
+      "extended_steps": 1200,
+      "discard_steps": 200,
+      "snapshot_stride": 20,
+      "seconds_per_step_scenario": [
+        0.05,
+        2.0
+      ]
+    },
+    {
+      "env_id": "RBC2D-medium-v0",
+      "extended_steps": 1200,
+      "discard_steps": 200,
+      "snapshot_stride": 20,
+      "seconds_per_step_scenario": [
+        0.05,
+        2.0
+      ]
+    },
+    {
+      "env_id": "RBC2D-hard-v0",
+      "extended_steps": 1200,
+      "discard_steps": 200,
+      "snapshot_stride": 20,
+      "seconds_per_step_scenario": [
+        0.05,
+        2.0
+      ]
+    },
+    {
+      "env_id": "RBC2D-wide-easy-v0",
+      "extended_steps": 1200,
+      "discard_steps": 200,
+      "snapshot_stride": 20,
+      "seconds_per_step_scenario": [
+        0.05,
+        2.0
+      ]
+    },
+    {
+      "env_id": "RBC2D-wide-medium-v0",
+      "extended_steps": 1200,
+      "discard_steps": 200,
+      "snapshot_stride": 20,
+      "seconds_per_step_scenario": [
+        0.05,
+        2.0
+      ]
+    },
+    {
+      "env_id": "RBC2D-wide-hard-v0",
+      "extended_steps": 1200,
+      "discard_steps": 200,
+      "snapshot_stride": 20,
+      "seconds_per_step_scenario": [
+        0.05,
+        2.0
+      ]
+    },
+    {
+      "env_id": "Airfoil2D-easy-v0",
+      "extended_steps": 2400,
+      "discard_steps": 400,
+      "snapshot_stride": 20,
+      "seconds_per_step_scenario": [
+        0.1,
+        5.0
+      ]
+    },
+    {
+      "env_id": "Airfoil2D-medium-v0",
+      "extended_steps": 2400,
+      "discard_steps": 400,
+      "snapshot_stride": 20,
+      "seconds_per_step_scenario": [
+        0.1,
+        5.0
+      ]
+    },
+    {
+      "env_id": "Airfoil2D-hard-v0",
+      "extended_steps": 2400,
+      "discard_steps": 400,
+      "snapshot_stride": 20,
+      "seconds_per_step_scenario": [
+        0.1,
+        5.0
+      ]
+    }
+  ],
+  "deferred_3d": [
+    "CylinderJet3D-easy-v0",
+    "CylinderJet3D-medium-v0",
+    "CylinderJet3D-hard-v0",
+    "RBC3D-easy-v0",
+    "RBC3D-medium-v0",
+    "RBC3D-hard-v0",
+    "RBC3D-wide-easy-v0",
+    "RBC3D-wide-medium-v0",
+    "RBC3D-wide-hard-v0",
+    "TCFSmall3D-bottom-easy-v0",
+    "TCFSmall3D-bottom-medium-v0",
+    "TCFSmall3D-bottom-hard-v0",
+    "TCFSmall3D-both-easy-v0",
+    "TCFSmall3D-both-medium-v0",
+    "TCFSmall3D-both-hard-v0",
+    "TCFLarge3D-bottom-easy-v0",
+    "TCFLarge3D-bottom-medium-v0",
+    "TCFLarge3D-bottom-hard-v0",
+    "TCFLarge3D-both-easy-v0",
+    "TCFLarge3D-both-medium-v0",
+    "TCFLarge3D-both-hard-v0",
+    "Airfoil3D-easy-v0",
+    "Airfoil3D-medium-v0",
+    "Airfoil3D-hard-v0"
+  ]
+}

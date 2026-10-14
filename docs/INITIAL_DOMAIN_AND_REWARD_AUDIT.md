@@ -1,5 +1,7 @@
 # Initial-domain and reward audit
 
+> Historical CylinderJet2D source audit. Current evidence: the user reports 25 passing CUDA-server tests (three real-environment tests); artifacts are not present here. Earlier “not run” statements describe the original authoring host only. See ENVIRONMENT_PHYSICS_INVENTORY.md and CHARACTERIZATION_WORKFLOW.md for the current complete scope. `env.time_passed` is nominal step-count time, not measured solver time; the new runner checks `env._sim.total_time`. Reset episodes must never be concatenated.
+
 ## Initial domains
 - Count/modes: `N_INITIAL_DOMAINS = 10` (`fluid_env.py:58`); modes train/val/test with generation seeds `MODE_SEEDS=[100,200,300]` (61) and per-domain seed `mode_seed + i` (`init`, ~1140-1156). **[SRC]**
 - Identity: `initial_domain_id = cylinder_{ndims}D_Re{int(Re)}_Res{res}` (`cylinder_env_base.py:822-828`). **Viscosity is not a separate key**: any change of Re maps to a different directory; any other physical change (e.g. inlet, actuator) would silently reuse the same files. **[SRC]**
