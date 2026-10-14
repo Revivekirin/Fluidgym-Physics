@@ -21,3 +21,9 @@ Tests exercise all CPU CLI entry points, inventory coverage, strict matrix rejec
 The earlier source maps remain as historical CylinderJet2D audits with prominent evidence updates. The current authoritative workflow is [CHARACTERIZATION_WORKFLOW.md](CHARACTERIZATION_WORKFLOW.md); the family inventory is [ENVIRONMENT_PHYSICS_INVENTORY.md](ENVIRONMENT_PHYSICS_INVENTORY.md).
 
 Outstanding scientific evidence: real new-runner execution, dataset stationarity/lineage, calibrated compute budget, numerical residual/divergence/flux audits, grid/time convergence, sufficiently sampled physical variability and controlled interventions. No comprehensive physical characterization or aggregate physical finding is claimed.
+
+## Subsequent server report: import-path blocker
+
+The supplied server log reports **51 passed, 3 errors** under Python 3.12. All three errors occur in the shared CUDA fixture at `_installed_upstream`, before environment construction or stepping. The preflight command stops at the same check. The original message omitted the actual import path, so the log alone cannot distinguish an absent package from a wheel or another checkout. This does not invalidate the earlier reported 25-test nominal run; the new provenance guard adds an installation requirement.
+
+The error now reports interpreter, actual/expected import paths and the editable-install command. The workflow documents installing upstream separately using the existing CUDA toolchain, without replacing dependencies or downloading datasets. Server installation repair and subsequent runtime verification remain pending.

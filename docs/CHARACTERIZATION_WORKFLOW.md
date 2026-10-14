@@ -57,6 +57,19 @@ fluidgym-physics plan --matrix experiments/characterization.v1.json
 python -m pytest -q
 ```
 
+Installing `fluidgym-physics` does **not** install its FluidGym submodule. On a CUDA host with the already configured torch 2.9.* and CUDA build toolchain, install the pinned upstream into the same active environment, from this repository root:
+
+```bash
+python -c "import sys, importlib.util; s=importlib.util.find_spec('fluidgym'); print('Python:', sys.executable); print('FluidGym:', None if s is None else s.origin)"
+MAX_JOBS=1 python -m pip install --no-build-isolation --no-deps -e ./third_party/fluidgym
+python -m fluidgym_physics.cli verify-upstream
+python -m fluidgym_physics.cli preflight --matrix experiments/characterization.v1.json
+```
+
+This may rebuild PISOtorch; it does not download initial-domain datasets or run CFD. `--no-build-isolation` uses the configured torch/toolchain, and `--no-deps` leaves existing runtime dependencies unchanged. Build prerequisites (including setuptools/wheel and a compatible CUDA compiler) must already be installed. Do not copy compiled extensions from an unrelated checkout or bypass the import check with PYTHONPATH. If the import still resolves elsewhere, inspect existing PYTHONPATH entries and the CLI interpreter. Calling `python -m fluidgym_physics.cli` ensures the active interpreter is used.
+
+The import error reports actual and expected paths. A wheel installation, a missing package, or an editable install pointing at a different checkout can all trigger it; the error alone is not evidence that CUDA or the CFD solver failed.
+
 On the CUDA host, preflight can check dependencies, import identity, compiled-backend hash and all required local data without constructing environments or advancing CFD:
 
 ```bash

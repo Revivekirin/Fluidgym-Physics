@@ -229,3 +229,24 @@ def test_cpu_cli_commands(args,capsys):
     from fluidgym_physics.cli import main
     assert main(args)==0
     assert isinstance(json.loads(capsys.readouterr().out),dict)
+
+
+@pytest.mark.parametrize('origin', [None, '/different/checkout/fluidgym/__init__.py'])
+def test_import_guard_explains_actual_path_and_repair(monkeypatch, origin):
+    import fluidgym_physics.runner as runner
+    from fluidgym_physics.errors import UpstreamIntegrityError
+    monkeypatch.setattr(runner.importlib.util, 'find_spec',
+                        lambda name: None if origin is None else SimpleNamespace(origin=origin))
+    with pytest.raises(UpstreamIntegrityError) as exc:
+        runner._installed_upstream()
+    message = str(exc.value)
+    assert f'actual: {origin or "not found"}' in message
+    assert 'expected:' in message and 'Python:' in message
+    assert '--no-build-isolation --no-deps -e ./third_party/fluidgym' in message
+
+
+def test_import_guard_accepts_pinned_checkout(monkeypatch):
+    import fluidgym_physics.runner as runner
+    monkeypatch.setattr(runner.importlib.util, 'find_spec', lambda name: SimpleNamespace(
+        origin=str(runner.UPSTREAM_DIR/'src/fluidgym/__init__.py')))
+    runner._installed_upstream()

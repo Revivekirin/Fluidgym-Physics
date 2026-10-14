@@ -67,8 +67,16 @@ def validate_input_file(path):
 def _installed_upstream():
     spec = importlib.util.find_spec('fluidgym')
     expected = (UPSTREAM_DIR / 'src/fluidgym/__init__.py').resolve()
-    if spec is None or not spec.origin or Path(spec.origin).resolve() != expected:
-        raise UpstreamIntegrityError(f'Install pinned checkout editable; import must resolve to {expected}')
+    actual = Path(spec.origin).resolve() if spec is not None and spec.origin else None
+    if actual != expected:
+        raise UpstreamIntegrityError(
+            'FluidGym import does not resolve to the verified pinned checkout. '
+            f'Python: {sys.executable}; actual: {actual or "not found"}; expected: {expected}. '
+            'From the Fluidgym-Physics repository root, using the active CUDA environment, run: '
+            'MAX_JOBS=1 python -m pip install --no-build-isolation --no-deps -e ./third_party/fluidgym. '
+            'This builds the CUDA extension using the existing torch/toolchain. '
+            'If the path still differs, check PYTHONPATH and whether the CLI uses the same Python.'
+        )
 
 
 def preflight(matrix):
