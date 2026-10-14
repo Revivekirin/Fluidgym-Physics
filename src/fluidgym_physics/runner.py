@@ -21,17 +21,47 @@ from .provenance import collect_platform
 from .upstream import REPO_ROOT, UPSTREAM_DIR, verify_upstream
 
 
-def local_inputs(root, item, mode, randomize):
+def _input_paths(root, item, mode, randomize):
     directory = Path(root) / item['initial_domain_id']
     files = [directory / 'domain_statistics.json']
     for idx in range(10) if randomize else [0]:
         files.extend(directory / str(idx) / f'{mode}.{ext}' for ext in ('json','npz'))
         optional = directory / str(idx) / f'{mode}_uncontrolled_episode.csv'
         if optional.exists(): files.append(optional)
+    return files
+
+
+def local_inputs(root, item, mode, randomize):
+    files = _input_paths(root, item, mode, randomize)
     missing = [str(p) for p in files if not p.is_file() or p.stat().st_size == 0]
     if missing:
         raise MissingInitialDomainError('Missing local inputs; no download/generation allowed: '+', '.join(missing))
     return files
+
+
+def input_report(matrix, root):
+    """Whole-matrix local availability report; no CUDA imports or network access."""
+    root = Path(root).expanduser().resolve()
+    reg = registrations()
+    datasets = {}
+    for row in matrix['environments']:
+        item = reg[row['env_id']]
+        domain_id = item['initial_domain_id']
+        if domain_id not in datasets:
+            paths = _input_paths(root, item, matrix['mode'], True)
+            missing = [str(p.relative_to(root)) for p in paths
+                       if not p.is_file() or p.stat().st_size == 0]
+            datasets[domain_id] = {
+                'env_ids': [], 'missing_files': missing,
+                'present_bytes': sum(p.stat().st_size for p in paths if p.is_file()),
+                'availability': 'missing_or_empty' if missing else 'present_not_validated',
+            }
+        datasets[domain_id]['env_ids'].append(row['env_id'])
+    return {'schema_version': 1, 'data_root': str(root), 'mode': matrix['mode'],
+            'dataset_count': len(datasets),
+            'missing_file_count': sum(len(d['missing_files']) for d in datasets.values()),
+            'datasets': datasets,
+            'note': 'Availability only. Preflight checks archive structure and hashes. No downloads or CFD.'}
 
 
 def validate_input_file(path):
@@ -90,6 +120,15 @@ def preflight(matrix):
         raise ValueError('UPSTREAM.lock requires torch 2.9.*')
     import fluidgym
     reg = registrations()
+    report = input_report(matrix, fluidgym.config.initial_domains_path)
+    if report['missing_file_count']:
+        summary = '; '.join(f"{name}: {len(d['missing_files'])} missing/empty files"
+                            for name, d in report['datasets'].items() if d['missing_files'])
+        raise MissingInitialDomainError(
+            f"Missing inputs across the full matrix at {report['data_root']}: {summary}. "
+            'No download/generation performed. Use input-report --matrix <matrix.json> '
+            '--data-root <initial_domains-directory> for the complete file list.'
+        )
     paths = set()
     for row in matrix['environments']:
         paths.update(local_inputs(fluidgym.config.initial_domains_path, reg[row['env_id']], matrix['mode'], True))

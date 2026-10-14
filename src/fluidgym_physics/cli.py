@@ -17,9 +17,11 @@ def main(argv: list[str] | None = None) -> int:
     s = sub.add_parser("inspect-config")
     s.add_argument("--env-id", default="CylinderJet2D-easy-v0")
     sub.add_parser("inventory")
-    for name in ("plan", "preflight", "run"):
+    for name in ("plan", "input-report", "preflight", "run"):
         command = sub.add_parser(name)
         command.add_argument("--matrix", required=True)
+        if name == "input-report":
+            command.add_argument("--data-root", required=True)
         if name == "run":
             command.add_argument("--output", required=True)
             command.add_argument("--reviewed-sha256", required=True)
@@ -35,12 +37,15 @@ def main(argv: list[str] | None = None) -> int:
         elif args.cmd == "inventory":
             from .inventory import inventory
             print(json.dumps(inventory(), indent=2))
-        elif args.cmd in ("plan", "preflight", "run"):
+        elif args.cmd in ("plan", "input-report", "preflight", "run"):
             from .characterization import load_matrix, estimate, digest
             verify_upstream()
             matrix = load_matrix(args.matrix)
             if args.cmd == "plan":
                 result = {"matrix_sha256": digest(args.matrix), **estimate(matrix)}
+            elif args.cmd == "input-report":
+                from .runner import input_report
+                result = input_report(matrix, args.data_root)
             elif args.cmd == "preflight":
                 from .runner import preflight
                 result = preflight(matrix)

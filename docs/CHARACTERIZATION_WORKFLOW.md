@@ -96,3 +96,19 @@ The review gate reflects the user's campaign execution policy. There is no per-e
 The runner checks native velocity/pressure/temperature each step, loaded domain/block viscosity, RBC diffusivity, finite observations/rewards/metrics, solver clock increments and termination semantics. A Python guard promotes solver False returns to exceptions. Residual histories, solver fallback event counts and native divergence are marked missing, not zero. Snapshot arrays are resampled and not a conservative native-state restart format.
 
 No physical trajectories are committed with this implementation. Synthetic tests exercise analysis and failure handling, not fluid mechanics. Aggregate physical findings and regime conclusions remain pending the reviewed CUDA campaign.
+
+## Missing inputs across the matrix
+
+A successful import-path check does not imply that every environment dataset is installed. The 15 scheduled variants share **12 unique dataset directories** (cylinder jet/rotation share states). With test mode and randomized replicates, each requires statistics plus ten JSON/NPZ pairs: **252 required files**, plus optional baseline CSVs.
+
+Report all missing or empty files in one read-only, CUDA-free pass:
+
+```bash
+python -m fluidgym_physics.cli input-report \
+  --matrix experiments/characterization.v1.json \
+  --data-root /home/jhkim/.local/share/FluidGym/initial_domains
+```
+
+Substitute the server's actual data directory. `--data-root` only selects the directory to inspect; it does not change FluidGym's runtime configuration. Present files are labeled `present_not_validated` until full preflight validates them. Preflight now summarizes missing files for every unique dataset before stopping, rather than exposing only the first missing variant.
+
+If data already exists elsewhere, locate it and configure the runtime data root consistently before proceeding. Otherwise, dataset acquisition must be an explicit operation using the official dataset repository; neither command downloads nor regenerates states. This report does not authorize a CFD campaign or prove that available initial states are physically adequate.

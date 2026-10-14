@@ -27,3 +27,7 @@ Outstanding scientific evidence: real new-runner execution, dataset stationarity
 The supplied server log reports **51 passed, 3 errors** under Python 3.12. All three errors occur in the shared CUDA fixture at `_installed_upstream`, before environment construction or stepping. The preflight command stops at the same check. The original message omitted the actual import path, so the log alone cannot distinguish an absent package from a wheel or another checkout. This does not invalidate the earlier reported 25-test nominal run; the new provenance guard adds an installation requirement.
 
 The error now reports interpreter, actual/expected import paths and the editable-install command. The workflow documents installing upstream separately using the existing CUDA toolchain, without replacing dependencies or downloading datasets. Server installation repair and subsequent runtime verification remain pending.
+
+## Subsequent server report: local datasets
+
+The server now resolves FluidGym to the pinned submodule and passes the import check. Preflight stops on missing/empty Re250 cylinder statistics and all ten test JSON/NPZ pairs at `/home/jhkim/.local/share/FluidGym/initial_domains`. The old fail-fast listing does not establish availability of later datasets. Added a CUDA-free `input-report` command and whole-matrix missing-input summary, deduplicating 15 environment rows into 12 dataset directories. No data was downloaded or regenerated; runtime characterization remains pending.

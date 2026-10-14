@@ -250,3 +250,29 @@ def test_import_guard_accepts_pinned_checkout(monkeypatch):
     monkeypatch.setattr(runner.importlib.util, 'find_spec', lambda name: SimpleNamespace(
         origin=str(runner.UPSTREAM_DIR/'src/fluidgym/__init__.py')))
     runner._installed_upstream()
+
+
+def test_input_report_covers_all_datasets_and_deduplicates(tmp_path):
+    from fluidgym_physics.runner import input_report
+    matrix = load_matrix(MATRIX)
+    report = input_report(matrix, tmp_path)
+    assert report['dataset_count'] == 12
+    assert report['missing_file_count'] == 252
+    dataset = report['datasets']['cylinder_2D_Re100_Res24']
+    assert len(dataset['env_ids']) == 2
+    for name in dataset['missing_files']:
+        path = tmp_path/name
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text('present, not yet validated')
+    report = input_report(matrix, tmp_path)
+    assert report['missing_file_count'] == 231
+    assert report['datasets']['cylinder_2D_Re100_Res24']['availability'] == 'present_not_validated'
+    (tmp_path/'cylinder_2D_Re100_Res24/0/test.npz').write_bytes(b'')
+    assert input_report(matrix,tmp_path)['missing_file_count'] == 232
+
+
+def test_input_report_cli(tmp_path,capsys):
+    from fluidgym_physics.cli import main
+    assert main(['input-report','--matrix',str(MATRIX),'--data-root',str(tmp_path)]) == 0
+    result = json.loads(capsys.readouterr().out)
+    assert result['missing_file_count'] == 252
