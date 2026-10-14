@@ -1,0 +1,25 @@
+[project]
+name = "fluidgym-physics"
+version = "0.0.1"
+description = "Physics-first inspection of the official FluidGym benchmark (CylinderJet2D)"
+requires-python = ">=3.10"
+dependencies = []          # core package is stdlib-only; FluidGym/torch are imported lazily and only on CUDA hosts
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.scripts]
+fluidgym-physics = "fluidgym_physics.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+  "cuda: needs a CUDA GPU, the compiled PISOtorch extension and locally present initial domains",
+]

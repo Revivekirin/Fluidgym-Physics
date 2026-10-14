@@ -1,0 +1,3 @@
+[submodule "third_party/fluidgym"]
+	path = third_party/fluidgym
+	url = https://github.com/safe-autonomous-systems/fluidgym

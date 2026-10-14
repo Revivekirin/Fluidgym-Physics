@@ -1,0 +1,13 @@
+# Pinned official FluidGym revision. Strategy: git submodule at third_party/fluidgym (see .gitmodules).
+# Never bump without an explicit decision and comparison against the revision pinned in Fluidgym-RL.
+url = https://github.com/safe-autonomous-systems/fluidgym
+commit = 50071140b73a2a917fb96d33522a769f903f8c27
+src_tree = 8a8476b966e496341676ea36384589028f4dc450
+describe = v0.1.2-7-g5007114
+# Declared upstream dependency pins (pyproject.toml of that commit):
+dep.torch = ==2.9.*
+dep.python = >=3.10,<3.14
+dep.gymnasium = unpinned (experiments extra: ==1.2.1)
+dep.numpy = unpinned (experiments extra: ==2.2.6)
+# Fluidgym-RL pinned revision: NOT COMPARED (that repo is not available in the authoring sandbox)
+fluidgym_rl_pinned_commit = UNKNOWN
