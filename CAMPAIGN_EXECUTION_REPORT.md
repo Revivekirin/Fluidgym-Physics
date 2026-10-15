@@ -76,3 +76,5 @@ bash experiments/run-approved-primary.sh results/preparation-20261014T115019Z
 The wrapper refuses failed readiness checks before launching CFD. Actual campaign results remain pending operator execution and returned artifacts.
 
 Current audit validation: full CPU suite 97 passed / 3 CUDA-dependent skipped; final focused time-axis and subprocess suite 16 passed. Shell syntax and diff whitespace checks passed. See docs/TIME_AXIS_AND_EXECUTION_VALIDATION.md for source trace, exact commands, and remaining supervisor/NFS/SIGKILL limits. No CFD launched.
+
+Launcher correction: the two reported `FG_EXEC: unbound variable` attempts failed before invoking the Python runner. The removed preflight/approval verification block and unique-directory initialization have been restored. Three actual-launcher CPU regression tests pass (downstream CFD replaced by a stub); no new CFD or approval creation occurred. See the validation audit for the exact editing failure and coverage gap.

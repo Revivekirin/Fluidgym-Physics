@@ -89,3 +89,7 @@ The launcher uses the existing approval, revalidates the same matrix/inputs, gen
 - No GPU integration, real long-run supervisor reliability, or physical PSD from the server trajectories was tested locally. Synthetic tests validate bookkeeping/analysis, not CFD accuracy.
 
 The shell `tee` process substitution was removed: otherwise terminal SIGINT could kill tee and break the supervisor's output pipe. The supervisor now writes launcher.log directly and independently displays progress. Its status/progress files are not a guarantee against filesystem loss.
+
+## Launcher regression correction
+
+Operator execution exposed `FG_EXEC: unbound variable` before any runner launch. The prior automated edit matched the substring `nvidia-smi >` inside `command -v nvidia-smi >/dev/null`, accidentally removing the approval/input gate and `mktemp` initialization along with the intended old telemetry block. Shell syntax and supervisor-unit tests did not detect this integration error. The complete gate and exclusive execution-directory creation are restored. Three new CPU tests execute the actual bash launcher and actual approval/input gate with only the downstream CFD/analysis commands replaced: unique output across two launches, changed-input rejection before launch, and no analysis after a failed child. All three pass. These two operator attempts did not launch CFD. Existing approval and results are unchanged.
