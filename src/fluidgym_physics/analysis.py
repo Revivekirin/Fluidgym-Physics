@@ -18,6 +18,7 @@ def analyze(campaign, output):
     if output.exists(): raise FileExistsError('analysis output must be new')
     output.mkdir(parents=True)
     reg=registrations()
+    campaign_provenance = json.loads((campaign/"provenance.json").read_text()) if (campaign/"provenance.json").exists() else {}
     results=[]; excluded=[]; series={}
     for directory in sorted(p for p in campaign.iterdir() if p.is_dir()):
         status_path=directory/'status.json'
@@ -33,7 +34,10 @@ def analyze(campaign, output):
         if len(records)!=run['steps'] or [r['step'] for r in records]!=list(range(1,run['steps']+1)):
             raise ValueError('incomplete/discontinuous trajectory')
         retained=records[run['discard_steps']:]
-        t=[r['elapsed_solver_time'] for r in retained]
+        from .time_axis import validated_axis
+        provenance = json.loads((directory/'provenance.json').read_text()) if (directory/'provenance.json').exists() else {}
+        axis, axis_info = validated_axis(records, run, provenance, campaign_provenance)
+        t=axis[run['discard_steps']:]
         family=reg[run['env_id']]['family']
         keys={'cylinder':['drag','lift'],'airfoil':['drag','lift','lift_to_drag'],
               'rbc':['nusselt','temperature_min','temperature_max','temperature_volume_mean','kinetic_energy_volume_mean']}[family]
@@ -47,19 +51,25 @@ def analyze(campaign, output):
             # Sensitivity to an additional quarter-window exclusion; no automatic stationarity declaration.
             start=len(values)//4
             metrics[key]['later_window_mean']=summarize(t[start:],values[start:])['mean']
-            ax.plot(t,values,lw=0.6); ax.set_ylabel(key); ax.set_xlabel('elapsed solver time')
+            ax.plot(t,values,lw=0.6); ax.set_ylabel(key); ax.set_xlabel(axis_info['basis'])
         fig.suptitle(directory.name); fig.tight_layout()
         fig.savefig(output/f'{directory.name}.png',dpi=130); plt.close(fig)
         spectrum=None
         if family=='cylinder' and run['protocol']=='extended':
-            spectrum=cylinder_spectrum(t,[r['lift'] for r in retained])
+            if axis_info['validated_uniform']:
+                spectrum=cylinder_spectrum(t,[r['lift'] for r in retained])
+            else:
+                spectrum={'frequency':[], 'psd':[], 'candidate_strouhal_D1_U1':None,
+                          'withheld_reasons':['uniform integration schedule not validated: '+axis_info.get('reason','unknown')],
+                          'interpretation':'No interpolation or resampling applied.'}
+            spectrum['time_axis'] = axis_info
             if spectrum['frequency']:
                 fig,ax=plt.subplots(figsize=(7,3))
                 ax.plot(spectrum['frequency'][1:],spectrum['psd'][1:]); ax.set(xlabel='frequency (D/U units)',ylabel='lift PSD')
                 fig.tight_layout(); fig.savefig(output/f'{directory.name}__spectrum.png',dpi=130); plt.close(fig)
         row={'run_id':directory.name,'env_id':run['env_id'],'protocol':run['protocol'],
              'randomize':run['randomize'],'seed':run['seed'],'metrics':metrics,
-             'unavailable':unavailable,'spectrum':spectrum}
+             'unavailable':unavailable,'spectrum':spectrum,'time_axis':axis_info}
         results.append(row); series[directory.name]=(run,records)
     comparisons=[]
     for eid in reg:

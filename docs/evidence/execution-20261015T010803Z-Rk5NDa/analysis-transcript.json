@@ -1,0 +1,885 @@
+{
+  "campaign": "/nfs4/jhkim/repos/Fluidgym-Physics/results/preparation-20261014T115019Z/execution-20261015T010803Z-Rk5NDa/campaign",
+  "comparisons": [
+    {
+      "env_id": "CylinderJet2D-easy-v0",
+      "kind": "deterministic_repeatability",
+      "max_absolute_difference": {
+        "drag": 0.0,
+        "lift": 0.0
+      },
+      "protocol": "benchmark",
+      "runs": [
+        "CylinderJet2D-easy-v0__benchmark__repeat-a",
+        "CylinderJet2D-easy-v0__benchmark__repeat-b"
+      ]
+    },
+    {
+      "env_id": "CylinderJet2D-easy-v0",
+      "kind": "randomized_initial_condition_variability",
+      "per_run_means": {
+        "drag": [
+          3.328191900253296,
+          3.3276724606752395,
+          3.328635513782501
+        ],
+        "lift": [
+          -0.07197411330998875,
+          -0.0765763716888614,
+          -0.08828550652833655
+        ]
+      },
+      "protocol": "benchmark",
+      "runs": [
+        "CylinderJet2D-easy-v0__benchmark__ic-1",
+        "CylinderJet2D-easy-v0__benchmark__ic-2",
+        "CylinderJet2D-easy-v0__benchmark__ic-3"
+      ]
+    },
+    {
+      "env_id": "CylinderJet2D-easy-v0",
+      "kind": "deterministic_repeatability",
+      "max_absolute_difference": {
+        "drag": 0.0,
+        "lift": 0.0
+      },
+      "protocol": "extended",
+      "runs": [
+        "CylinderJet2D-easy-v0__extended__repeat-a",
+        "CylinderJet2D-easy-v0__extended__repeat-b"
+      ]
+    },
+    {
+      "env_id": "CylinderJet2D-easy-v0",
+      "kind": "randomized_initial_condition_variability",
+      "per_run_means": {
+        "drag": [
+          3.3280548043483957,
+          3.3280529830187047,
+          3.328056142222141
+        ],
+        "lift": [
+          -0.020291867232027458,
+          -0.020112696056016514,
+          -0.01944343055455701
+        ]
+      },
+      "protocol": "extended",
+      "runs": [
+        "CylinderJet2D-easy-v0__extended__ic-1",
+        "CylinderJet2D-easy-v0__extended__ic-2",
+        "CylinderJet2D-easy-v0__extended__ic-3"
+      ]
+    },
+    {
+      "env_id": "CylinderJet2D-medium-v0",
+      "kind": "deterministic_repeatability",
+      "max_absolute_difference": {
+        "drag": 0.0,
+        "lift": 0.0
+      },
+      "protocol": "benchmark",
+      "runs": [
+        "CylinderJet2D-medium-v0__benchmark__repeat-a",
+        "CylinderJet2D-medium-v0__benchmark__repeat-b"
+      ]
+    },
+    {
+      "env_id": "CylinderJet2D-medium-v0",
+      "kind": "randomized_initial_condition_variability",
+      "per_run_means": {
+        "drag": [
+          3.157773926971128,
+          3.1577683615263155,
+          3.1583074486027387
+        ],
+        "lift": [
+          -0.0196424282135886,
+          -0.02723773349360437,
+          -0.024825959373406502
+        ]
+      },
+      "protocol": "benchmark",
+      "runs": [
+        "CylinderJet2D-medium-v0__benchmark__ic-1",
+        "CylinderJet2D-medium-v0__benchmark__ic-2",
+        "CylinderJet2D-medium-v0__benchmark__ic-3"
+      ]
+    }
+  ],
+  "excluded": [
+    {
+      "reason": "interrupted: no terminal status",
+      "run": "CylinderJet2D-medium-v0__extended__repeat-a"
+    }
+  ],
+  "interpretation": "Descriptive statistics only. Four contiguous block means and discard sensitivity do not establish stationarity, independence, bifurcation, chaos, or turbulence.",
+  "schema_version": 1,
+  "trajectories": [
+    {
+      "env_id": "CylinderJet2D-easy-v0",
+      "metrics": {
+        "drag": {
+          "block_means": [
+            3.325447106361389,
+            3.3277966499328615,
+            3.331851840019226,
+            3.327672004699707
+          ],
+          "estimator": "equal-weight sample moments",
+          "half_mean_difference": 0.0031400442123414862,
+          "later_window_mean": 3.329106831550598,
+          "max": 3.3699278831481934,
+          "mean": 3.328191900253296,
+          "min": 3.2878355979919434,
+          "rms": 3.328308649060153,
+          "samples": 80,
+          "sampling": "uniform_recorded_solver_time",
+          "std": 0.02787720389454458
+        },
+        "lift": {
+          "block_means": [
+            -0.1287144798785448,
+            -0.11503724548965692,
+            0.2215785440057516,
+            -0.2657232718775049
+          ],
+          "estimator": "equal-weight sample moments",
+          "half_mean_difference": 0.09980349874822422,
+          "later_window_mean": -0.053060657787136735,
+          "max": 1.206052541732788,
+          "mean": -0.07197411330998875,
+          "min": -1.2487350702285767,
+          "rms": 0.8692712090171266,
+          "samples": 80,
+          "sampling": "uniform_recorded_solver_time",
+          "std": 0.8662864202094697
+        }
+      },
+      "protocol": "benchmark",
+      "randomize": true,
+      "run_id": "CylinderJet2D-easy-v0__benchmark__ic-1",
+      "seed": 11,
+      "spectrum": null,
+      "unavailable": {}
+    },
+    {
+      "env_id": "CylinderJet2D-easy-v0",
+      "metrics": {
+        "drag": {
+          "block_means": [
+            3.324429178237915,
+            3.3265533804893495,
+            3.3315585613250733,
+            3.3281487226486206
+          ],
+          "estimator": "equal-weight sample moments",
+          "half_mean_difference": 0.004362362623214544,
+          "later_window_mean": 3.3287535548210143,
+          "max": 3.368600368499756,
+          "mean": 3.3276724606752395,
+          "min": 3.2874605655670166,
+          "rms": 3.3277883263101895,
+          "samples": 80,
+          "sampling": "uniform_recorded_solver_time",
+          "std": 0.027769393042867914
+        },
+        "lift": {
+          "block_means": [
+            -0.15121842012740672,
+            -0.09375600945204496,
+            0.21174582354724408,
+            -0.273076880723238
+          ],
+          "estimator": "equal-weight sample moments",
+          "half_mean_difference": 0.09182168620172887,
+          "later_window_mean": -0.05169568887601296,
+          "max": 1.2060469388961792,
+          "mean": -0.0765763716888614,
+          "min": -1.2473068237304688,
+          "rms": 0.8683802743664085,
+          "samples": 80,
+          "sampling": "uniform_recorded_solver_time",
+          "std": 0.8649973180349453
+        }
+      },
+      "protocol": "benchmark",
+      "randomize": true,
+      "run_id": "CylinderJet2D-easy-v0__benchmark__ic-2",
+      "seed": 22,
+      "spectrum": null,
+      "unavailable": {}
+    },
+    {
+      "env_id": "CylinderJet2D-easy-v0",
+      "metrics": {
+        "drag": {
+          "block_means": [
+            3.3269312381744385,
+            3.326510858535767,
+            3.3308284401893617,
+            3.3302715182304383
+          ],
+          "estimator": "equal-weight sample moments",
+          "half_mean_difference": 0.0038289308547971856,
+          "later_window_mean": 3.3292036056518555,
+          "max": 3.371084451675415,
+          "mean": 3.328635513782501,
+          "min": 3.2878856658935547,
+          "rms": 3.328753707415321,
+          "samples": 80,
+          "sampling": "uniform_recorded_solver_time",
+          "std": 0.0280510430670198
+        },
+        "lift": {
+          "block_means": [
+            -0.21937890723347664,
+            -0.006073766946792602,
+            0.15726112555712463,
+            -0.2849504774902016
+          ],
+          "estimator": "equal-weight sample moments",
+          "half_mean_difference": 0.048881661123596126,
+          "later_window_mean": -0.04458770629328986,
+          "max": 1.2097538709640503,
+          "mean": -0.08828550652833655,
+          "min": -1.2527453899383545,
+          "rms": 0.8715554849817575,
+          "samples": 80,
+          "sampling": "uniform_recorded_solver_time",
+          "std": 0.8670724495328066
+        }
+      },
+      "protocol": "benchmark",
+      "randomize": true,
+      "run_id": "CylinderJet2D-easy-v0__benchmark__ic-3",
+      "seed": 33,
+      "spectrum": null,
+      "unavailable": {}
+    },
+    {
+      "env_id": "CylinderJet2D-easy-v0",
+      "metrics": {
+        "drag": {
+          "block_means": [
+            3.326932060718536,
+            3.330743193626404,
+            3.3299630284309387,
+            3.3248019933700563
+          ],
+          "estimator": "equal-weight sample moments",
+          "half_mean_difference": -0.0014551162719724786,
+          "later_window_mean": 3.3285027384757995,
+          "max": 3.3762176036834717,
+          "mean": 3.3281100690364838,
+          "min": 3.2878503799438477,
+          "rms": 3.3282291571355493,
+          "samples": 80,
+          "sampling": "uniform_recorded_solver_time",
+          "std": 0.0281547648752428
+        },
+        "lift": {
+          "block_means": [
+            0.014156258385628461,
+            -0.23236929504200815,
+            0.24059271924197673,
+            -0.17544590253382922
+          ],
+          "estimator": "equal-weight sample moments",
+          "half_mean_difference": 0.14167992668226362,
+          "later_window_mean": -0.055740826111286876,
+          "max": 1.2072728872299194,
+          "mean": -0.03826655498705804,
+          "min": -1.2485730648040771,
+          "rms": 0.8681008782283545,
+          "samples": 80,
+          "sampling": "uniform_recorded_solver_time",
+          "std": 0.8672570585185588
+        }
+      },
+      "protocol": "benchmark",
+      "randomize": false,
+      "run_id": "CylinderJet2D-easy-v0__benchmark__repeat-a",
+      "seed": 0,
+      "spectrum": null,
+      "unavailable": {}
+    },
+    {
+      "env_id": "CylinderJet2D-easy-v0",
+      "metrics": {
+        "drag": {
+          "block_means": [
+            3.326932060718536,
+            3.330743193626404,
+            3.3299630284309387,
+            3.3248019933700563
+          ],
+          "estimator": "equal-weight sample moments",
+          "half_mean_difference": -0.0014551162719724786,
+          "later_window_mean": 3.3285027384757995,
+          "max": 3.3762176036834717,
+          "mean": 3.3281100690364838,
+          "min": 3.2878503799438477,
+          "rms": 3.3282291571355493,
+          "samples": 80,
+          "sampling": "uniform_recorded_solver_time",
+          "std": 0.0281547648752428
+        },
+        "lift": {
+          "block_means": [
+            0.014156258385628461,
+            -0.23236929504200815,
+            0.24059271924197673,
+            -0.17544590253382922
+          ],
+          "estimator": "equal-weight sample moments",
+          "half_mean_difference": 0.14167992668226362,
+          "later_window_mean": -0.055740826111286876,
+          "max": 1.2072728872299194,
+          "mean": -0.03826655498705804,
+          "min": -1.2485730648040771,
+          "rms": 0.8681008782283545,
+          "samples": 80,
+          "sampling": "uniform_recorded_solver_time",
+          "std": 0.8672570585185588
+        }
+      },
+      "protocol": "benchmark",
+      "randomize": false,
+      "run_id": "CylinderJet2D-easy-v0__benchmark__repeat-b",
+      "seed": 0,
+      "spectrum": null,
+      "unavailable": {}
+    },
+    {
+      "env_id": "CylinderJet2D-easy-v0",
+      "metrics": {
+        "drag": {
+          "block_means": [
+            3.327961278087136,
+            3.328174579408519,
+            3.3281267862945336,
+            3.3279565736033936
+          ],
+          "duration": 500.02227783203125,
+          "estimator": "time-weighted piecewise-linear interpolation between recorded samples",
+          "half_mean_difference": -2.6248798864259015e-05,
+          "later_window_mean": 3.328089108900262,
+          "max": 3.3689815998077393,
+          "mean": 3.3280548043483957,
+          "min": 3.287832498550415,
+          "rms": 3.3281586893777066,
+          "samples": 2000,
+          "sampling": "nonuniform_recorded_solver_time",
+          "std": 0.02629602505887394
+        },
+        "lift": {
+          "block_means": [
+            -0.016761404451504622,
+            -0.015247316076647562,
+            -0.02972479447973646,
+            -0.019433953920221177
+          ],
+          "duration": 500.02227783203125,
+          "estimator": "time-weighted piecewise-linear interpolation between recorded samples",
+          "half_mean_difference": -0.00857501393590272,
+          "later_window_mean": -0.021294265330761654,
+          "max": 1.2073650360107422,
+          "mean": -0.020291867232027458,
+          "min": -1.248803734779358,
+          "rms": 0.8543480552521254,
+          "samples": 2000,
+          "sampling": "nonuniform_recorded_solver_time",
+          "std": 0.8541070422595324
+        }
+      },
+      "protocol": "extended",
+      "randomize": true,
+      "run_id": "CylinderJet2D-easy-v0__extended__ic-1",
+      "seed": 11,
+      "spectrum": {
+        "candidate_strouhal_D1_U1": null,
+        "frequency": [],
+        "interpretation": "FFT withheld; time-domain statistics remain available.",
+        "psd": [],
+        "withheld_reasons": [
+          "nonuniform recorded solver-time sampling; no resampling applied"
+        ]
+      },
+      "unavailable": {}
+    },
+    {
+      "env_id": "CylinderJet2D-easy-v0",
+      "metrics": {
+        "drag": {
+          "block_means": [
+            3.3279653009719294,
+            3.3281487743457343,
+            3.3281522673136252,
+            3.3279455894435306
+          ],
+          "duration": 500.02230072021484,
+          "estimator": "time-weighted piecewise-linear interpolation between recorded samples",
+          "half_mean_difference": -8.109280254409157e-06,
+          "later_window_mean": 3.3280860758883066,
+          "max": 3.3689770698547363,
+          "mean": 3.3280529830187047,
+          "min": 3.2878341674804688,
+          "rms": 3.3281568636700936,
+          "samples": 2000,
+          "sampling": "nonuniform_recorded_solver_time",
+          "std": 0.026295463765762736
+        },
+        "lift": {
+          "block_means": [
+            -0.016004894511025495,
+            -0.01590777250147237,
+            -0.029861580468639414,
+            -0.018676536742928778
+          ],
+          "duration": 500.02230072021484,
+          "estimator": "time-weighted piecewise-linear interpolation between recorded samples",
+          "half_mean_difference": -0.008312725099535165,
+          "later_window_mean": -0.0213067158055032,
+          "max": 1.2073663473129272,
+          "mean": -0.020112696056016514,
+          "min": -1.2488043308258057,
+          "rms": 0.854381576246201,
+          "samples": 2000,
+          "sampling": "nonuniform_recorded_solver_time",
+          "std": 0.8541448104895922
+        }
+      },
+      "protocol": "extended",
+      "randomize": true,
+      "run_id": "CylinderJet2D-easy-v0__extended__ic-2",
+      "seed": 22,
+      "spectrum": {
+        "candidate_strouhal_D1_U1": null,
+        "frequency": [],
+        "interpretation": "FFT withheld; time-domain statistics remain available.",
+        "psd": [],
+        "withheld_reasons": [
+          "nonuniform recorded solver-time sampling; no resampling applied"
+        ]
+      },
+      "unavailable": {}
+    },
+    {
+      "env_id": "CylinderJet2D-easy-v0",
+      "metrics": {
+        "drag": {
+          "block_means": [
+            3.328012822746132,
+            3.3280399063293586,
+            3.3282271199378974,
+            3.327944719875175
+          ],
+          "duration": 500.0223083496094,
+          "estimator": "time-weighted piecewise-linear interpolation between recorded samples",
+          "half_mean_difference": 5.955536879120871e-05,
+          "later_window_mean": 3.328076192489874,
+          "max": 3.3689818382263184,
+          "mean": 3.328056142222141,
+          "min": 3.2878310680389404,
+          "rms": 3.328160031934283,
+          "samples": 2000,
+          "sampling": "nonuniform_recorded_solver_time",
+          "std": 0.02629662302059876
+        },
+        "lift": {
+          "block_means": [
+            -0.013331518155972118,
+            -0.01887092083606259,
+            -0.029764665025563828,
+            -0.015806618200629504
+          ],
+          "duration": 500.0223083496094,
+          "estimator": "time-weighted piecewise-linear interpolation between recorded samples",
+          "half_mean_difference": -0.006684422117079314,
+          "later_window_mean": -0.021314931596996208,
+          "max": 1.207345724105835,
+          "mean": -0.01944343055455701,
+          "min": -1.2488019466400146,
+          "rms": 0.8546165934926849,
+          "samples": 2000,
+          "sampling": "nonuniform_recorded_solver_time",
+          "std": 0.8543953855688309
+        }
+      },
+      "protocol": "extended",
+      "randomize": true,
+      "run_id": "CylinderJet2D-easy-v0__extended__ic-3",
+      "seed": 33,
+      "spectrum": {
+        "candidate_strouhal_D1_U1": null,
+        "frequency": [],
+        "interpretation": "FFT withheld; time-domain statistics remain available.",
+        "psd": [],
+        "withheld_reasons": [
+          "nonuniform recorded solver-time sampling; no resampling applied"
+        ]
+      },
+      "unavailable": {}
+    },
+    {
+      "env_id": "CylinderJet2D-easy-v0",
+      "metrics": {
+        "drag": {
+          "block_means": [
+            3.328032213691947,
+            3.328261239451281,
+            3.327966983059839,
+            3.328099158291187
+          ],
+          "duration": 500.0221710205078,
+          "estimator": "time-weighted piecewise-linear interpolation between recorded samples",
+          "half_mean_difference": -0.00011365589610123905,
+          "later_window_mean": 3.328106366895089,
+          "max": 3.36898136138916,
+          "mean": 3.3280898986235634,
+          "min": 3.2878332138061523,
+          "rms": 3.3281938264692124,
+          "samples": 2000,
+          "sampling": "nonuniform_recorded_solver_time",
+          "std": 0.0263015822257472
+        },
+        "lift": {
+          "block_means": [
+            -0.022295780554069125,
+            -0.011988567172720541,
+            -0.0272641860933498,
+            -0.024500521712044407
+          ],
+          "duration": 500.0221710205078,
+          "estimator": "time-weighted piecewise-linear interpolation between recorded samples",
+          "half_mean_difference": -0.008740180039302266,
+          "later_window_mean": -0.021112873597633443,
+          "max": 1.2073701620101929,
+          "mean": -0.02151226388304597,
+          "min": -1.2487940788269043,
+          "rms": 0.8544579067759858,
+          "samples": 2000,
+          "sampling": "nonuniform_recorded_solver_time",
+          "std": 0.854187062038887
+        }
+      },
+      "protocol": "extended",
+      "randomize": false,
+      "run_id": "CylinderJet2D-easy-v0__extended__repeat-a",
+      "seed": 0,
+      "spectrum": {
+        "candidate_strouhal_D1_U1": null,
+        "frequency": [],
+        "interpretation": "FFT withheld; time-domain statistics remain available.",
+        "psd": [],
+        "withheld_reasons": [
+          "nonuniform recorded solver-time sampling; no resampling applied"
+        ]
+      },
+      "unavailable": {}
+    },
+    {
+      "env_id": "CylinderJet2D-easy-v0",
+      "metrics": {
+        "drag": {
+          "block_means": [
+            3.328032213691947,
+            3.328261239451281,
+            3.327966983059839,
+            3.328099158291187
+          ],
+          "duration": 500.0221710205078,
+          "estimator": "time-weighted piecewise-linear interpolation between recorded samples",
+          "half_mean_difference": -0.00011365589610123905,
+          "later_window_mean": 3.328106366895089,
+          "max": 3.36898136138916,
+          "mean": 3.3280898986235634,
+          "min": 3.2878332138061523,
+          "rms": 3.3281938264692124,
+          "samples": 2000,
+          "sampling": "nonuniform_recorded_solver_time",
+          "std": 0.0263015822257472
+        },
+        "lift": {
+          "block_means": [
+            -0.022295780554069125,
+            -0.011988567172720541,
+            -0.0272641860933498,
+            -0.024500521712044407
+          ],
+          "duration": 500.0221710205078,
+          "estimator": "time-weighted piecewise-linear interpolation between recorded samples",
+          "half_mean_difference": -0.008740180039302266,
+          "later_window_mean": -0.021112873597633443,
+          "max": 1.2073701620101929,
+          "mean": -0.02151226388304597,
+          "min": -1.2487940788269043,
+          "rms": 0.8544579067759858,
+          "samples": 2000,
+          "sampling": "nonuniform_recorded_solver_time",
+          "std": 0.854187062038887
+        }
+      },
+      "protocol": "extended",
+      "randomize": false,
+      "run_id": "CylinderJet2D-easy-v0__extended__repeat-b",
+      "seed": 0,
+      "spectrum": {
+        "candidate_strouhal_D1_U1": null,
+        "frequency": [],
+        "interpretation": "FFT withheld; time-domain statistics remain available.",
+        "psd": [],
+        "withheld_reasons": [
+          "nonuniform recorded solver-time sampling; no resampling applied"
+        ]
+      },
+      "unavailable": {}
+    },
+    {
+      "env_id": "CylinderJet2D-medium-v0",
+      "metrics": {
+        "drag": {
+          "block_means": [
+            3.160793169204968,
+            3.1574992649579743,
+            3.1558732149536453,
+            3.1569300587679243
+          ],
+          "duration": 19.74981665611267,
+          "estimator": "time-weighted piecewise-linear interpolation between recorded samples",
+          "half_mean_difference": -0.0027445802206864656,
+          "later_window_mean": 3.157109316980977,
+          "max": 3.3460617065429688,
+          "mean": 3.157773926971128,
+          "min": 2.967010974884033,
+          "rms": 3.159996220807228,
+          "samples": 80,
+          "sampling": "nonuniform_recorded_solver_time",
+          "std": 0.11849025975710145
+        },
+        "lift": {
+          "block_means": [
+            -0.48508781366840914,
+            0.44856504224585425,
+            -0.5048999192387466,
+            0.46285297780694706
+          ],
+          "duration": 19.74981665611267,
+          "estimator": "time-weighted piecewise-linear interpolation between recorded samples",
+          "half_mean_difference": -0.002762085004622345,
+          "later_window_mean": 0.13884885556597915,
+          "max": 2.3780999183654785,
+          "mean": -0.0196424282135886,
+          "min": -2.4474077224731445,
+          "rms": 1.6598741814775084,
+          "samples": 80,
+          "sampling": "nonuniform_recorded_solver_time",
+          "std": 1.6597579562543157
+        }
+      },
+      "protocol": "benchmark",
+      "randomize": true,
+      "run_id": "CylinderJet2D-medium-v0__benchmark__ic-1",
+      "seed": 11,
+      "spectrum": null,
+      "unavailable": {}
+    },
+    {
+      "env_id": "CylinderJet2D-medium-v0",
+      "metrics": {
+        "drag": {
+          "block_means": [
+            3.1619549232185857,
+            3.1552766704288904,
+            3.1576570508088584,
+            3.156184801648927
+          ],
+          "duration": 19.749826908111572,
+          "estimator": "time-weighted piecewise-linear interpolation between recorded samples",
+          "half_mean_difference": -0.0016948705948456322,
+          "later_window_mean": 3.156796962364088,
+          "max": 3.3462095260620117,
+          "mean": 3.1577683615263155,
+          "min": 2.962409496307373,
+          "rms": 3.1599954791140186,
+          "samples": 80,
+          "sampling": "nonuniform_recorded_solver_time",
+          "std": 0.11861872939988981
+        },
+        "lift": {
+          "block_means": [
+            0.4495847471281035,
+            -0.5059486903736603,
+            0.46343142820795996,
+            -0.5160184189368207
+          ],
+          "duration": 19.749826908111572,
+          "estimator": "time-weighted piecewise-linear interpolation between recorded samples",
+          "half_mean_difference": 0.0018884762583481,
+          "later_window_mean": -0.18890605781754363,
+          "max": 2.3844337463378906,
+          "mean": -0.02723773349360437,
+          "min": -2.4252190589904785,
+          "rms": 1.6587850318071236,
+          "samples": 80,
+          "sampling": "nonuniform_recorded_solver_time",
+          "std": 1.6585613909715526
+        }
+      },
+      "protocol": "benchmark",
+      "randomize": true,
+      "run_id": "CylinderJet2D-medium-v0__benchmark__ic-2",
+      "seed": 22,
+      "spectrum": null,
+      "unavailable": {}
+    },
+    {
+      "env_id": "CylinderJet2D-medium-v0",
+      "metrics": {
+        "drag": {
+          "block_means": [
+            3.162216823347977,
+            3.158215594072233,
+            3.1569231608037995,
+            3.1558742161869455
+          ],
+          "duration": 19.749836683273315,
+          "estimator": "time-weighted piecewise-linear interpolation between recorded samples",
+          "half_mean_difference": -0.0038175202147323617,
+          "later_window_mean": 3.1575943831694984,
+          "max": 3.3527331352233887,
+          "mean": 3.1583074486027387,
+          "min": 2.9624595642089844,
+          "rms": 3.1605671328383345,
+          "samples": 80,
+          "sampling": "nonuniform_recorded_solver_time",
+          "std": 0.11949335244434894
+        },
+        "lift": {
+          "block_means": [
+            -0.5190705204905427,
+            0.47112854232152124,
+            -0.5193322228076177,
+            0.4679703634830131
+          ],
+          "duration": 19.749836683273315,
+          "estimator": "time-weighted piecewise-linear interpolation between recorded samples",
+          "half_mean_difference": -0.0017099405777915092,
+          "later_window_mean": 0.14049531032558832,
+          "max": 2.384866237640381,
+          "mean": -0.024825959373406502,
+          "min": -2.4254205226898193,
+          "rms": 1.6591705314840761,
+          "samples": 80,
+          "sampling": "nonuniform_recorded_solver_time",
+          "std": 1.6589847872377677
+        }
+      },
+      "protocol": "benchmark",
+      "randomize": true,
+      "run_id": "CylinderJet2D-medium-v0__benchmark__ic-3",
+      "seed": 33,
+      "spectrum": null,
+      "unavailable": {}
+    },
+    {
+      "env_id": "CylinderJet2D-medium-v0",
+      "metrics": {
+        "drag": {
+          "block_means": [
+            3.162189964895889,
+            3.1585792470710037,
+            3.156412010239283,
+            3.1573086723565886
+          ],
+          "duration": 19.749820947647095,
+          "estimator": "time-weighted piecewise-linear interpolation between recorded samples",
+          "half_mean_difference": -0.003524264685510481,
+          "later_window_mean": 3.157678010843617,
+          "max": 3.352163314819336,
+          "mean": 3.1586224736406914,
+          "min": 2.9628868103027344,
+          "rms": 3.1608501917836698,
+          "samples": 80,
+          "sampling": "nonuniform_recorded_solver_time",
+          "std": 0.11865076447634663
+        },
+        "lift": {
+          "block_means": [
+            -0.45812107927235807,
+            0.424104491257128,
+            -0.48452998886331633,
+            0.44583603831381025
+          ],
+          "duration": 19.749820947647095,
+          "estimator": "time-weighted piecewise-linear interpolation between recorded samples",
+          "half_mean_difference": -0.0023386812671380326,
+          "later_window_mean": 0.13308696246384824,
+          "max": 2.3800082206726074,
+          "mean": -0.018177634641184055,
+          "min": -2.421527147293091,
+          "rms": 1.6607463158861595,
+          "samples": 80,
+          "sampling": "nonuniform_recorded_solver_time",
+          "std": 1.6606468316075826
+        }
+      },
+      "protocol": "benchmark",
+      "randomize": false,
+      "run_id": "CylinderJet2D-medium-v0__benchmark__repeat-a",
+      "seed": 0,
+      "spectrum": null,
+      "unavailable": {}
+    },
+    {
+      "env_id": "CylinderJet2D-medium-v0",
+      "metrics": {
+        "drag": {
+          "block_means": [
+            3.162189964895889,
+            3.1585792470710037,
+            3.156412010239283,
+            3.1573086723565886
+          ],
+          "duration": 19.749820947647095,
+          "estimator": "time-weighted piecewise-linear interpolation between recorded samples",
+          "half_mean_difference": -0.003524264685510481,
+          "later_window_mean": 3.157678010843617,
+          "max": 3.352163314819336,
+          "mean": 3.1586224736406914,
+          "min": 2.9628868103027344,
+          "rms": 3.1608501917836698,
+          "samples": 80,
+          "sampling": "nonuniform_recorded_solver_time",
+          "std": 0.11865076447634663
+        },
+        "lift": {
+          "block_means": [
+            -0.45812107927235807,
+            0.424104491257128,
+            -0.48452998886331633,
+            0.44583603831381025
+          ],
+          "duration": 19.749820947647095,
+          "estimator": "time-weighted piecewise-linear interpolation between recorded samples",
+          "half_mean_difference": -0.0023386812671380326,
+          "later_window_mean": 0.13308696246384824,
+          "max": 2.3800082206726074,
+          "mean": -0.018177634641184055,
+          "min": -2.421527147293091,
+          "rms": 1.6607463158861595,
+          "samples": 80,
+          "sampling": "nonuniform_recorded_solver_time",
+          "std": 1.6606468316075826
+        }
+      },
+      "protocol": "benchmark",
+      "randomize": false,
+      "run_id": "CylinderJet2D-medium-v0__benchmark__repeat-b",
+      "seed": 0,
+      "spectrum": null,
+      "unavailable": {}
+    }
+  ]
+}

@@ -1,5 +1,15 @@
 # Numerical limitations
 
+## Current time-axis and termination audit — 2026-10-15
+
+See [Time-axis and execution validation](docs/TIME_AXIS_AND_EXECUTION_VALIDATION.md) for the current source trace, reconstruction conditions, uncertainty, termination classifications and exact offline/next-launch commands. This supersedes earlier blanket FFT withholding: easy extended spectra are permitted only if the full raw record passes the new fixed-native-dt replay/count validation. Raw trajectories are not available locally, so no new physical spectrum or peak has been calculated here. All six targets are adaptive-capable; medium variable counts and unknown timing retain restrictions. The second campaign termination remains UNKNOWN. Progress/signal supervision is corrected without changing solver physics or the approved matrix. No CFD was launched and no approval was generated.
+
+
+## Partial-analysis evidence — 2026-10-15
+
+Server analysis now succeeds for 15 completed runs; one incomplete run is excluded. All five easy extended spectra remain withheld for nonuniform solver-time sampling. Equal-weight and time-weighted interpolant statistics coexist and must be distinguished when comparing amplitudes. Available drag/lift repeat pairs agree exactly; full-field repeatability and cross-hardware determinism were not tested. No RBC or hard-cylinder physical conclusions are possible. No complete campaign runtime, device-memory peak, residual history, fallback counts or divergence history is available. Earlier sections are historical records, not evidence that the campaign is complete.
+
+
 ## Clock validation correction — 2026-10-15
 
 CPU reproduction of pinned upstream scalar accumulation (`numpy.float32(1)` plus 25 additions of `numpy.float32(.01)` per environment step) exactly matches all supplied clock values at steps 249–253. It predicts step 254 clock 64.49536895751953 and increment 0.25005340576171875, exceeding the old 0.00005 increment tolerance. The observed failure is explained by float32 clock accumulation, not evidence of solver divergence. The rejected value itself was not saved, so the predicted step-254 value is a reproduction, not a recovered measurement.
@@ -29,3 +39,5 @@ Subsequent controlled physical shifts remain a research proposal. After nominal 
 ## Offline sampling handling — 2026-10-15
 
 The partial-campaign analysis stopped with `nonuniform sampling: resampling/weighted analysis required`. The analysis now preserves recorded solver times and uses duration-weighted piecewise-linear interpolant moments for nonuniform time series, including equal-duration block means and half-window comparisons. This is an explicitly labeled descriptive estimator between sampled observables, not a reconstruction of instantaneous CFD fields or a correction to the solver clock. Uniform series retain equal-weight sample moments; these estimator labels must be considered when comparing runs. Nonuniform cylinder spectra are withheld with a reason; no FFT frequency or Strouhal estimate is fabricated. Raw artifacts and validation tolerances are unchanged. Failed analysis output remains immutable; rerun offline analysis into a new directory. No CFD rerun is needed for this fix.
+
+Current audit validation: full CPU suite 97 passed / 3 CUDA-dependent skipped; final focused time-axis and subprocess suite 16 passed. Shell syntax and diff whitespace checks passed. See docs/TIME_AXIS_AND_EXECUTION_VALIDATION.md for source trace, exact commands, and remaining supervisor/NFS/SIGKILL limits. No CFD launched.

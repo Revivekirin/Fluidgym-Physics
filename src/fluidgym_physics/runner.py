@@ -17,6 +17,7 @@ from .characterization import digest, estimate, load_matrix, runs, write_json
 from .diagnostics import finite, physical_metrics, scalar
 from .errors import MissingInitialDomainError, UpstreamIntegrityError
 from .inventory import registrations
+from .execution import capture_signals, emit_progress, termination_reason
 from .provenance import collect_platform
 from .upstream import REPO_ROOT, UPSTREAM_DIR, verify_upstream
 
@@ -292,6 +293,8 @@ def execute_run(run, item, directory, provenance, campaign, budget, started):
     env = None
     completed = 0
     begin = time.monotonic()
+    last_output = None
+    emit_progress(directory,run,completed,begin,'starting')
     try:
         # Recheck checksums immediately before use; files may have changed since campaign preflight.
         for path in local_inputs(fluidgym.config.initial_domains_path,item,run['mode'],run['randomize']):
@@ -324,6 +327,7 @@ def execute_run(run, item, directory, provenance, campaign, budget, started):
             eff = effective(env,item)
             torch.cuda.synchronize()
             t0 = scalar(env._sim.total_time)
+            emit_progress(directory,run,completed,begin,'reset_complete')
             tprev = t0
             solver_step_prev = int(env._sim.total_step)
             shape = snapshot(env,item,directory/'fields_000000.npz')
@@ -379,6 +383,9 @@ def execute_run(run, item, directory, provenance, campaign, budget, started):
                             'gpu_peak_allocated_bytes':peak,**metrics}
                     stream.write(json.dumps(record,allow_nan=False)+'\n')
                     completed=step; tprev=now; solver_step_prev=int(env._sim.total_step)
+                    last_output = str(directory/'trajectory.jsonl')
+                    if step == 1 or step % 25 == 0 or step == run['steps']:
+                        emit_progress(directory,run,completed,begin,'running',last_output)
                     if step % run['snapshot_stride']==0:
                         snapshot_path=directory/f'fields_{step:06d}.npz'
                         snapshot(env,item,snapshot_path)
@@ -389,7 +396,8 @@ def execute_run(run, item, directory, provenance, campaign, budget, started):
                                           'sha256':files})
     except BaseException as exc:
         write_json(directory/'status.json',{'status':'failed','steps':completed,'error_type':type(exc).__name__,
-                                          'error':str(exc),'wall_seconds':time.monotonic()-begin})
+                                          'error':str(exc),'wall_seconds':time.monotonic()-begin,
+                                          'termination_reason':termination_reason(exc), 'last_successful_output':last_output})
         raise
     finally:
         if env is not None:
@@ -397,6 +405,7 @@ def execute_run(run, item, directory, provenance, campaign, budget, started):
             if close is not None: close()
 
 
+@capture_signals()
 def run_matrix(matrix_path, output, reviewed_sha256=None, data_root=None, approval_path=None):
     path, output = Path(matrix_path), Path(output)
     m=load_matrix(path)
@@ -429,6 +438,7 @@ def run_matrix(matrix_path, output, reviewed_sha256=None, data_root=None, approv
         write_json(output/'status.json',{'status':'complete','wall_seconds':time.monotonic()-started,
                    'sha256':{p.name:digest(p) for p in output.iterdir() if p.is_file()}})
     except BaseException as exc:
-        write_json(output/'status.json',{'status':'failed','error':str(exc),'error_type':type(exc).__name__})
+        write_json(output/'status.json',{'status':'failed','error':str(exc),'error_type':type(exc).__name__,
+                                          'termination_reason':termination_reason(exc),'wall_seconds':time.monotonic()-started})
         raise
     return {'output':str(output),'status':'complete'}

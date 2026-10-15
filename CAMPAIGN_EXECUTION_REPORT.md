@@ -1,5 +1,19 @@
 # Campaign execution report
 
+## Current time-axis and termination audit — 2026-10-15
+
+See [Time-axis and execution validation](docs/TIME_AXIS_AND_EXECUTION_VALIDATION.md) for the current source trace, reconstruction conditions, uncertainty, termination classifications and exact offline/next-launch commands. This supersedes earlier blanket FFT withholding: easy extended spectra are permitted only if the full raw record passes the new fixed-native-dt replay/count validation. Raw trajectories are not available locally, so no new physical spectrum or peak has been calculated here. All six targets are adaptive-capable; medium variable counts and unknown timing retain restrictions. The second campaign termination remains UNKNOWN. Progress/signal supervision is corrected without changing solver physics or the approved matrix. No CFD was launched and no approval was generated.
+
+
+## Latest execution assessment — 2026-10-15
+
+This section supersedes older pending-launch/analysis statuses below. Second attempt: `execution-20261015T010803Z-Rk5NDa`. Server offline analysis completed with 15 analyzed runs and one excluded incomplete run. Completed scope: CylinderJet2D-easy benchmark and extended (10 runs), CylinderJet2D-medium benchmark (5 runs). Completed trajectories contain 12,800 environment steps; the incomplete medium extended trajectory last showed 580 additional recorded steps, for 13,380 recorded steps in this attempt. Forty-four planned runs were not started. This is not a completed 60-run campaign.
+
+Campaign/run terminal status for the incomplete trajectory and wrapper exit/wall-time files are absent. A later successful process listing showed no campaign processes; GPU snapshot showed none. Termination cause and total wall time are unknown; Ctrl+C and Killed were observed but do not establish OOM. Do not merge this attempt with the earlier failed attempt or resume its incomplete trajectory. The latest five supplied medium benchmark status files report completion; analysis verified completed-run hashes server-side. Locally only the operator transcript is available.
+
+The previously supplied medium final record reports torch peak allocation 67,819,520 bytes (64.68 MiB). This is a sampled record's allocator peak, not a measured whole-campaign device-memory peak. Complete GPU telemetry and launcher timing are still unavailable. No new CFD was launched during this analysis update.
+
+
 ## Clock validation correction — 2026-10-15
 
 CPU reproduction of pinned upstream scalar accumulation (`numpy.float32(1)` plus 25 additions of `numpy.float32(.01)` per environment step) exactly matches all supplied clock values at steps 249–253. It predicts step 254 clock 64.49536895751953 and increment 0.25005340576171875, exceeding the old 0.00005 increment tolerance. The observed failure is explained by float32 clock accumulation, not evidence of solver divergence. The rejected value itself was not saved, so the predicted step-254 value is a reproduction, not a recovered measurement.
@@ -60,3 +74,5 @@ bash experiments/run-approved-primary.sh results/preparation-20261014T115019Z
 ```
 
 The wrapper refuses failed readiness checks before launching CFD. Actual campaign results remain pending operator execution and returned artifacts.
+
+Current audit validation: full CPU suite 97 passed / 3 CUDA-dependent skipped; final focused time-axis and subprocess suite 16 passed. Shell syntax and diff whitespace checks passed. See docs/TIME_AXIS_AND_EXECUTION_VALIDATION.md for source trace, exact commands, and remaining supervisor/NFS/SIGKILL limits. No CFD launched.
