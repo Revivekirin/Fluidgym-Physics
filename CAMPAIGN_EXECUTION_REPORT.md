@@ -1,5 +1,21 @@
 # Campaign execution report
 
+## Clock validation correction — 2026-10-15
+
+CPU reproduction of pinned upstream scalar accumulation (`numpy.float32(1)` plus 25 additions of `numpy.float32(.01)` per environment step) exactly matches all supplied clock values at steps 249–253. It predicts step 254 clock 64.49536895751953 and increment 0.25005340576171875, exceeding the old 0.00005 increment tolerance. The observed failure is explained by float32 clock accumulation, not evidence of solver divergence. The rejected value itself was not saved, so the predicted step-254 value is a reproduction, not a recovered measurement.
+
+The runner now adds a bounded rounding allowance: actual solver-step count times half the maximum endpoint ULP of the actual clock dtype. It retains the original baseline tolerance, monotonic/finite time checks and termination checks, rejects nonpositive solver-step progress, and fails if the rounding bound reaches half the average nominal substep interval. This validates the recorded clock within finite precision; it does not establish solver accuracy. New trajectory records expose clock dtype, increment, tolerance and internal step count. Official solver source, physical parameters, data and approved matrix are unchanged. CPU regression tests cover the full 2,400-step cylinder horizon, missed/extra integration and insufficient clock resolution. No new CFD has been executed locally.
+
+The failed campaign remains immutable and excluded from complete-run statistics. Any subsequent campaign must execute all 60 runs in a fresh directory using the existing approval; no continuation or concatenation of the failed trajectory is supported.
+
+
+## Server execution update — 2026-10-15
+
+This update supersedes the pending-launch status below. Operator-supplied evidence identifies `results/preparation-20261014T115019Z/execution-20261014T130118Z-LYojRC`. Runner exit code: 2; wrapper wall time: 511 seconds. Five CylinderJet2D-easy benchmark runs completed (80 steps each). The first extended run (`repeat-a`) failed after 253 recorded steps with `solver time increment differs from nominal integration interval`. Thus 5 runs completed, 1 failed, and 54 were not started under fail-fast execution. There are 653 recorded validated steps; the next env.step returned before validation failed, so this is not the total solver work performed. Completed run wall times were 62.1201, 61.4181, 61.8394, 62.0062 and 62.1328 seconds; failed run wall time was 195.4805 seconds.
+
+No trajectory has been retried, resumed, joined, or overwritten. Actual rejected clock values were not recorded by the original error message. A diagnostic-only runner change now includes previous/current time, actual/expected increment and unchanged tolerances. It does not resolve or reclassify the observed failure. Await trajectory/provenance and offline analysis before deciding whether a numerical validity change is justified. No new campaign launch is recommended yet.
+
+
 Status (2026-10-14): preflight, input-hash verification and repository approval reported successful; server launch pending. This is a gate report, not an executed-campaign report.
 
 The researcher reports completed official acquisition, full and primary preflight, and primary budget review. These server artifacts are not available in this local workspace. The operator manages the remote server; no remote operation or CFD was performed in this session.

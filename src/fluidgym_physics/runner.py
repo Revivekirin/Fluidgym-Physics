@@ -240,13 +240,35 @@ def snapshot(env, item, path):
     return {k:{'shape':list(v.shape),'dtype':str(v.dtype)} for k,v in arrays.items()}
 
 
-def validate_step(previous, current, expected_delta, terminated, truncated, final):
+def validate_step(previous, current, expected_delta, terminated, truncated, final,
+                  *, clock_dtype=None, solver_steps=None):
     if not math.isfinite(current) or current <= previous:
         raise ValueError('solver time failed to advance')
-    if not math.isclose(current-previous, expected_delta, rel_tol=2e-4, abs_tol=1e-6):
-        raise ValueError('solver time increment differs from nominal integration interval')
+    tolerance = max(2e-4 * abs(expected_delta), 1e-6)
+    rounding_bound = 0.0
+    if clock_dtype is not None:
+        import numpy as np
+        dtype = np.dtype(clock_dtype)
+        if dtype.kind != 'f' or solver_steps is None or solver_steps <= 0:
+            raise ValueError('invalid solver clock dtype or step count')
+        # Upstream end_step adds one native scalar per solver step. Each addition
+        # rounds by at most half an ULP; use the largest endpoint spacing.
+        spacing = max(abs(float(np.spacing(dtype.type(previous)))),
+                      abs(float(np.spacing(dtype.type(current)))))
+        rounding_bound = solver_steps * spacing / 2
+        if rounding_bound >= expected_delta / (2 * solver_steps):
+            raise ValueError('solver clock resolution insufficient to validate integration interval')
+        tolerance += rounding_bound
+    if abs(current-previous-expected_delta) > tolerance:
+        raise ValueError(
+            'solver time increment differs from nominal integration interval: '
+            f'previous={previous!r}, current={current!r}, '
+            f'actual_delta={current-previous!r}, expected_delta={expected_delta!r}, '
+            f'tolerance={tolerance!r}, rounding_bound={rounding_bound!r}, '
+            f'clock_dtype={clock_dtype}, solver_steps={solver_steps}')
     if terminated or bool(truncated) != bool(final):
         raise ValueError('unexpected termination/truncation; trajectories are never reset/concatenated')
+    return tolerance
 
 
 def _tree_bytes(root):
@@ -303,6 +325,7 @@ def execute_run(run, item, directory, provenance, campaign, budget, started):
             torch.cuda.synchronize()
             t0 = scalar(env._sim.total_time)
             tprev = t0
+            solver_step_prev = int(env._sim.total_step)
             shape = snapshot(env,item,directory/'fields_000000.npz')
             write_json(directory/'provenance.json', {'schema_version':1,'execution_level':'runtime_cuda',
                        'campaign_provenance':'../provenance.json','effective':eff,'initial_domains':selected,
@@ -325,7 +348,13 @@ def execute_run(run, item, directory, provenance, campaign, budget, started):
                     finite(obs,'observations'); finite(reward,'reward'); finite(info,'info')
                     check_native_fields(env,item['family'])
                     now=scalar(env._sim.total_time)
-                    validate_step(tprev,now,eff['dt']*eff['n_sim_steps'],term,trunc,step==run['steps'])
+                    solver_steps = int(env._sim.total_step) - solver_step_prev
+                    if solver_steps <= 0:
+                        raise ValueError('solver step counter failed to advance')
+                    clock_dtype = getattr(env._sim.total_time, 'dtype', None)
+                    clock_tolerance = validate_step(
+                        tprev,now,eff['dt']*eff['n_sim_steps'],term,trunc,step==run['steps'],
+                        clock_dtype=clock_dtype, solver_steps=solver_steps)
                     metrics=physical_metrics(item['family'],info)
                     if item['family']=='rbc':
                         temperature=env._domain.getBlock(0).passiveScalar
@@ -341,11 +370,15 @@ def execute_run(run, item, directory, provenance, campaign, budget, started):
                     peak=torch.cuda.max_memory_allocated()
                     if peak > budget['max_gpu_allocated_gib']*2**30: raise RuntimeError('GPU allocation cap reached')
                     record={'step':step,'solver_time':now,'elapsed_solver_time':now-t0,
+                            'solver_time_increment':now-tprev,
+                            'solver_time_increment_tolerance':clock_tolerance,
+                            'solver_clock_dtype':str(clock_dtype),
+                            'solver_steps_this_env_step':solver_steps,
                             'reported_env_time':scalar(env.time_passed),'solver_total_step':int(env._sim.total_step),
                             'wall_seconds':time.monotonic()-tick,'reward':scalar(reward),
                             'gpu_peak_allocated_bytes':peak,**metrics}
                     stream.write(json.dumps(record,allow_nan=False)+'\n')
-                    completed=step; tprev=now
+                    completed=step; tprev=now; solver_step_prev=int(env._sim.total_step)
                     if step % run['snapshot_stride']==0:
                         snapshot_path=directory/f'fields_{step:06d}.npz'
                         snapshot(env,item,snapshot_path)

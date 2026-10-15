@@ -83,6 +83,37 @@ def test_invalid_solver_progress(current,term,trunc,final):
     with pytest.raises(ValueError): validate_step(0,current,0.25,term,trunc,final)
 
 
+def test_float32_clock_rounding_over_full_extended_horizon():
+    clock = np.float32(1)
+    for step in range(1, 2401):
+        previous = float(clock)
+        for _ in range(25):
+            clock += np.float32(.01)
+        if step == 253:
+            assert float(clock) == 64.24531555175781
+        if step == 254:
+            with pytest.raises(ValueError, match='increment differs'):
+                validate_step(previous, float(clock), .25, False, False, False)
+        validate_step(previous, float(clock), .25, False, step == 2400, step == 2400,
+                      clock_dtype=clock.dtype, solver_steps=25)
+
+
+@pytest.mark.parametrize('start,count', [(64.,24), (64.,26), (600.,24), (600.,26)])
+def test_rounding_allowance_rejects_missing_or_extra_integration(start, count):
+    clock = np.float32(start)
+    for _ in range(count):
+        clock += np.float32(.01)
+    with pytest.raises(ValueError, match='increment differs'):
+        validate_step(start, float(clock), .25, False, False, False,
+                      clock_dtype=clock.dtype, solver_steps=count)
+
+
+def test_clock_resolution_guard():
+    with pytest.raises(ValueError, match='resolution insufficient'):
+        validate_step(1e6, 1e6+.25, .25, False, False, False,
+                      clock_dtype=np.dtype('float32'), solver_steps=25)
+
+
 def test_metrics_are_family_specific():
     assert physical_metrics('rbc',{'nusselt':2}) == {'nusselt':2}
     with pytest.raises(KeyError): physical_metrics('rbc',{'drag':2})

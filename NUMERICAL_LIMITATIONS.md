@@ -1,5 +1,19 @@
 # Numerical limitations
 
+## Clock validation correction — 2026-10-15
+
+CPU reproduction of pinned upstream scalar accumulation (`numpy.float32(1)` plus 25 additions of `numpy.float32(.01)` per environment step) exactly matches all supplied clock values at steps 249–253. It predicts step 254 clock 64.49536895751953 and increment 0.25005340576171875, exceeding the old 0.00005 increment tolerance. The observed failure is explained by float32 clock accumulation, not evidence of solver divergence. The rejected value itself was not saved, so the predicted step-254 value is a reproduction, not a recovered measurement.
+
+The runner now adds a bounded rounding allowance: actual solver-step count times half the maximum endpoint ULP of the actual clock dtype. It retains the original baseline tolerance, monotonic/finite time checks and termination checks, rejects nonpositive solver-step progress, and fails if the rounding bound reaches half the average nominal substep interval. This validates the recorded clock within finite precision; it does not establish solver accuracy. New trajectory records expose clock dtype, increment, tolerance and internal step count. Official solver source, physical parameters, data and approved matrix are unchanged. CPU regression tests cover the full 2,400-step cylinder horizon, missed/extra integration and insufficient clock resolution. No new CFD has been executed locally.
+
+The failed campaign remains immutable and excluded from complete-run statistics. Any subsequent campaign must execute all 60 runs in a fresh directory using the existing approval; no continuation or concatenation of the failed trajectory is supported.
+
+
+## Observed validation failure — 2026-10-15
+
+The first CylinderJet2D-easy extended run failed its solver-clock increment check after 253 recorded steps. The validator uses relative tolerance 2e-4 and absolute tolerance 1e-6 against the nominal integration interval. Pinned upstream accumulates `total_time` by adding `ntonp(time_step)[0]` in `PISOtorch_simulation.py:end_step`. Finite-precision accumulation is a possible explanation, not a demonstrated root cause; the offending clock values are missing. Solver instability is likewise not established by this message alone. No tolerance or official solver change has been made. GPU telemetry and completed-run physical statistics have not yet been supplied. A diagnostic-only error-message improvement will expose rejected values in future execution, but does not justify rerunning now.
+
+
 Status (2026-10-14): campaign evidence pending. No observed server numerical failure or successful rollout is asserted by this report.
 
 - Full preflight validates inputs/runtime prerequisites without CFD; it does not establish numerical stability or measured execution cost.
