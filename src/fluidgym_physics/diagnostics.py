@@ -42,11 +42,31 @@ def summarize(times, values):
     finite(t); finite(x)
     if len(t) < 4 or x.shape != t.shape or not np.all(np.diff(t) > 0):
         raise ValueError('need >=4 finite samples at strictly increasing times')
-    # Equal-weight statistics only with verified uniform sampling.
+    # Preserve recorded solver times. Do not silently replace them by nominal time.
     if not np.allclose(np.diff(t), np.median(np.diff(t)), rtol=1e-4, atol=1e-6):
-        raise ValueError('nonuniform sampling: resampling/weighted analysis required')
+        def moments(tt, xx):
+            dt = np.diff(tt)
+            duration = tt[-1]-tt[0]
+            mean = float(np.sum(dt*(xx[:-1]+xx[1:])/2)/duration)
+            second = float(np.sum(dt*(xx[:-1]**2+xx[:-1]*xx[1:]+xx[1:]**2)/3)/duration)
+            return mean, second
+        def window_mean(left, right):
+            inner = (t > left) & (t < right)
+            tt = np.concatenate(([left], t[inner], [right]))
+            return moments(tt, np.interp(tt, t, x))[0]
+        mean, second = moments(t, x)
+        edges = np.linspace(t[0], t[-1], 5)
+        mid = (t[0]+t[-1])/2
+        return {'mean':mean, 'std':float(np.sqrt(max(0, second-mean**2))),
+                'rms':float(np.sqrt(max(0, second))), 'min':float(x.min()), 'max':float(x.max()),
+                'samples':len(x), 'duration':float(t[-1]-t[0]),
+                'sampling':'nonuniform_recorded_solver_time',
+                'estimator':'time-weighted piecewise-linear interpolation between recorded samples',
+                'block_means':[window_mean(a,b) for a,b in zip(edges[:-1],edges[1:])],
+                'half_mean_difference':window_mean(mid,t[-1])-window_mean(t[0],mid)}
     blocks = np.array_split(x, 4)
-    return {'mean':float(x.mean()), 'std':float(x.std()), 'rms':float(np.sqrt(np.mean(x*x))),
+    return {'sampling':'uniform_recorded_solver_time', 'estimator':'equal-weight sample moments',
+            'mean':float(x.mean()), 'std':float(x.std()), 'rms':float(np.sqrt(np.mean(x*x))),
             'min':float(x.min()), 'max':float(x.max()), 'samples':len(x),
             'block_means':[float(b.mean()) for b in blocks],
             'half_mean_difference':float(x[len(x)//2:].mean()-x[:len(x)//2].mean())}
@@ -57,6 +77,10 @@ def cylinder_spectrum(times, lifts):
     import numpy as np
     summarize(times, lifts)
     t, x = np.asarray(times), np.asarray(lifts)
+    if not np.allclose(np.diff(t), np.median(np.diff(t)), rtol=1e-4, atol=1e-6):
+        return {'frequency':[], 'psd':[], 'candidate_strouhal_D1_U1':None,
+                'withheld_reasons':['nonuniform recorded solver-time sampling; no resampling applied'],
+                'interpretation':'FFT withheld; time-domain statistics remain available.'}
     dt = float(np.median(np.diff(t)))
     n = len(t)
     window = np.hanning(n)

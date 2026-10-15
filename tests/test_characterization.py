@@ -130,7 +130,13 @@ def test_spectrum_known_frequency_and_short_record_withholding():
     assert cylinder_spectrum(t[:80],x[:80])['candidate_strouhal_D1_U1'] is None
     assert cylinder_spectrum(t,np.ones(len(t)))['candidate_strouhal_D1_U1'] is None
     with pytest.raises(ValueError): summarize([0,1,1,2],[1,2,3,4])
-    with pytest.raises(ValueError): summarize([0,1,2,4],[1,2,3,4])
+    result = summarize([0,1,2,4],[0,1,2,4])
+    assert result['mean'] == pytest.approx(2)
+    assert result['std'] == pytest.approx(4/np.sqrt(12))
+    assert result['rms'] == pytest.approx(4/np.sqrt(3))
+    assert result['block_means'] == pytest.approx([.5,1.5,2.5,3.5])
+    assert result['half_mean_difference'] == pytest.approx(2)
+    assert cylinder_spectrum([0,1,2,4],[0,1,2,4])['frequency'] == []
 
 
 def test_guard_catches_ignored_failure_and_restores(monkeypatch):
@@ -145,7 +151,8 @@ def test_guard_catches_ignored_failure_and_restores(monkeypatch):
     assert Simulation.single_step is original
 
 
-def test_analysis_preserves_runs_and_excludes_failures(tmp_path):
+@pytest.mark.parametrize('nonuniform', [False, True])
+def test_analysis_preserves_runs_and_excludes_failures(tmp_path, nonuniform):
     from fluidgym_physics.analysis import analyze
     campaign=tmp_path/'campaign'; campaign.mkdir()
     for label,shift in [('repeat-a',0),('repeat-b',.01)]:
@@ -155,7 +162,7 @@ def test_analysis_preserves_runs_and_excludes_failures(tmp_path):
         write_json(d/'request.json',run)
         with (d/'trajectory.jsonl').open('w') as stream:
             for i in range(1,301):
-                stream.write(json.dumps({'step':i,'elapsed_solver_time':i*.25,'drag':3+shift,
+                stream.write(json.dumps({'step':i,'elapsed_solver_time':i*.25+(i*.0002 if nonuniform and i>150 else 0),'drag':3+shift,
                                          'lift':float(np.sin(i*.25*2*np.pi*.2))+shift})+'\n')
         write_json(d/'status.json',{'status':'complete','sha256':{p.name:digest(p) for p in d.iterdir()}})
     (campaign/'interrupted').mkdir()

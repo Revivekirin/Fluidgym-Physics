@@ -53,9 +53,10 @@ def analyze(campaign, output):
         spectrum=None
         if family=='cylinder' and run['protocol']=='extended':
             spectrum=cylinder_spectrum(t,[r['lift'] for r in retained])
-            fig,ax=plt.subplots(figsize=(7,3))
-            ax.plot(spectrum['frequency'][1:],spectrum['psd'][1:]); ax.set(xlabel='frequency (D/U units)',ylabel='lift PSD')
-            fig.tight_layout(); fig.savefig(output/f'{directory.name}__spectrum.png',dpi=130); plt.close(fig)
+            if spectrum['frequency']:
+                fig,ax=plt.subplots(figsize=(7,3))
+                ax.plot(spectrum['frequency'][1:],spectrum['psd'][1:]); ax.set(xlabel='frequency (D/U units)',ylabel='lift PSD')
+                fig.tight_layout(); fig.savefig(output/f'{directory.name}__spectrum.png',dpi=130); plt.close(fig)
         row={'run_id':directory.name,'env_id':run['env_id'],'protocol':run['protocol'],
              'randomize':run['randomize'],'seed':run['seed'],'metrics':metrics,
              'unavailable':unavailable,'spectrum':spectrum}
