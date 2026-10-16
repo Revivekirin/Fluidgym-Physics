@@ -32,7 +32,7 @@ def check_initial_domains_present(cfg: NominalEnvConfig) -> Path:
     if not all(p.is_file() and p.stat().st_size > 0 for p in required):
         raise MissingInitialDomainError(
             f"initial domains for {domain_id} not found at {d}; not downloading automatically. "
-            "Fetch them explicitly (see docs/NUMERICAL_VALIDATION_PLAN.md, command C0)."
+            "Fetch them explicitly (see docs/SERVER_EXECUTION.md, preparation commands)."
         )
     return d
 

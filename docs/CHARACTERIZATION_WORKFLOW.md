@@ -78,16 +78,9 @@ fluidgym-physics preflight --matrix experiments/characterization.v1.json
 
 Dataset placement is an explicit separate operation. The runner never downloads or regenerates it. Preflight requires all ten selected-mode domain JSON/NPZ pairs and reference statistics for each unique dataset; shared cylinder jet/rotation datasets are hashed once. Optional baseline CSVs are hashed when present. Input hashes are rechecked immediately before each run. Invalid loaded fields/coefficients abort after reset; file existence alone is not physical validation.
 
-After review and authorization of the full matrix and budget, save a reviewed matrix version with `review_status: reviewed`, run `plan` to obtain its SHA-256, and supply that exact digest:
+For an authorized campaign, use the approval and supervised-launch interface in [SERVER_EXECUTION.md](SERVER_EXECUTION.md). Retain existing approvals and use a new exclusive execution directory. The completed primary campaign does not need to be rerun.
 
-```bash
-fluidgym-physics run --matrix experiments/characterization.reviewed.json \
-  --reviewed-sha256 <SHA-256-from-plan> --output results/campaign-unique-id
-fluidgym-physics analyze --campaign results/campaign-unique-id \
-  --output results/analysis-unique-id
-```
-
-The review gate reflects the user's campaign execution policy. There is no per-environment approval/pilot loop. Do not mark the matrix reviewed merely to test the CLI. A new campaign output directory is mandatory; existing results are never overwritten or resumed. Abrupt process death leaves an incomplete run without terminal status, excluded by analysis. Normal failures write terminal failure artifacts and stop the entire matrix. Complete-run manifests cover requests, runtime provenance, scalar trajectories and field snapshots. Analysis verifies hashes and writes into a new directory.
+Complete-run manifests cover requests, runtime provenance, scalar trajectories and field snapshots. Analysis verifies hashes and writes into a new directory. The supervisor records termination evidence and recovers missing terminal statuses into a separate sidecar where possible; interrupted runs are excluded from complete-trajectory analysis. See [time-axis and execution validation](TIME_AXIS_AND_EXECUTION_VALIDATION.md).
 
 ## Analysis and evidence limits
 
@@ -95,7 +88,7 @@ The review gate reflects the user's campaign execution policy. There is no per-e
 
 The runner checks native velocity/pressure/temperature each step, loaded domain/block viscosity, RBC diffusivity, finite observations/rewards/metrics, solver clock increments and termination semantics. A Python guard promotes solver False returns to exceptions. Residual histories, solver fallback event counts and native divergence are marked missing, not zero. Snapshot arrays are resampled and not a conservative native-state restart format.
 
-No physical trajectories are committed with this implementation. Synthetic tests exercise analysis and failure handling, not fluid mechanics. Aggregate physical findings and regime conclusions remain pending the reviewed CUDA campaign.
+The six-environment primary campaign is complete: 60 runs and 58,200 steps. See the [final characterization](FINAL_NOMINAL_CHARACTERIZATION.md) for audited physical findings and evidence limits. Synthetic tests validate analysis and failure handling, not fluid mechanics.
 
 ## Missing inputs across the matrix
 
@@ -117,4 +110,6 @@ If data already exists elsewhere, locate it and configure the runtime data root 
 
 The original 15-variant matrix remains unchanged and is the scope for official acquisition/full preflight. The primary nominal study is **CylinderJet2D easy/medium/hard plus standard RBC2D easy/medium/hard**, not CylinderJet2D alone. After full preflight succeeds, `prepare-primary` creates a separate schema-v2 draft with those six registered IDs and lists the other nine 2D variants as future expansion targets. It never approves either matrix.
 
-See [SERVER_EXECUTION.md](SERVER_EXECUTION.md) for the explicit `fetch-inputs` → full preflight → primary preparation → primary preflight/plan commands, official dataset provenance, recalculated six-environment budget, and the future approval/run interface. The primary proposal is 60 runs / 58,200 steps / about 2.392 GiB output / an uncalibrated 1.2125–48.5 GPU-hour range. No physical dynamics shifts or campaigns are authorized by these preparation commands.
+See [SERVER_EXECUTION.md](SERVER_EXECUTION.md) for the explicit `fetch-inputs` → full preflight → primary preparation → primary preflight/plan commands, official dataset provenance, recalculated six-environment budget, and the approval/run interface. The original primary planning estimate was 60 runs / 58,200 steps / about 2.392 GiB output / an uncalibrated 1.2125–48.5 GPU-hour range. No physical dynamics shifts or campaigns are authorized by these preparation commands.
+
+The approved primary campaign has since completed in 18h 15m 45.7s. The original 15-variant expansion matrix remains unapproved; the planning scenarios above are not measured forecasts for that expansion.

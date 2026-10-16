@@ -1,6 +1,6 @@
 # Time-axis and termination audit — 2026-10-15
 
-No CFD was launched. The approved matrix, approvals, data and pinned solver are unchanged. Upstream verification reports clean commit `50071140b73a2a917fb96d33522a769f903f8c27` and source tree `8a8476b966e496341676ea36384589028f4dc450`.
+This reference records the time-axis and supervision implementation audit. The subsequent primary campaign is complete; current results are in [final characterization](FINAL_NOMINAL_CHARACTERIZATION.md) and [numerical limitations](NUMERICAL_UNCERTAINTY_AND_LIMITATIONS.md). No CFD was launched during the implementation audit. The approved matrix, approvals, data and pinned solver were unchanged. Upstream verification reports clean commit `50071140b73a2a917fb96d33522a769f903f8c27` and source tree `8a8476b966e496341676ea36384589028f4dc450`.
 
 ## Actual stepping path
 
@@ -19,7 +19,7 @@ Pinned source locations:
 | RBC2D easy | .05 | 20 | 1 | .8 | Adaptive-capable |
 | RBC2D medium/hard | .05 | 20 | 1 | .5 | Adaptive-capable |
 
-`reported_env_time` is the intended task schedule, not evidence that adaptive substeps exactly covered it. Observed easy records report 25 accepted internal steps/control step; medium records report varying counts (e.g. 27–49), proving subdivision occurs there. No runtime RBC timing evidence is available.
+`reported_env_time` is the intended task schedule, not evidence that adaptive substeps exactly covered it. Observed easy records report 25 accepted internal steps/control step; medium records report varying counts (e.g. 27–49), proving subdivision occurs there. The completed campaign now supplies RBC timing evidence; see the final numerical limitations report for per-family validation outcomes.
 
 ## Conservative offline reconstruction
 
@@ -29,11 +29,9 @@ A successful adaptive call must make at least one accepted internal step. Having
 
 For Cylinder dt, native dt is 0.009999999776482582. Over 2,400 control steps the reconstructed elapsed time is 599.9999865889549, versus nominal 600. Starting at clock 1, float32 accumulation ends at 601.275390625 (elapsed 600.275390625). This exact CPU reproduction explains a 0.275404036 difference without changing the integration itself. Nominal/native dt relative difference is about 2.24e-8. FFT frequency units use the reconstructed interval and remain those of the dimensionless solver schedule. This does not quantify spatial/temporal discretization error, solver residuals, or clock-dependent boundary effects.
 
-### Existing partial results
+### Completed campaign results
 
-The supplied tail excerpts and summary JSON do not contain full raw time/lift sequences. Therefore existing easy extended FFTs are **conditionally justified only after all-record validation**. They have not been computed locally and no peak is reported. Medium extended is incomplete and excluded; its variable subdivision cannot use this reconstruction. The completed server run artifacts should be analyzed offline into a new directory, using the commands below. Synthetic full-horizon replay/FFT tests do not substitute for this server artifact validation.
-
-Even validated FFTs remain control-interval-averaged lift spectra; window length, frequency resolution, aliasing and stationarity limitations remain. Existing rules requiring enough samples/cycles and withholding flat/Nyquist-edge candidates remain in force.
+All-record validation now supports the five easy Cylinder extended spectra. Other extended spectra remain withheld under the timing restrictions; see the [final characterization](FINAL_NOMINAL_CHARACTERIZATION.md) for measured peaks and uncertainty. Raw clocks remain unchanged. Validated spectra describe control-interval-averaged lift; finite windows, aliasing and lack of stationarity evidence still limit interpretation.
 
 ## Execution audit and corrections
 
@@ -56,30 +54,11 @@ Limits: SIGKILL of the supervisor, machine loss, blocked filesystem writes or un
 
 Second attempt: 12,800 completed-run steps plus 580 recorded incomplete steps; 44 runs not started. First attempt: 400 completed-run steps plus 253 recorded incomplete steps. These independent attempts are not combined into a trajectory or a completed matrix. Device-wide peak and total runtime of the second attempt are unavailable. Existing residual histories, fallback-event counts and divergence diagnostics remain missing.
 
-## Commands (operator-run; no commands here were executed against CFD)
+## Reproduction
 
-Synchronize changed Python modules and launcher to the server, keep the existing activated environment, and run offline reanalysis first:
+See [server execution](SERVER_EXECUTION.md) for the maintained offline-analysis and supervised-launch interfaces. The primary campaign is complete; no additional CFD run is needed to reproduce its offline reports. Historical partial attempts remain separate evidence and are never joined to the completed campaign.
 
-```bash
-cd /nfs4/jhkim/repos/Fluidgym-Physics
-FG_EXEC=results/preparation-20261014T115019Z/execution-20261015T010803Z-Rk5NDa
-python -m fluidgym_physics.cli analyze \
-  --campaign "$FG_EXEC/campaign" \
-  --output "$FG_EXEC/analysis-validated-time-v1"
-```
-
-This reads immutable existing trajectories, validates hashes/time evidence and either produces labeled spectra or explicit withholding reasons. If the output exists, choose a fresh name. Send `analysis.json` and figures for review; do not claim spectral results from the previous summary alone.
-
-For the **next campaign only**, after this task's changes and tests have been reviewed, in a persistent server terminal:
-
-```bash
-cd /nfs4/jhkim/repos/Fluidgym-Physics
-bash experiments/run-approved-primary.sh results/preparation-20261014T115019Z
-```
-
-The launcher uses the existing approval, revalidates the same matrix/inputs, generates a new exclusive execution directory and never resumes partial trajectories. Do not rerun approve-matrix. The six environments, 60 runs and 58,200 steps are unchanged. No launch is part of this task.
-
-## Validation results
+## Historical implementation validation results
 
 - Full CPU suite: **97 passed, 3 skipped** (26.62 seconds). Skipped tests require the real CUDA environment.
 - After removing the signal-sensitive shell `tee` pipe and testing process-group delivery, focused time-axis/subprocess suite: **16 passed** (18.11 seconds).

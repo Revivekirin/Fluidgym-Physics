@@ -1,0 +1,2014 @@
+{
+  "artifact_sha256": {
+    "analysis.log": "2b00603ae5edef1690599efd166f697fb3736ef7669f97e391cce8dfa48c51e4",
+    "analysis/CylinderJet2D-easy-v0__benchmark__ic-1.png": "051ec80d5775e40cf737c0c1ff690ea3399a4158e6e5b4e82fc763c5199eb7bc",
+    "analysis/CylinderJet2D-easy-v0__benchmark__ic-2.png": "b7fabd2f2c5a4545d6e7928fe65d1c742e2fc6b89a627053d0c9f81ef812183d",
+    "analysis/CylinderJet2D-easy-v0__benchmark__ic-3.png": "0227e6ee5e6be7f53cfb85e92553d8c56c99a954863d03072cfeb66e9630f602",
+    "analysis/CylinderJet2D-easy-v0__benchmark__repeat-a.png": "1abc6a2f698ef3426ec93fac9ff386fe336648e12274c7caf45c5579251ffeb1",
+    "analysis/CylinderJet2D-easy-v0__benchmark__repeat-b.png": "a19dc3e1d763ac8fe762ed9f1b1d2fe26decf249d5bb3b1ac29d29b2cee8eb65",
+    "analysis/CylinderJet2D-easy-v0__extended__ic-1.png": "1a5f9b3eb67d65e6ebd5dcec984b18052f5de764b6b7187cb47fe81e42b3906d",
+    "analysis/CylinderJet2D-easy-v0__extended__ic-1__spectrum.png": "1302c0cc44eb62820154ca01090c9eef157157b8e4d44481eefd81b4479baf13",
+    "analysis/CylinderJet2D-easy-v0__extended__ic-2.png": "778fa0b5921585906643abebfaf04bc38c095de322f101cf7f1caed13bad2c6e",
+    "analysis/CylinderJet2D-easy-v0__extended__ic-2__spectrum.png": "eaf0d89a1082a183fc6cf2caea6d6518e9e668da525e01cb863dcfecdcce69f0",
+    "analysis/CylinderJet2D-easy-v0__extended__ic-3.png": "812547d2a803800864e842480540a019689f039ac42a5173436235ac68182576",
+    "analysis/CylinderJet2D-easy-v0__extended__ic-3__spectrum.png": "1302c0cc44eb62820154ca01090c9eef157157b8e4d44481eefd81b4479baf13",
+    "analysis/CylinderJet2D-easy-v0__extended__repeat-a.png": "862d342c8b594490cd498aba98ab40a7108ea7877bc01d3227a0cc3db2c8d334",
+    "analysis/CylinderJet2D-easy-v0__extended__repeat-a__spectrum.png": "1302c0cc44eb62820154ca01090c9eef157157b8e4d44481eefd81b4479baf13",
+    "analysis/CylinderJet2D-easy-v0__extended__repeat-b.png": "3b71cc7953515b2cdfe1b46aec0e637dead80bd1998c1e06cc8670b61bab72fc",
+    "analysis/CylinderJet2D-easy-v0__extended__repeat-b__spectrum.png": "1302c0cc44eb62820154ca01090c9eef157157b8e4d44481eefd81b4479baf13",
+    "analysis/CylinderJet2D-hard-v0__benchmark__ic-1.png": "b90d182f603b3af3f52182e1b32abad9037f7b8b47d3a49a8969c8ed3bd03903",
+    "analysis/CylinderJet2D-hard-v0__benchmark__ic-2.png": "27fd30733c1bdcdbc3be4a46648f052b475556a1d20dc0dedfb03a9b5e7f9fca",
+    "analysis/CylinderJet2D-hard-v0__benchmark__ic-3.png": "8f734d3869252eab1ac6a2763c5c0860251b23177fc04688d38c2f1cc87d45f1",
+    "analysis/CylinderJet2D-hard-v0__benchmark__repeat-a.png": "dfdb3eba4d57947b81a261839879f8dd90ffa9519a64bf42bee932b73dec78e3",
+    "analysis/CylinderJet2D-hard-v0__benchmark__repeat-b.png": "7269121058eb5114dc6fbfb2d5983e264c6203e7fdd8aabbcc1512075d2d2518",
+    "analysis/CylinderJet2D-hard-v0__extended__ic-1.png": "e9cb2db03fadbcc355aaa639ba105fdff196730f817f3f0adb7b31e643aa054b",
+    "analysis/CylinderJet2D-hard-v0__extended__ic-2.png": "57626e8490e74326cd769f484cba48e2351b4c796ef47f7845819a341cfdb236",
+    "analysis/CylinderJet2D-hard-v0__extended__ic-3.png": "b47c7ac42af3f06ebf92060c42c09e9118237b200fae186f4ec31e64af23ae82",
+    "analysis/CylinderJet2D-hard-v0__extended__repeat-a.png": "fa03fe63505161469357937a7972643b3604ff0d17185230744ae4a61cb7dce2",
+    "analysis/CylinderJet2D-hard-v0__extended__repeat-b.png": "29ca15c325d8da71087cb565a658b998f9c4d36093d6ef91fe7a2c726e4fc58f",
+    "analysis/CylinderJet2D-medium-v0__benchmark__ic-1.png": "1725d81d8bbb6194c36b75cca45a7f42006e572db2d0c5e2482f6c1588379a7e",
+    "analysis/CylinderJet2D-medium-v0__benchmark__ic-2.png": "844d681fc008657d0d5deed94d26896770f36590a4012034fac413dc8a368afe",
+    "analysis/CylinderJet2D-medium-v0__benchmark__ic-3.png": "2c48e34381cd3e9d032e939c02b506c2a69e247de47af2f2da329e224558167c",
+    "analysis/CylinderJet2D-medium-v0__benchmark__repeat-a.png": "a9193f3c4c766d2350317aed4721baae4cf88d5fee8c6ccec62826d8fa551aec",
+    "analysis/CylinderJet2D-medium-v0__benchmark__repeat-b.png": "41ec2782387c851bd3101516a04674ef360b0fd9daf5b5ef6b6f6084e9518fb6",
+    "analysis/CylinderJet2D-medium-v0__extended__ic-1.png": "5154c737b76c1634851ccc3fa58c4a99a3d1338cb04d5c66aa531c6c4d0b7523",
+    "analysis/CylinderJet2D-medium-v0__extended__ic-2.png": "71ca60650765dce6510a00688974d0b8c78ee646fa8ffd4e051519dc7b4ca592",
+    "analysis/CylinderJet2D-medium-v0__extended__ic-3.png": "0e6a2c225cbb34f1c00c6fac58ee79b67abb9d3325fa876cdeaab8d2346550e7",
+    "analysis/CylinderJet2D-medium-v0__extended__repeat-a.png": "78ccb3de1fe457f0b7ed61f688f058114d3832b60c2df392e6da08a493a763df",
+    "analysis/CylinderJet2D-medium-v0__extended__repeat-b.png": "69cb23dc805e423af7cda773934b06131ff6e0ee363e3891705a299c6fd316b8",
+    "analysis/RBC2D-easy-v0__benchmark__ic-1.png": "1138f2c89668157bdc478d20e5de10d8ddccf8362795efe17b48aa931c84b171",
+    "analysis/RBC2D-easy-v0__benchmark__ic-2.png": "eb04a76cb30f48557404c3723899f3a9e2daab81c82d30c17c6eabc6de327583",
+    "analysis/RBC2D-easy-v0__benchmark__ic-3.png": "57f11ad435e3ff89a99bca7c4fe812d69084bf9f598e2ef3e047e2565022b11d",
+    "analysis/RBC2D-easy-v0__benchmark__repeat-a.png": "70a00737e3a64a09b5467a740db1b112de95b857717aa97aae9860d33e2a43a8",
+    "analysis/RBC2D-easy-v0__benchmark__repeat-b.png": "ef485b68864387c37d661291db362255d816795ee0fdaa6274951f66a8bb011c",
+    "analysis/RBC2D-easy-v0__extended__ic-1.png": "c237145de40045defa6a7a1e0bd984e92a46019149ebbae9aedd9a6a1bcdd52f",
+    "analysis/RBC2D-easy-v0__extended__ic-2.png": "83b5aa4a5cb68cc1eb54317078478981d15fa6bf4a0bfb999e5ed8c46bfaa0d6",
+    "analysis/RBC2D-easy-v0__extended__ic-3.png": "8c13af1f2cc7bbbb22401c6c04985bd60728efb87e54486d42d32dc64b216f58",
+    "analysis/RBC2D-easy-v0__extended__repeat-a.png": "6a4f02ba4549391cc1bacc648bc6b164d228612dd801d160e3f14b8b59e7425b",
+    "analysis/RBC2D-easy-v0__extended__repeat-b.png": "2aae4d6f29ac50f2f483a31f8c539e5c2eb90eafc15a2fb9ffd5048bb233be1f",
+    "analysis/RBC2D-hard-v0__benchmark__ic-1.png": "80bac611befde49097b5d85580864e2192c2ba691b6b47e0887c40b17212706a",
+    "analysis/RBC2D-hard-v0__benchmark__ic-2.png": "7f9b5106b798ef8325f7e4bbbab0dd612b7ce7b8182d3e7b120f11dd962db8d7",
+    "analysis/RBC2D-hard-v0__benchmark__ic-3.png": "02b025736a8de4f0fc75c3d5bf3e30b7faccb5be9f769e09174fdb3ec08a0ba1",
+    "analysis/RBC2D-hard-v0__benchmark__repeat-a.png": "d44a8de30c84c7c7b2b9d6bd710b3165de51de0f2fbed95acb3a04ffe7709d1a",
+    "analysis/RBC2D-hard-v0__benchmark__repeat-b.png": "e359dcef93b7d70f9349d9ea8473533cba010ef15a6930607bd180bf1ce5e10d",
+    "analysis/RBC2D-hard-v0__extended__ic-1.png": "52abc08ebff70a657b87577fb5d24b47bb25f5e91e4c970ec6edcd06e1c06663",
+    "analysis/RBC2D-hard-v0__extended__ic-2.png": "b3a6d904370fcf476f4fd0b7cda2fa44af80a26b9b539c849ad14bb653fd6612",
+    "analysis/RBC2D-hard-v0__extended__ic-3.png": "c7b3de826bbea57593ab4428cf29c91ae125afe5a6fd83525453b3d9b18c4ddc",
+    "analysis/RBC2D-hard-v0__extended__repeat-a.png": "677da2ca9a22959cf6232f615442a5de97b4b246c242cedd229548847a2082b7",
+    "analysis/RBC2D-hard-v0__extended__repeat-b.png": "119eff6d8e7b53135136d623fba81e151ce84be12899d5de5891f0bc20a931fd",
+    "analysis/RBC2D-medium-v0__benchmark__ic-1.png": "c867692007be2cdb4aa02eabf2938851986d9763e5bcb67802c08d1b191ec9b8",
+    "analysis/RBC2D-medium-v0__benchmark__ic-2.png": "756186934f729c0c314f875053871c428edefc9760713f7cdbcd1d7759dd1a37",
+    "analysis/RBC2D-medium-v0__benchmark__ic-3.png": "2a3cad25450a68570bc1aacfe15270e9bb68578c9ccf40e4c6366273de266351",
+    "analysis/RBC2D-medium-v0__benchmark__repeat-a.png": "73f6a03140cfbb40d73e82c81a7676ed5f6550fd0ad9d2d0a66ca4034e882156",
+    "analysis/RBC2D-medium-v0__benchmark__repeat-b.png": "49b972aa0ad6aaee1e0d6fb7daf19e02b5256cbdeb9b7cbfb86e548a7155b552",
+    "analysis/RBC2D-medium-v0__extended__ic-1.png": "63d4eaedca0f80d40979fcc595e5e7f0bec9b8601ff9c2fa751905d8907f607c",
+    "analysis/RBC2D-medium-v0__extended__ic-2.png": "9c430c17b35e320c77c77347c98fc7e7cf229c73646ec34fc9407e21236ea559",
+    "analysis/RBC2D-medium-v0__extended__ic-3.png": "30eb88671e6947624a2fc5b0560b5ff0045fd50cb5674f6d086f83c43f11cdc5",
+    "analysis/RBC2D-medium-v0__extended__repeat-a.png": "7bf011fbb1175cf12550a24992578bd9b31196e14ebac35fe2f4ed24aef25801",
+    "analysis/RBC2D-medium-v0__extended__repeat-b.png": "4a7701d05ba09ac74c21d3a048b9734a00063f707f5c078af702d31d9950449b",
+    "analysis/aggregate.png": "108c0c5b155178eca426631ff24c221034d2235fdf405d0562520b303ee80d3e",
+    "analysis/analysis.json": "9be783b352900966424264766c74cd89f20ee4cfd2f9ca07ee17e60023c985cb",
+    "campaign/CylinderJet2D-easy-v0__benchmark__ic-1/progress.jsonl": "e2cce93218aabb6d7bbde0264e9febf0bbe0fe710be8abb85b413ee6919f6dbb",
+    "campaign/CylinderJet2D-easy-v0__benchmark__ic-1/provenance.json": "6ee4ce194a068e4fd69f09a38fcc9cf7ee5adbb6e7fbd94a5c064cb9f5b70101",
+    "campaign/CylinderJet2D-easy-v0__benchmark__ic-1/request.json": "cf9ed3f32f8f4d5ad3c969286d9ba58372eb14a950da5b52388f2e0ecb6476b5",
+    "campaign/CylinderJet2D-easy-v0__benchmark__ic-1/status.json": "a6195ca15dff0c32ea60bc8e6baed6332120c67ec139b29034642633c878c9a3",
+    "campaign/CylinderJet2D-easy-v0__benchmark__ic-1/trajectory.jsonl": "d986448f8caba1e43eec279a9d2eaa38b56e878f996ca248a8f115f5533f687f",
+    "campaign/CylinderJet2D-easy-v0__benchmark__ic-2/progress.jsonl": "14b0b40888c6d8fbeedab668cb34aabab05a9a947f9f932996ff4ae7259921a5",
+    "campaign/CylinderJet2D-easy-v0__benchmark__ic-2/provenance.json": "f882bd06413ffde5a9a966079145d3aa3f19bd9ad1402afe86539f0a2a3c9856",
+    "campaign/CylinderJet2D-easy-v0__benchmark__ic-2/request.json": "d2621b272a9be1cb023a1a12ee37613c8c81321cf9d0d694013c4578f48ad695",
+    "campaign/CylinderJet2D-easy-v0__benchmark__ic-2/status.json": "8040bf85ef04487dea6ef73dcb2a065bee3ab1840c40dfcd2d95a01a2f3caff4",
+    "campaign/CylinderJet2D-easy-v0__benchmark__ic-2/trajectory.jsonl": "15b70394673bb74e0f032238d4f3f937ee343edae99d9b69fab87dab55abc0bc",
+    "campaign/CylinderJet2D-easy-v0__benchmark__ic-3/progress.jsonl": "7cb8edab843791e84bd5876ca449db517e6d9e417d19c61a73cbdf5c86b687c9",
+    "campaign/CylinderJet2D-easy-v0__benchmark__ic-3/provenance.json": "c77e99b6311539e22cc51d86a990e45d1efc1a70baec6af5d424e3b318f30679",
+    "campaign/CylinderJet2D-easy-v0__benchmark__ic-3/request.json": "3bb55c255f6445a2a9b8aea33cb572ee137172b24f196717cc2653137a1a31cf",
+    "campaign/CylinderJet2D-easy-v0__benchmark__ic-3/status.json": "5877d2c1cf6c50dd4fb03268abb27616f34d39daaf3b5fcf0f4f17c72c64b906",
+    "campaign/CylinderJet2D-easy-v0__benchmark__ic-3/trajectory.jsonl": "a75ec6768b7e69187e07a0e125557ce81ac77988f634333a5c914007c36d7ec2",
+    "campaign/CylinderJet2D-easy-v0__benchmark__repeat-a/progress.jsonl": "1244e152f8889d01cd55c9c2c4fcd7f9f57f33e31a443794754a6697d49c9ae9",
+    "campaign/CylinderJet2D-easy-v0__benchmark__repeat-a/provenance.json": "835320a7371d64f2f5234d97a26bb4f21dda14cc3874dc97d1c485ae77685af8",
+    "campaign/CylinderJet2D-easy-v0__benchmark__repeat-a/request.json": "09650e8f50450434939e298e7e732ec49f7dc72282825dc2d1648541f1392b2b",
+    "campaign/CylinderJet2D-easy-v0__benchmark__repeat-a/status.json": "7018d5ab35fc15ee00bdaa63bbda35f75f207afa59d7c0bf9cf2f9bdaeec0d0e",
+    "campaign/CylinderJet2D-easy-v0__benchmark__repeat-a/trajectory.jsonl": "da654c2980c4b4f13ce15c74f7a3a0a9d14d6f993242426ff364b04f36828e1b",
+    "campaign/CylinderJet2D-easy-v0__benchmark__repeat-b/progress.jsonl": "efcfcab1dc399eefb333acfed23a7fe439194ac1857176c5c70a60265587aa92",
+    "campaign/CylinderJet2D-easy-v0__benchmark__repeat-b/provenance.json": "835320a7371d64f2f5234d97a26bb4f21dda14cc3874dc97d1c485ae77685af8",
+    "campaign/CylinderJet2D-easy-v0__benchmark__repeat-b/request.json": "261fc7242633b2175169bf84a3006a860a9ecd5d7ef15d69fd2da30c1843a4dc",
+    "campaign/CylinderJet2D-easy-v0__benchmark__repeat-b/status.json": "62d8f5d71aca42f2b549bc49482539e4c445565c7af5e1b2a3ac0c467b48590e",
+    "campaign/CylinderJet2D-easy-v0__benchmark__repeat-b/trajectory.jsonl": "d5709f7a6a7a6b221133adcd000d1b2aa4719a744c427c40967bb7e380fcdc73",
+    "campaign/CylinderJet2D-easy-v0__extended__ic-1/progress.jsonl": "df7a8ffe73a8058c81a9121f8ddc0b50ff61e2544a941cdb24841dfebadeba73",
+    "campaign/CylinderJet2D-easy-v0__extended__ic-1/provenance.json": "305682c0ed52d8751c03400764672215537273ee712554a1e392fd9a3f6e4dfd",
+    "campaign/CylinderJet2D-easy-v0__extended__ic-1/request.json": "8973c50f3f74b2c49b59e04c3e32b78cde879a4376796368a54936223d0caa5a",
+    "campaign/CylinderJet2D-easy-v0__extended__ic-1/status.json": "25d9dc701ebdc37875de4c7b05600b9ca0ac727008ecbaaac88ea91a3a39fac3",
+    "campaign/CylinderJet2D-easy-v0__extended__ic-1/trajectory.jsonl": "7d48b7b0e857b816faf167424ffed64e77a562df23401b86ed255eaf92d9a5c0",
+    "campaign/CylinderJet2D-easy-v0__extended__ic-2/progress.jsonl": "dcbfb538d55be7228f2359e1b700340796f5730e86f769fe4324565dcfe8e4c0",
+    "campaign/CylinderJet2D-easy-v0__extended__ic-2/provenance.json": "dd3e1b76aec8c1f262f727cccdadeb38aab76b230600d5c7c3d3491c66051a50",
+    "campaign/CylinderJet2D-easy-v0__extended__ic-2/request.json": "2d2e69b2da84d24cc1dacbcb24d6cafd18cd72fbc9cfa347f40ef66708f55a0e",
+    "campaign/CylinderJet2D-easy-v0__extended__ic-2/status.json": "869c3e912c33b14475c54ea3688318e172139cf58c89b5aba48b24348ccfca92",
+    "campaign/CylinderJet2D-easy-v0__extended__ic-2/trajectory.jsonl": "ace96553401f033aee6d90b85a44a70787b83b22490a444b4894eb8d0b04c0be",
+    "campaign/CylinderJet2D-easy-v0__extended__ic-3/progress.jsonl": "8e09b59366a15a0895fde7f6d02d66ae80798788b7dfcd4b919b57754d72488e",
+    "campaign/CylinderJet2D-easy-v0__extended__ic-3/provenance.json": "eb39c6a853c9ec074283bd356aad22e32b890c28fd38d2f87ed8ca9267ada0ac",
+    "campaign/CylinderJet2D-easy-v0__extended__ic-3/request.json": "e1c0fa847abee1cb7041c04710dc94f708668dfc900e1582f0a1b20914537e01",
+    "campaign/CylinderJet2D-easy-v0__extended__ic-3/status.json": "51b55abf3450f3c00891156672181ed33d45476dd2ca0f969c564b7ee929cb83",
+    "campaign/CylinderJet2D-easy-v0__extended__ic-3/trajectory.jsonl": "52b8021abfacfddb0c0611ab8db27d24a20a659ed27b78fa6ace416b358b1ee1",
+    "campaign/CylinderJet2D-easy-v0__extended__repeat-a/progress.jsonl": "5cab07d40a4e5ddd1e2859a005b1677bc45a65e280c7036fdd3ba38cd73ed7ee",
+    "campaign/CylinderJet2D-easy-v0__extended__repeat-a/provenance.json": "2dcb4d48a3b4e60b3ecda3e9f8dd0e688faf8ff2c5a97876d9029b0265ecfa87",
+    "campaign/CylinderJet2D-easy-v0__extended__repeat-a/request.json": "ff60367ab3e5c1a8fb4c2757eb020921008b3323297563c5eacd9b70e7f8c343",
+    "campaign/CylinderJet2D-easy-v0__extended__repeat-a/status.json": "a1dc397b10811c8d2c2c758f7c660bc8d11423eba6222cdcbbacb26c07f3209c",
+    "campaign/CylinderJet2D-easy-v0__extended__repeat-a/trajectory.jsonl": "001bed6c309aa67d8f7a655b19bd4a75392139b480c068b66061e8cbe9bb2bdd",
+    "campaign/CylinderJet2D-easy-v0__extended__repeat-b/progress.jsonl": "d3cb08c1ca73096371750ad965fd92b74598288ff05e72e68587381982a2d181",
+    "campaign/CylinderJet2D-easy-v0__extended__repeat-b/provenance.json": "2dcb4d48a3b4e60b3ecda3e9f8dd0e688faf8ff2c5a97876d9029b0265ecfa87",
+    "campaign/CylinderJet2D-easy-v0__extended__repeat-b/request.json": "396e6bd3143945277840e7a1fce7753b00889f54e339c231225121aac10c5fe3",
+    "campaign/CylinderJet2D-easy-v0__extended__repeat-b/status.json": "a912acaf031c708c283f078e90052cdc7df37641520383fa6b9e529fa584a240",
+    "campaign/CylinderJet2D-easy-v0__extended__repeat-b/trajectory.jsonl": "b57c21ba5af2506af137e3c46c99fb0881f615ea6da7cb9de66eb90f4b8bc011",
+    "campaign/CylinderJet2D-hard-v0__benchmark__ic-1/progress.jsonl": "ac11f63d348472bcbc8671524717d862a9bce1d88703175e17b63f8c8dcf39fb",
+    "campaign/CylinderJet2D-hard-v0__benchmark__ic-1/provenance.json": "0c154cf9c2641bcff226ba0cf01d24ac07ad62fc03b48e12c67bcf55591142c4",
+    "campaign/CylinderJet2D-hard-v0__benchmark__ic-1/request.json": "f9c0816fd5cc8d8e70d4922924b85756019d533529596660dde2ede935f94daf",
+    "campaign/CylinderJet2D-hard-v0__benchmark__ic-1/status.json": "77aee6dd007a4376c1dbd88f7983e84795dddda9e259caf9ffbf409bcbc5944f",
+    "campaign/CylinderJet2D-hard-v0__benchmark__ic-1/trajectory.jsonl": "f4b0417ed6e598bead7a055681b744d9de5a395ca53429a69ff860c104c99e0a",
+    "campaign/CylinderJet2D-hard-v0__benchmark__ic-2/progress.jsonl": "bb52a65a803a1126d17ff3c0d4eb514783673f9ebade48e1a5cb6583e348640f",
+    "campaign/CylinderJet2D-hard-v0__benchmark__ic-2/provenance.json": "0a40ce07f8d5bda5264b0f8c0bfdaccd8c17b6dbefaa3ec45b89af2404a77baa",
+    "campaign/CylinderJet2D-hard-v0__benchmark__ic-2/request.json": "82a4f2346d4a3c19fbec88a326612c76777bb02025f2a4cdc48de954e0da4aef",
+    "campaign/CylinderJet2D-hard-v0__benchmark__ic-2/status.json": "ecb6b32f73eab40469581a68cebc3c146f4061ed05f149f20c40f2d1fea65618",
+    "campaign/CylinderJet2D-hard-v0__benchmark__ic-2/trajectory.jsonl": "1cb67928fe9adf1c5809ab167fb3a2248d5b370b1616af0beefe39def32babd7",
+    "campaign/CylinderJet2D-hard-v0__benchmark__ic-3/progress.jsonl": "ddc513dc2cbd8953e8fedf706b205193bce10c7738524f5a3c36bf8832f2025c",
+    "campaign/CylinderJet2D-hard-v0__benchmark__ic-3/provenance.json": "2130da76d2ebaafa8bd4c998c308f126613fd1cd47fd9398eb61159575a29e1f",
+    "campaign/CylinderJet2D-hard-v0__benchmark__ic-3/request.json": "ba11e814cea53b20771dc1d423965fc7e240d5bc30bd5947a04d82aac11da893",
+    "campaign/CylinderJet2D-hard-v0__benchmark__ic-3/status.json": "bf66b1c3ffecbea6f46e5bc872dc5aaf74c062f12c1973c40fe42252990cf3e9",
+    "campaign/CylinderJet2D-hard-v0__benchmark__ic-3/trajectory.jsonl": "87f9fa5902daee5f78c60a8ebc782d31bb846836ecbd3bbae66acda153d8601b",
+    "campaign/CylinderJet2D-hard-v0__benchmark__repeat-a/progress.jsonl": "faf6b3b93135bb83991ea4037178eeec11e0d1dd2324fae0d34416196d5cdd87",
+    "campaign/CylinderJet2D-hard-v0__benchmark__repeat-a/provenance.json": "ba30a9dd5c0c79e228388d60b2968386d1b8ee4d2c45d00a53a70ac7df9c9600",
+    "campaign/CylinderJet2D-hard-v0__benchmark__repeat-a/request.json": "22ef8ae0617dd7d80c9e7a85c2c09aa0601360ae473ce02d46332a0708ae90c3",
+    "campaign/CylinderJet2D-hard-v0__benchmark__repeat-a/status.json": "47a96fd3609fd8f5a7e659deba8609e5e642a3ac21081a275edb12a925d64083",
+    "campaign/CylinderJet2D-hard-v0__benchmark__repeat-a/trajectory.jsonl": "648b9becb15b604f0dac93878d15970d8483eda608763fa6a44d7423d79a225d",
+    "campaign/CylinderJet2D-hard-v0__benchmark__repeat-b/progress.jsonl": "304d7d83d5b392876478ec37d91a9f205b25c70f90e64b1756d81c279765c42e",
+    "campaign/CylinderJet2D-hard-v0__benchmark__repeat-b/provenance.json": "ba30a9dd5c0c79e228388d60b2968386d1b8ee4d2c45d00a53a70ac7df9c9600",
+    "campaign/CylinderJet2D-hard-v0__benchmark__repeat-b/request.json": "e93b578ae1ac6d3cfb5eedfc03ee705ca8788add3222508145c47a069539595b",
+    "campaign/CylinderJet2D-hard-v0__benchmark__repeat-b/status.json": "dcde4356ceb099ae1ed8cb8a1775b7def9857b1b6b08515de45814d569049d23",
+    "campaign/CylinderJet2D-hard-v0__benchmark__repeat-b/trajectory.jsonl": "58ad419478ba6f45c7ef9347bbfd33cc9af8ef6340199bfd798a540de808e09b",
+    "campaign/CylinderJet2D-hard-v0__extended__ic-1/progress.jsonl": "641d2c8e1ac88b245f96d21afc6f0ac4bcfc77f36d6e0a2c821f7238876f2404",
+    "campaign/CylinderJet2D-hard-v0__extended__ic-1/provenance.json": "4995c77ba66825f7b9845a3ca5e09f44b322346f674f3771604f572e885297a5",
+    "campaign/CylinderJet2D-hard-v0__extended__ic-1/request.json": "0b6842e65b4233f3e05bbf87d0c9b61ed80e5024ecca2bf47a5111c859a60629",
+    "campaign/CylinderJet2D-hard-v0__extended__ic-1/status.json": "ea0bb5b310a6dd2079a4e1294a7404e7094bfb0a3e1edbcd89acfdabcf9b69e0",
+    "campaign/CylinderJet2D-hard-v0__extended__ic-1/trajectory.jsonl": "95316071abf410d58cbb77214bdcf58e10979e5c1f4e8d5bd3c356532c9c549d",
+    "campaign/CylinderJet2D-hard-v0__extended__ic-2/progress.jsonl": "bbcbc16f6e020f4cf2f0ad802cf636b257048bb850c2ba3172ecdd311e5b0ba4",
+    "campaign/CylinderJet2D-hard-v0__extended__ic-2/provenance.json": "9e15c35175bb9ed99990ff7b86a2bfccada9715dbe6a55203323a7e8f1b4c870",
+    "campaign/CylinderJet2D-hard-v0__extended__ic-2/request.json": "c554149b146cf3370d01e1dbd546c4d015be38ea7ae740b88b1000ed123a7036",
+    "campaign/CylinderJet2D-hard-v0__extended__ic-2/status.json": "5f356cb30121a8ebbb309e6a873d5efd5e50054041ffcd96145be1c67f65af4c",
+    "campaign/CylinderJet2D-hard-v0__extended__ic-2/trajectory.jsonl": "1a7d2fa58e7ff7fbb1fe0f2ac373e83dd1517853b166700654877c6d328872bb",
+    "campaign/CylinderJet2D-hard-v0__extended__ic-3/progress.jsonl": "133910771cb7a18eccb39df73415db0cbbe210eada13b84df1c9127821102557",
+    "campaign/CylinderJet2D-hard-v0__extended__ic-3/provenance.json": "b4ec54575f092dbf621c8370024c515a65a31656d573cc62c3fc0f41bf2dc2a0",
+    "campaign/CylinderJet2D-hard-v0__extended__ic-3/request.json": "f1ffef62ef889f987223e2e9190e0cf62754c55a532146c18f1d8c8ba930d568",
+    "campaign/CylinderJet2D-hard-v0__extended__ic-3/status.json": "e562c78ed7709b9e71fced4d98bde19107efd43177897bfe488f793541eddace",
+    "campaign/CylinderJet2D-hard-v0__extended__ic-3/trajectory.jsonl": "06d9c1f042dd8dea73903a29c7d198eb5a1d8b72ffac1c3fd0e6a731c2a1a81e",
+    "campaign/CylinderJet2D-hard-v0__extended__repeat-a/progress.jsonl": "9b01abc32e2322ab207d9dc5a9d9ffc26fa1293eb066c415f99f6d2257d61099",
+    "campaign/CylinderJet2D-hard-v0__extended__repeat-a/provenance.json": "79eb8d2699cdad02a235eadcc6bbba36b8046da2c6f3736a2d12ca141d68fe47",
+    "campaign/CylinderJet2D-hard-v0__extended__repeat-a/request.json": "8d3414e7c8a6584ae9a0124431821320c5c7187cb05fc6a2358d0ca013d1ea01",
+    "campaign/CylinderJet2D-hard-v0__extended__repeat-a/status.json": "41f6ffdf162eae3732f3112c72fa00d86ea677850b30a031e0eebbd87c26e92c",
+    "campaign/CylinderJet2D-hard-v0__extended__repeat-a/trajectory.jsonl": "396406a69953765a5c7f7a40d915d24255ea1a1404f39a23c7923f49b923861c",
+    "campaign/CylinderJet2D-hard-v0__extended__repeat-b/progress.jsonl": "e8e704096bd89af2d70eef8cddca5fd45caaf873ce394d11bf3bddfdb77dc28d",
+    "campaign/CylinderJet2D-hard-v0__extended__repeat-b/provenance.json": "79eb8d2699cdad02a235eadcc6bbba36b8046da2c6f3736a2d12ca141d68fe47",
+    "campaign/CylinderJet2D-hard-v0__extended__repeat-b/request.json": "62b5b99995193802980b57cfddceb2c6e8148b3bfcee1781c55e840f478b312d",
+    "campaign/CylinderJet2D-hard-v0__extended__repeat-b/status.json": "7356782e12c4285924cb3f293240f83540f591b87ca7bcbecc174e38da1046f9",
+    "campaign/CylinderJet2D-hard-v0__extended__repeat-b/trajectory.jsonl": "0eb8d81917728af03da3889817b2c27165bee69c1581959ec24495b6f0272635",
+    "campaign/CylinderJet2D-medium-v0__benchmark__ic-1/progress.jsonl": "85141457aa2d594e493355e038f1fbba0d8b51dacaac58f4c9eacd731c99de55",
+    "campaign/CylinderJet2D-medium-v0__benchmark__ic-1/provenance.json": "6f1fe6682361038bca87e6f1b8805e3ea08e42965324292543794c66fa12483d",
+    "campaign/CylinderJet2D-medium-v0__benchmark__ic-1/request.json": "8f0e964c06002675118a30a301d377d97bce467fc450ac0847afa28ec89c6bf7",
+    "campaign/CylinderJet2D-medium-v0__benchmark__ic-1/status.json": "01ad54c18ed7d967097e2982e60e4f4fbbf00a34d1beb3e10a51025d27af25e9",
+    "campaign/CylinderJet2D-medium-v0__benchmark__ic-1/trajectory.jsonl": "208daa7b81a980e51de9f95be42f4402fab8f39785a4e2621eec5da1cf97d46b",
+    "campaign/CylinderJet2D-medium-v0__benchmark__ic-2/progress.jsonl": "b161e7429c49179c30c78e0a7fd0e5ea6afb85e49c576384e81789a21cb9b8db",
+    "campaign/CylinderJet2D-medium-v0__benchmark__ic-2/provenance.json": "8932040468e9e23f8b15ac92f0c399cd84bc949dd22f7a51fd2c4cc1562014db",
+    "campaign/CylinderJet2D-medium-v0__benchmark__ic-2/request.json": "2cb066bd51a79be740674813bcbf3b41d0b9c1bd0ef563550a4ec7256d4a51bb",
+    "campaign/CylinderJet2D-medium-v0__benchmark__ic-2/status.json": "a55fb69da2b6c70494315715c43a14afd714c8cf1278683c9e866c5505ce95e2",
+    "campaign/CylinderJet2D-medium-v0__benchmark__ic-2/trajectory.jsonl": "59666d7283f005f715f34b9766c7c81365543c60b9f7470986f3aa2724a6c302",
+    "campaign/CylinderJet2D-medium-v0__benchmark__ic-3/progress.jsonl": "979a2e34dd1881c1d6d9a99e52620c5cb609be3098232fbf8ab64a9047f27629",
+    "campaign/CylinderJet2D-medium-v0__benchmark__ic-3/provenance.json": "2279ec48d8757e35677aa48f15cfd3b55b21854def15bdfd8c8e9d3428eba129",
+    "campaign/CylinderJet2D-medium-v0__benchmark__ic-3/request.json": "06fe03aa80e836a66c8104bed1f538400fd6ae4d43247f153f49e5b1ed0a20bb",
+    "campaign/CylinderJet2D-medium-v0__benchmark__ic-3/status.json": "ea25c64e2e39f992385588d253cdfc5690096edb9d01d74dd41f23b76b0d287e",
+    "campaign/CylinderJet2D-medium-v0__benchmark__ic-3/trajectory.jsonl": "87247e78318a469fc9ec866224fb4c898f120a38b385276808bb4ca6c15b6684",
+    "campaign/CylinderJet2D-medium-v0__benchmark__repeat-a/progress.jsonl": "399c18d5a522b562f2544e0358f673367fcaafb82d4663735a059d605e013b08",
+    "campaign/CylinderJet2D-medium-v0__benchmark__repeat-a/provenance.json": "75b7e4d730d6a7ac3a3ac2bca4cc18da129af38705f4190ac366c69c7866613c",
+    "campaign/CylinderJet2D-medium-v0__benchmark__repeat-a/request.json": "b4959efe34b6b30d8e7cc60fab36f919d0de94b13b058dd6571fdcfebb078066",
+    "campaign/CylinderJet2D-medium-v0__benchmark__repeat-a/status.json": "c976af1d4eb30733549f8595e43c7b91e7c481934801422d6d118be79df5a02e",
+    "campaign/CylinderJet2D-medium-v0__benchmark__repeat-a/trajectory.jsonl": "2979cba00ea652d1b06448a18a9f2bf2febf523eb0ac011e8ddd43fc7e61f656",
+    "campaign/CylinderJet2D-medium-v0__benchmark__repeat-b/progress.jsonl": "894e38a73cddd1539e28480d23d4d5baa98d28f862a956b1c2350e2b8195044e",
+    "campaign/CylinderJet2D-medium-v0__benchmark__repeat-b/provenance.json": "75b7e4d730d6a7ac3a3ac2bca4cc18da129af38705f4190ac366c69c7866613c",
+    "campaign/CylinderJet2D-medium-v0__benchmark__repeat-b/request.json": "e515da132531c84376af683fbdf8367faccd6567d6a13d4131ca4878a5d2a60d",
+    "campaign/CylinderJet2D-medium-v0__benchmark__repeat-b/status.json": "499f274aff141d141be4cb2503d7ee2581e2c9b09dc7438e3b6b18bd78fd8bee",
+    "campaign/CylinderJet2D-medium-v0__benchmark__repeat-b/trajectory.jsonl": "a8f7c6442a95afb53655230150957aea88a80c52651f9c64b2ad6a57b533f89f",
+    "campaign/CylinderJet2D-medium-v0__extended__ic-1/progress.jsonl": "8150237f4badb678a6eaaff2eae5d2582116fba8529bc9f9a53e73115944bee3",
+    "campaign/CylinderJet2D-medium-v0__extended__ic-1/provenance.json": "50bd40abc59d6e4dd01d18a44913cd8871155e52c8bfc0a7d596bcf2f9952b3d",
+    "campaign/CylinderJet2D-medium-v0__extended__ic-1/request.json": "b4a235817d6dd84628cafd659b4f9764ff44ac5f9bd3ad934c98e9bee0663ae9",
+    "campaign/CylinderJet2D-medium-v0__extended__ic-1/status.json": "339adf1cc22b01b3ab81359c2c0b7aff5627dc440ef18cee650b3e36c8fd23c1",
+    "campaign/CylinderJet2D-medium-v0__extended__ic-1/trajectory.jsonl": "441b55d46ae3420f23898d2e982c143d90f22bd61243b6523eae729b5f4fcd0d",
+    "campaign/CylinderJet2D-medium-v0__extended__ic-2/progress.jsonl": "4d2d5d2379b6e9155479b796520b2de89b63c7856a0354a1de074d8723a1c249",
+    "campaign/CylinderJet2D-medium-v0__extended__ic-2/provenance.json": "3b6e738ff87889d5d71863140a006a340a6e401fa563f0c9ef3534b5a7742989",
+    "campaign/CylinderJet2D-medium-v0__extended__ic-2/request.json": "fd92d2854cbb1d55c3046efd050f25f8c6c93183fd926af95f914a5473495cad",
+    "campaign/CylinderJet2D-medium-v0__extended__ic-2/status.json": "0bed47a07181b690b247e42a7cc00d7481ff349a6f780a72ac6b596878df617c",
+    "campaign/CylinderJet2D-medium-v0__extended__ic-2/trajectory.jsonl": "0052396fd88c130a2a63ef3e3d6000cddf1232bc51217c46cb942e67dcca69e7",
+    "campaign/CylinderJet2D-medium-v0__extended__ic-3/progress.jsonl": "f327104f33fa3593fc517cd67f0c19cd76cb447976715e27fb460ff500238c00",
+    "campaign/CylinderJet2D-medium-v0__extended__ic-3/provenance.json": "537a698c04c5365a155d2d41f8670a648e1affe692f00a66bdaa07bb98fc8a92",
+    "campaign/CylinderJet2D-medium-v0__extended__ic-3/request.json": "0ed33c78ee0daaa4a20bf4e404dcad45ce1aee46f74a9c50d1c0ea11439f9558",
+    "campaign/CylinderJet2D-medium-v0__extended__ic-3/status.json": "a4c7894eb73dfce0ceaeac47d5ac0d62be4eca3d0092c3a1624fde300597574f",
+    "campaign/CylinderJet2D-medium-v0__extended__ic-3/trajectory.jsonl": "11825a4ee06f99e5fa4dc63bd81d582b871e0d9dbdfdaaf68ab71323963ae5de",
+    "campaign/CylinderJet2D-medium-v0__extended__repeat-a/progress.jsonl": "606d93fcfd17fa98e7d7d3690695b9296ebec22c94b9be25b90718959d20284c",
+    "campaign/CylinderJet2D-medium-v0__extended__repeat-a/provenance.json": "e4adf1ce13c20a223df8384bcb96a0b80a4c483335b5f51a942a7fb83cee1d88",
+    "campaign/CylinderJet2D-medium-v0__extended__repeat-a/request.json": "74a5feae801fb2a84ecadf6aaf249548af836de16753b284ab28bc43ffcf2b60",
+    "campaign/CylinderJet2D-medium-v0__extended__repeat-a/status.json": "e684374b19ac77652c31c74f178d38b13fbfc9083f7c41cc94d2eee5e3217fef",
+    "campaign/CylinderJet2D-medium-v0__extended__repeat-a/trajectory.jsonl": "04cc488c1a842c2052a726ddf1639fe3b30c3783486d580321853827f050ff41",
+    "campaign/CylinderJet2D-medium-v0__extended__repeat-b/progress.jsonl": "9f681ea67aa95cfd32cf6256f67d2455eb1329c07e46efc7f2aac786dbb19b43",
+    "campaign/CylinderJet2D-medium-v0__extended__repeat-b/provenance.json": "e4adf1ce13c20a223df8384bcb96a0b80a4c483335b5f51a942a7fb83cee1d88",
+    "campaign/CylinderJet2D-medium-v0__extended__repeat-b/request.json": "41da1e0d5ca368d008be995dbb63f00a48d24174428ce5b073702fbbf4217a28",
+    "campaign/CylinderJet2D-medium-v0__extended__repeat-b/status.json": "58f50cbb0c741ad0f6d240551507b9570c6ba05770bb55451946ed7356fdc513",
+    "campaign/CylinderJet2D-medium-v0__extended__repeat-b/trajectory.jsonl": "dc0c5ee55dc25ad43c6ccc2fe9f53bdcfb1df8a707c4edbb7d69aa957c565fed",
+    "campaign/RBC2D-easy-v0__benchmark__ic-1/progress.jsonl": "5c2f2baab735a7879f869afcccc5b5bdb211d0554936839e992ceec18c8a72d5",
+    "campaign/RBC2D-easy-v0__benchmark__ic-1/provenance.json": "2f06866fd7e5e47bc52f485aad98f7b3f734cd3af5af63687413f79748ab8bd7",
+    "campaign/RBC2D-easy-v0__benchmark__ic-1/request.json": "b6d4a85ba17cd158bcc125795ef17234aa7b1b07036214d4150be1a4073e0634",
+    "campaign/RBC2D-easy-v0__benchmark__ic-1/status.json": "c4d116b77f6e52dbc9d92c4cb3680b95957858e95a179590638862c0f7360922",
+    "campaign/RBC2D-easy-v0__benchmark__ic-1/trajectory.jsonl": "33173f2b97c56b82beb527e8d410827e571d84e8fc51cfad20cae2a1af4ba4d2",
+    "campaign/RBC2D-easy-v0__benchmark__ic-2/progress.jsonl": "9be8c18f4f5ed5b2cd46033c36e6295795b6864f1fa6da466c22383a763c1584",
+    "campaign/RBC2D-easy-v0__benchmark__ic-2/provenance.json": "d9ae80e83541b6d48433e61fca27c63c55157a6891d4558b9ac4bacaf6dab53e",
+    "campaign/RBC2D-easy-v0__benchmark__ic-2/request.json": "489c1dd5af862bac23e8c24eeab43285d791f1c780e23d45be2a3e662c02d86d",
+    "campaign/RBC2D-easy-v0__benchmark__ic-2/status.json": "951ac956f3a8fa9aa6571aa8af603745eb658bc7334c5c656a4553a767dd98c8",
+    "campaign/RBC2D-easy-v0__benchmark__ic-2/trajectory.jsonl": "72bb07d04b2f3afa95e4440d8589ab93a5b16070f88f613a2b8c8f783c5bad6e",
+    "campaign/RBC2D-easy-v0__benchmark__ic-3/progress.jsonl": "71c047267675ec74b712655b2780d213aae40a646dd9a081fb1bd50828f60a95",
+    "campaign/RBC2D-easy-v0__benchmark__ic-3/provenance.json": "0dc4a561e139f16239ffbb714c072a897b1f236464682c862d793ecabe0c1a89",
+    "campaign/RBC2D-easy-v0__benchmark__ic-3/request.json": "2801524534a1c6d26609ec0b1a77fe704fefcf4d69aedfc07704c3e2e8b517d9",
+    "campaign/RBC2D-easy-v0__benchmark__ic-3/status.json": "2c47ff6618b34b187f067156f7add9c82613d66c5046ae571b0a40f51a742950",
+    "campaign/RBC2D-easy-v0__benchmark__ic-3/trajectory.jsonl": "c1da46bfd5115c9a4a12e706fbf52e542e0216a0bda12e17a9aa1987fc4ebd5f",
+    "campaign/RBC2D-easy-v0__benchmark__repeat-a/progress.jsonl": "4ab08bfa7b55fe78af2f861dbb1fbf46f40c14b520b788b19742f831d23f0017",
+    "campaign/RBC2D-easy-v0__benchmark__repeat-a/provenance.json": "a2479a449dc8cd8ac421a98ebe3363feadfeeafb4d0fa2aa374ce0f06b4ededc",
+    "campaign/RBC2D-easy-v0__benchmark__repeat-a/request.json": "0064c4ddb007a2a3de30dbb6f4d07d5d1c3758fd59ffbbe3309e06b62196f722",
+    "campaign/RBC2D-easy-v0__benchmark__repeat-a/status.json": "a97d663b81bae20af7f8d008a066b37881e2ff120d60892c50047fb2ce91e452",
+    "campaign/RBC2D-easy-v0__benchmark__repeat-a/trajectory.jsonl": "ccf6131030825f9d8228fa761bb3031b37921921f25ac9953d169a487b0c25da",
+    "campaign/RBC2D-easy-v0__benchmark__repeat-b/progress.jsonl": "84326c0de5029cbd446fd5a90d6c51d291ada3fb82c0f561a2c84f21ca019f96",
+    "campaign/RBC2D-easy-v0__benchmark__repeat-b/provenance.json": "a2479a449dc8cd8ac421a98ebe3363feadfeeafb4d0fa2aa374ce0f06b4ededc",
+    "campaign/RBC2D-easy-v0__benchmark__repeat-b/request.json": "47aed719394c68ac547b4ace8542ea8cfd27e903236ea0b5b291fcccaac1c644",
+    "campaign/RBC2D-easy-v0__benchmark__repeat-b/status.json": "4a3ad4edc110cdf2c0c0a2e403b10f17e29d636602661e8dceec8b613f1487c6",
+    "campaign/RBC2D-easy-v0__benchmark__repeat-b/trajectory.jsonl": "bdc90bf2aa59f2efe214136e1a11774a64d351ff34e33c20a77bf73c8d28ded4",
+    "campaign/RBC2D-easy-v0__extended__ic-1/progress.jsonl": "8075c11cfb2b1f2fc74c16b84ca71475aa7ced4430f2b25231da6bfb764a9d85",
+    "campaign/RBC2D-easy-v0__extended__ic-1/provenance.json": "bf5d42bf979f6ddf6dbe64a5f0743fc21a01d59afefbff6a34a41e4ab183bce9",
+    "campaign/RBC2D-easy-v0__extended__ic-1/request.json": "81dd3230e4e98b7c68d45dcd0273694130c85865f7662c2b1d6228319edf95f4",
+    "campaign/RBC2D-easy-v0__extended__ic-1/status.json": "88688269ba679d37956324e7a56dc759ce42ccc5c82329e9b3ecf5c4741eac07",
+    "campaign/RBC2D-easy-v0__extended__ic-1/trajectory.jsonl": "afcc5a2a39880a1b08e6e35183b4eec91eb15935529af2405bad9f49c244921c",
+    "campaign/RBC2D-easy-v0__extended__ic-2/progress.jsonl": "f1c791289c173e4183a03e8c9a6ed9f89421c1d7875dbcc93c3606d2b4202dca",
+    "campaign/RBC2D-easy-v0__extended__ic-2/provenance.json": "a84479529433b5784a80160fe6572ea383871b95caa755a65433cb2347653301",
+    "campaign/RBC2D-easy-v0__extended__ic-2/request.json": "33da8ee4206a0947cdf737eb6a93acddb0773fcf2ac5f6412d6fc92a0f75e4b6",
+    "campaign/RBC2D-easy-v0__extended__ic-2/status.json": "339d66f08e091b40872898dbd599a6a6cabf0be7c7d8429fb67ac814485be56d",
+    "campaign/RBC2D-easy-v0__extended__ic-2/trajectory.jsonl": "2f2057b0ad0e2be27b69d3bb078babe4b17620027b8ea489fe12379d9ce36458",
+    "campaign/RBC2D-easy-v0__extended__ic-3/progress.jsonl": "5006863d0678f283e29acb363b862d6eb06b9ab3df4c457856e9812ae82570e5",
+    "campaign/RBC2D-easy-v0__extended__ic-3/provenance.json": "9eaad02b29bfd464c16238751d3a34ddb194d963f4b0befbe0b83fe7cffee66d",
+    "campaign/RBC2D-easy-v0__extended__ic-3/request.json": "33f4c0fe08b908889e74b93f4e150133716c3fd2b9efa14d59140dd330a93dae",
+    "campaign/RBC2D-easy-v0__extended__ic-3/status.json": "70af6229aa1be2efc7fc61e6c0ea255ea8290b185c022a120c44b49e5ced3f36",
+    "campaign/RBC2D-easy-v0__extended__ic-3/trajectory.jsonl": "bcd5dad338777bc019dfd7e18a6707094b7b65e018a88b374cac5511ca122172",
+    "campaign/RBC2D-easy-v0__extended__repeat-a/progress.jsonl": "0acf796f9f557a83f1577170b469d6aacf8dd08395a60989c933e6b3ee29a437",
+    "campaign/RBC2D-easy-v0__extended__repeat-a/provenance.json": "7ad4c736126cc66092b35c85ff9eb8a71e812bd307a1bd644edd56cb13a945c2",
+    "campaign/RBC2D-easy-v0__extended__repeat-a/request.json": "977fc301bdcc20e633873e8da404e2543ee6e9914a84314939c3c5bf6811f9c9",
+    "campaign/RBC2D-easy-v0__extended__repeat-a/status.json": "e8cd72714dc91146be2f6d01b4390c1d58b379cc833826e76f751d8150e8ba33",
+    "campaign/RBC2D-easy-v0__extended__repeat-a/trajectory.jsonl": "c7368bc0690e89b2ecb447a72830b5dad6250704a060bc14f1b9ae41944b0df4",
+    "campaign/RBC2D-easy-v0__extended__repeat-b/progress.jsonl": "9cd14c7436eb4caf009bd4dbdc2eeb783aec220e8127f9b6808bcb7322b28204",
+    "campaign/RBC2D-easy-v0__extended__repeat-b/provenance.json": "7ad4c736126cc66092b35c85ff9eb8a71e812bd307a1bd644edd56cb13a945c2",
+    "campaign/RBC2D-easy-v0__extended__repeat-b/request.json": "9a93f2226473a7b7c6e0046c3c9b848e040e1b3437776110d493ca1cdd4ed118",
+    "campaign/RBC2D-easy-v0__extended__repeat-b/status.json": "b0c17df6683b3fe8a51904e10f87ee80f44d9cc72705ab9b8dae1b374722fa1d",
+    "campaign/RBC2D-easy-v0__extended__repeat-b/trajectory.jsonl": "f897824536131e87ca85ca3aacb0f541d5dcdaa839e9a578ce256c31f7ce0982",
+    "campaign/RBC2D-hard-v0__benchmark__ic-1/progress.jsonl": "9a82924505d19bc01f23bb5c97c55831dea803a3dce1e7e317bc405d919001bb",
+    "campaign/RBC2D-hard-v0__benchmark__ic-1/provenance.json": "39560ee595dbe142f3e81def3999c1d97267f9abc7835f4895f51d2ae41d47dc",
+    "campaign/RBC2D-hard-v0__benchmark__ic-1/request.json": "4c86f6963cd964cfad90f3bcb15950d3c5ff1adde397600a0cb1603ef44d781d",
+    "campaign/RBC2D-hard-v0__benchmark__ic-1/status.json": "8ceba5d383bf131679dc43a8ac45301e3990662813da9ae8a9cdbba236e1c878",
+    "campaign/RBC2D-hard-v0__benchmark__ic-1/trajectory.jsonl": "776aa2428f7468f3ec8fdbf422e5bf565135a4a603dced9ef628e1dde52af896",
+    "campaign/RBC2D-hard-v0__benchmark__ic-2/progress.jsonl": "2e308eedc8213b187f679a3bd6d347e3a240b7634237fbeeefa7fb0c6d753a2d",
+    "campaign/RBC2D-hard-v0__benchmark__ic-2/provenance.json": "ee7d3a52c988e2f694a7d7730076c7c54c30c2ca3aa8e66da29d3fb64370e27e",
+    "campaign/RBC2D-hard-v0__benchmark__ic-2/request.json": "e9e0d5f4c4dce834c79579dacd93e9b18e83857e4aa13ca79d8d35ef15ca6c85",
+    "campaign/RBC2D-hard-v0__benchmark__ic-2/status.json": "25b76b2e8b876a2cf5c7e255e989c29185a5582c6f9e29b3b523750690cd1484",
+    "campaign/RBC2D-hard-v0__benchmark__ic-2/trajectory.jsonl": "b7fcdf38e512c8aea04251279c70a2a2d512f54931308910d71272787017a5c4",
+    "campaign/RBC2D-hard-v0__benchmark__ic-3/progress.jsonl": "daf328c473b4b8f77faed49ae077e7cd0ac82ecded8f1f57bdbfe4250318bca7",
+    "campaign/RBC2D-hard-v0__benchmark__ic-3/provenance.json": "c6a94e74c67bc45b692957671f2534fc59b056510ba8dce5c77269f2c503a98c",
+    "campaign/RBC2D-hard-v0__benchmark__ic-3/request.json": "3d9786c2fc3e4c19f54f5d6228d8f3a0c91b780d0948716e3355e8a991e83b08",
+    "campaign/RBC2D-hard-v0__benchmark__ic-3/status.json": "32df82b24dc3cadaad229f35fa34b52ebe25ec65d9d3a01685e3e745cb4bced2",
+    "campaign/RBC2D-hard-v0__benchmark__ic-3/trajectory.jsonl": "8b9d70aa76d62dbf6e4bd838e8b2ce734dc80dd3b0c24a1f099f4640381c9429",
+    "campaign/RBC2D-hard-v0__benchmark__repeat-a/progress.jsonl": "d47bd52b67d6a74e97a6968cd2c42c798e169e18d8afd2c390528a17bda86f40",
+    "campaign/RBC2D-hard-v0__benchmark__repeat-a/provenance.json": "002340f21aeb665a00862b494b061aeb2aae38a49d909086a6cd2588608b2e3f",
+    "campaign/RBC2D-hard-v0__benchmark__repeat-a/request.json": "187bf94070749600d3d1d3c5e4dc00c4048cec5af4ddb307492ca2bdb0a83299",
+    "campaign/RBC2D-hard-v0__benchmark__repeat-a/status.json": "18d63434d7553ba95856f522efa5d97f4364d802afc514494e86f6a2c97bcc47",
+    "campaign/RBC2D-hard-v0__benchmark__repeat-a/trajectory.jsonl": "5ac34b261d63083e8781e6d9bc306ce2303bbd301b480a9785ab2f6aee641ff6",
+    "campaign/RBC2D-hard-v0__benchmark__repeat-b/progress.jsonl": "9fbd0bf4a83cb2fc8d984824d0c924a61af35111645f88962844c757f9ecbefc",
+    "campaign/RBC2D-hard-v0__benchmark__repeat-b/provenance.json": "002340f21aeb665a00862b494b061aeb2aae38a49d909086a6cd2588608b2e3f",
+    "campaign/RBC2D-hard-v0__benchmark__repeat-b/request.json": "52b23d155a221c57a430ea318960bebb1ae704fe1eb41ede3723a7bc2b7e31a5",
+    "campaign/RBC2D-hard-v0__benchmark__repeat-b/status.json": "1144505603e1de12706950d3ed01a5dc57a7328b28e4a544fc02bdb128a0484e",
+    "campaign/RBC2D-hard-v0__benchmark__repeat-b/trajectory.jsonl": "fd17a8a719c30795ba5b757770c1ecf17ffdeeb0f1d393f86384848b46ecfdb0",
+    "campaign/RBC2D-hard-v0__extended__ic-1/progress.jsonl": "aba906f844826175e9c4f315780b0292477e3d7525344c46feeb734904612b6a",
+    "campaign/RBC2D-hard-v0__extended__ic-1/provenance.json": "1a3869c4eb37fa96cc08481c258041f86e90fd2dc6f6062c63c1e1aac454ad8c",
+    "campaign/RBC2D-hard-v0__extended__ic-1/request.json": "77fbbd8ca4da5f92fba238f3e1ba1bd4b8ec72e9f6527973e33e25b3d332cb32",
+    "campaign/RBC2D-hard-v0__extended__ic-1/status.json": "21d687dd69d3b0bdb59baa4aa8f72bfe9e2ea9ca64c5280034f3b544d79ac165",
+    "campaign/RBC2D-hard-v0__extended__ic-1/trajectory.jsonl": "ee6949f89df9ee52d49cab1afeaf188f2c25362a683824ca256220d1d1bcd323",
+    "campaign/RBC2D-hard-v0__extended__ic-2/progress.jsonl": "74995cac7b42abf5ec4f74b41708b63c58f6d4f9a38256ba366391ef1a033177",
+    "campaign/RBC2D-hard-v0__extended__ic-2/provenance.json": "80169f46073cda45d2d23c24d46aad99680c6751a4726d54920b4b2338764217",
+    "campaign/RBC2D-hard-v0__extended__ic-2/request.json": "c26db6147d66aa5d417b4cbdde2354d847354181a347a32d3215c0cc8d2eff34",
+    "campaign/RBC2D-hard-v0__extended__ic-2/status.json": "1123509b125480f1f77d03ed2accbc63aef7616335ac591f7c8df3693aa324c5",
+    "campaign/RBC2D-hard-v0__extended__ic-2/trajectory.jsonl": "55d2ba181fac4db23a088fcb1c8ff3540975f0f92cf3b4628d3df454b356a7f3",
+    "campaign/RBC2D-hard-v0__extended__ic-3/progress.jsonl": "c3794938c62154d92dfef788bedfafd23bf1cdf155b6bce50dd3e326d821e4a4",
+    "campaign/RBC2D-hard-v0__extended__ic-3/provenance.json": "c3af89820cd2a5ff0692f96f67eeb3b4804985785d72d88c70acaf3e8d05985f",
+    "campaign/RBC2D-hard-v0__extended__ic-3/request.json": "bbe42411694b44b41eab4cd3bf1fefef1e15deec497bff9dfc903fe013c243fa",
+    "campaign/RBC2D-hard-v0__extended__ic-3/status.json": "9746c758d6bcbe9dc747b09cf62aab72100f8b4d5538275abf602e3c4da7eed3",
+    "campaign/RBC2D-hard-v0__extended__ic-3/trajectory.jsonl": "aff00c7e8b5b855e9fe9c209d00b062d68eb9208ff71b94a5e17db9bc2f84c39",
+    "campaign/RBC2D-hard-v0__extended__repeat-a/progress.jsonl": "6ed8605dc2f590e6caa7f390896a4b241be37e195e60dd2c5f35df7c2bbe79f3",
+    "campaign/RBC2D-hard-v0__extended__repeat-a/provenance.json": "9abb7476ecdc0e987620fe6c79599047e4b8c62df0053a7af19f0f4e3c271478",
+    "campaign/RBC2D-hard-v0__extended__repeat-a/request.json": "6e49bda1137fe7fa652d3a86a9ea7e5e0c0e6b0ae92cad9c245b125f4a9eb125",
+    "campaign/RBC2D-hard-v0__extended__repeat-a/status.json": "2634faf90a5865bb3e53d6309505938d77d8b6778a25a6cd2df531be7df26900",
+    "campaign/RBC2D-hard-v0__extended__repeat-a/trajectory.jsonl": "ccad50234e7744912ff87c0d93e82bf891858b3fea391ec3bbaddbb621a4fc0b",
+    "campaign/RBC2D-hard-v0__extended__repeat-b/progress.jsonl": "211643ff5b9ba379087cc429a5fe3a9c9584e065a2635bbeba91c44bcca67a3f",
+    "campaign/RBC2D-hard-v0__extended__repeat-b/provenance.json": "9abb7476ecdc0e987620fe6c79599047e4b8c62df0053a7af19f0f4e3c271478",
+    "campaign/RBC2D-hard-v0__extended__repeat-b/request.json": "bb010608fd1ff8b371495c05afbdf1fc8ffa70e9792bc91033ae1a712598771a",
+    "campaign/RBC2D-hard-v0__extended__repeat-b/status.json": "adba187a2b8bf35f2d442545a4e8f9bc3985565fb171ccdc55cf500645c994f8",
+    "campaign/RBC2D-hard-v0__extended__repeat-b/trajectory.jsonl": "72c9ccdd2a5f9111b091cea8c5382b88b3b524327cc58fb46bbdd465c01fb5b8",
+    "campaign/RBC2D-medium-v0__benchmark__ic-1/progress.jsonl": "868a0e8c8778cf0eee13386afb84f14c6bfe2f68c1768f7df642aa4c80cac053",
+    "campaign/RBC2D-medium-v0__benchmark__ic-1/provenance.json": "3453829a29b95d702bd919c4c221a62a2f57da9e650d7fc4b94c17f71a046747",
+    "campaign/RBC2D-medium-v0__benchmark__ic-1/request.json": "4f1b1a44225bbf66efcd15e4ff68f50cf80da273fb8724adcccec0205db76c3d",
+    "campaign/RBC2D-medium-v0__benchmark__ic-1/status.json": "792b4e18882c7528ce1ac8a586355b8526754ba4deed3f9de5d7c196f1e3462b",
+    "campaign/RBC2D-medium-v0__benchmark__ic-1/trajectory.jsonl": "7f56143691ac59abe374fb2086bd3bef240001931fcba5d6bcb11c0dc9966d2c",
+    "campaign/RBC2D-medium-v0__benchmark__ic-2/progress.jsonl": "c29a099df19b74772095814e6fd258244d895b4952c63e7053120e9154fd5f5a",
+    "campaign/RBC2D-medium-v0__benchmark__ic-2/provenance.json": "a15e9f9485eeb9be3c48aac4ad1374d71fcb9a0f2f4eabcf45f293d28b3a45c0",
+    "campaign/RBC2D-medium-v0__benchmark__ic-2/request.json": "30ee82699850d81cd5a48a56f26992b1ba424f43b6505cd31ca06ef8a0d945f0",
+    "campaign/RBC2D-medium-v0__benchmark__ic-2/status.json": "84e5ce16a9f60830f431693653dd9271432f2f7d0e5123c642b2b2c1816a6127",
+    "campaign/RBC2D-medium-v0__benchmark__ic-2/trajectory.jsonl": "4a3d224d0989af6f00ca705d3ee7462ca3d1e36713d375520c9023f27ca297c1",
+    "campaign/RBC2D-medium-v0__benchmark__ic-3/progress.jsonl": "4f3dc775335718823427f2af4222554d694c19705e72bdc1ab1cefe9b2aa60b7",
+    "campaign/RBC2D-medium-v0__benchmark__ic-3/provenance.json": "ca5718016d68b1bf1ec385c962c437b3bc8ad7aa3034c62779f5dff01e8543ce",
+    "campaign/RBC2D-medium-v0__benchmark__ic-3/request.json": "6873a6d11383e19aa59bf52be0e7ea597db0b06650b2af9d150b481ef1b3ca3b",
+    "campaign/RBC2D-medium-v0__benchmark__ic-3/status.json": "efb9e6bddc94a5c95a978fab6235d369eb54cc8693fe6a75646d791d94ce3b70",
+    "campaign/RBC2D-medium-v0__benchmark__ic-3/trajectory.jsonl": "a5ad3aca23ce12d185bdb165368ef6ffd78c4c63143dfabe3b7a143765ad3a96",
+    "campaign/RBC2D-medium-v0__benchmark__repeat-a/progress.jsonl": "38f514b960e69f5af3f9d5eba1a4aaa4a56d0172f50ae5204defb36d1cc8abe6",
+    "campaign/RBC2D-medium-v0__benchmark__repeat-a/provenance.json": "771f82945c1ef6f1ea500c5e9da1323c9e04c068daca36c8b4e3dd653e6a4635",
+    "campaign/RBC2D-medium-v0__benchmark__repeat-a/request.json": "57ebe8ff4a13587b313291aaf876e345baa91bd141c1cfc1f772d50c14a96604",
+    "campaign/RBC2D-medium-v0__benchmark__repeat-a/status.json": "04153434e396f2a7dc6b7fc62316290ad848187965236e07215cada483664221",
+    "campaign/RBC2D-medium-v0__benchmark__repeat-a/trajectory.jsonl": "4628c0721ded988617e715e4415a6bb64a1ef3a65e7d0bb8db34d217eb739184",
+    "campaign/RBC2D-medium-v0__benchmark__repeat-b/progress.jsonl": "b2c1710bd460aa0566a3420c046521be9631d777ff22d41a206dfd6f7b690933",
+    "campaign/RBC2D-medium-v0__benchmark__repeat-b/provenance.json": "771f82945c1ef6f1ea500c5e9da1323c9e04c068daca36c8b4e3dd653e6a4635",
+    "campaign/RBC2D-medium-v0__benchmark__repeat-b/request.json": "68540f923c856f86d7bd898e3cbcd7a87e8740b505f8f02a6d1a34e081184e13",
+    "campaign/RBC2D-medium-v0__benchmark__repeat-b/status.json": "0bec970a60a606a4ca43967958a873e3ce4c90f9e64d05fd0f4ab803eb934620",
+    "campaign/RBC2D-medium-v0__benchmark__repeat-b/trajectory.jsonl": "f1f21e38c7e7f98b0160c55685cc6d7a8f4fd6ba0b8403d0db3eb89dce408dd0",
+    "campaign/RBC2D-medium-v0__extended__ic-1/progress.jsonl": "38bb237462106ff5148b3f6887c2fcb689a0a9c17514a38ff8b25c6cd915604a",
+    "campaign/RBC2D-medium-v0__extended__ic-1/provenance.json": "01b3611e2ee51a53c9ca110f6162bb248d91cc32906c49d20e9953cdeaf19442",
+    "campaign/RBC2D-medium-v0__extended__ic-1/request.json": "f46812840039c0551c153c677493ca48ba888497e7465f70f1c96f504ef1e2cc",
+    "campaign/RBC2D-medium-v0__extended__ic-1/status.json": "329c752c10e281d082ef65f54f18da8b9280d6f819fe0b9dccdbfff119dd5588",
+    "campaign/RBC2D-medium-v0__extended__ic-1/trajectory.jsonl": "212ffc003d2282118878608bd205a77ebbb9f911e2957d6c285e2581aadef63d",
+    "campaign/RBC2D-medium-v0__extended__ic-2/progress.jsonl": "4aead38808db916d0cc6051dd1033f80a9b5b1a1c0997700a17ed3601b0802a3",
+    "campaign/RBC2D-medium-v0__extended__ic-2/provenance.json": "4a98604196e0206e144d907142f62408ab4a0b75f335a4bc0860b6092828edb3",
+    "campaign/RBC2D-medium-v0__extended__ic-2/request.json": "0f6fbb453a3187a3e966b18002fdb016c9dec72c213476680321b87a0bd6502d",
+    "campaign/RBC2D-medium-v0__extended__ic-2/status.json": "20f07fdb9f12c3b2eaddbee034a64b942d6761ba8c2c17748a04493177d5ef3f",
+    "campaign/RBC2D-medium-v0__extended__ic-2/trajectory.jsonl": "7270752a8e915b201c246a8306c03cd42f37907578ab35d5a6993e66f4a17cf4",
+    "campaign/RBC2D-medium-v0__extended__ic-3/progress.jsonl": "3f368869aacf104db680bef096514466f8f00c4ac6aa2404b3517d5405828074",
+    "campaign/RBC2D-medium-v0__extended__ic-3/provenance.json": "4200d381808d1318a6d07eeca3bb385e481533985fe166e5c8e9aa28d88ac935",
+    "campaign/RBC2D-medium-v0__extended__ic-3/request.json": "37b2c9f491ddf51915aa9e7616abcddf039b2629011d48810aea566dcbde6cc3",
+    "campaign/RBC2D-medium-v0__extended__ic-3/status.json": "ffedabb641293b9c2507f2ca418834440d0691d32492071d96541e96d363287e",
+    "campaign/RBC2D-medium-v0__extended__ic-3/trajectory.jsonl": "f07234f20b2ab7d36fb2ecd8a8672ac2173725d6bbca674e0a6dcfc2ce27ec91",
+    "campaign/RBC2D-medium-v0__extended__repeat-a/progress.jsonl": "111e440810e88c75fc5f6f1bd28afdc6d711f4227400b59b8aee03d47f3be8a1",
+    "campaign/RBC2D-medium-v0__extended__repeat-a/provenance.json": "8e2349e9da5a0b00c81bc29ec376b99f4529833e745bbcabfec95032c497fd7f",
+    "campaign/RBC2D-medium-v0__extended__repeat-a/request.json": "e1675a6a93f5bcecbd22ac9ee339dde0bf541b98b52af8fe82a49d616510e698",
+    "campaign/RBC2D-medium-v0__extended__repeat-a/status.json": "828598bea17e2b2dda9cf62cf1c6010fa5d5b067532db5d22098d9ea4ca6d30e",
+    "campaign/RBC2D-medium-v0__extended__repeat-a/trajectory.jsonl": "fe37ec9b6edb77ffe613b0ceeb6f3d36cf68eb2cab2d56c864c6d2e8aa7612a7",
+    "campaign/RBC2D-medium-v0__extended__repeat-b/progress.jsonl": "8db0dd11f20a24b9469d7fa956489daa1660f022d4fb6ec416c423a19acc5dbe",
+    "campaign/RBC2D-medium-v0__extended__repeat-b/provenance.json": "8e2349e9da5a0b00c81bc29ec376b99f4529833e745bbcabfec95032c497fd7f",
+    "campaign/RBC2D-medium-v0__extended__repeat-b/request.json": "d7098d042506beef09bdee12a7420efad32c9390fe2a0cba8ae7fbd4470ae691",
+    "campaign/RBC2D-medium-v0__extended__repeat-b/status.json": "5ac45c96fbe987e910fd6ddf4e14847b08b4e350840784fc2d554a6c91ba3a96",
+    "campaign/RBC2D-medium-v0__extended__repeat-b/trajectory.jsonl": "c34fc1dfcf8364d4bbc82513134cc919924528b83432dec7489ffcdd3dc6c416",
+    "campaign/approval.json": "6272f0c09b0bc20ee0ef2beb5ddcfc655ca228ef819952807f2304bbe7f83678",
+    "campaign/matrix.json": "4890739524bdf7e60095756c4fec0dd4e0e28f395932f14d1cae9acc92974328",
+    "campaign/provenance.json": "7553cb2dacb1ddd92ed7cbde366437994d8048599a70498d514289ebe9ce4534",
+    "campaign/status.json": "7423ee32168eefc2567290085e49956f01650bf16e215ec3270452ec71cdc945",
+    "child.json": "6140d5db9b3e503bfd2f747387cba19b4e5ba73cd2407d75f12812ac1b57bc5c",
+    "execution-status.json": "2675bc11276ff0b7873ef94c65d5c5fd0bd89ebbcbb9baf257d6f585f0ff7f8f",
+    "gpu-monitor-errors.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "gpu.csv": "58ec3537b0acc41a703291bb02cf88d4d2f144b4c407eb22475868ded2365d9a",
+    "launch.json": "9c6a3f4f726fdb87808a698f0128b0d4324b9e88fd399598ab3f0586d9cd7cf5",
+    "launcher.log": "5b2973b341cb6862e8183c784525fe5376aff41d4915f76d2dfd4609c8710205",
+    "recovered-run-statuses.json": "1c836b4e2aca93b2e08a9d92e6e215836ca1bb1c25c4422738eadeaaeefb0445",
+    "run.log": "e9afc423aaf82796447da9160012b58bc161412aad119e7432f8f03b253803a3",
+    "telemetry-status.json": "ae2a6f9aa9c2d0a111973827441ac29d5cd729c253af8632bed839e3323709c3"
+  },
+  "current_code_comparison": {
+    "experiments/characterization.v1.json": "match",
+    "experiments/run-approved-primary.sh": "match",
+    "src/fluidgym_physics.egg-info/PKG-INFO": "match",
+    "src/fluidgym_physics.egg-info/SOURCES.txt": "match",
+    "src/fluidgym_physics.egg-info/dependency_links.txt": "match",
+    "src/fluidgym_physics.egg-info/entry_points.txt": "match",
+    "src/fluidgym_physics.egg-info/requires.txt": "match",
+    "src/fluidgym_physics.egg-info/top_level.txt": "match",
+    "src/fluidgym_physics/__init__.py": "match",
+    "src/fluidgym_physics/acquisition.py": "match",
+    "src/fluidgym_physics/analysis.py": "match",
+    "src/fluidgym_physics/characterization.py": "match",
+    "src/fluidgym_physics/cli.py": "match",
+    "src/fluidgym_physics/config.py": "match",
+    "src/fluidgym_physics/diagnostics.py": "match",
+    "src/fluidgym_physics/errors.py": "match",
+    "src/fluidgym_physics/execution.py": "match",
+    "src/fluidgym_physics/inventory.py": "match",
+    "src/fluidgym_physics/provenance.py": "match",
+    "src/fluidgym_physics/review.py": "match",
+    "src/fluidgym_physics/runner.py": "match",
+    "src/fluidgym_physics/runtime.py": "match",
+    "src/fluidgym_physics/static_inspect.py": "match",
+    "src/fluidgym_physics/time_axis.py": "match",
+    "src/fluidgym_physics/upstream.py": "match"
+  },
+  "dataset_source": {
+    "acquisition_request_sha256": "6dcb733f6c6b81f0070b9c470e45c082114dabf677a2e0f6ec8addf49a665fe4",
+    "acquisition_source_matrix_sha256": "73ac299057f82a11cf4dc1a5e7a5d815af097fdd2641975e52e91e6f219d80d6",
+    "acquisition_status_sha256": "e6728c78f9bcd5d2a2466737914df92cd5d4ae93b79ca565881fc7dbb992b858",
+    "repo_id": "safe-autonomous-systems/fluidgym-data",
+    "revision": "a8c00235a814828441a0c5638e6f803ef62bfa31",
+    "target_matrix_sha256": "0f15afbbd926d6bd03195ecaea8db8131cdd8a7358c020384f661c211d6b8bc1"
+  },
+  "errors": [],
+  "execution": "/Users/jihyekim/Desktop/Fluidgym-Physics/results/execution-20261015T045202Z-NoMY5u",
+  "external_inputs_locally_rehashed": 0,
+  "external_inputs_recorded": 136,
+  "external_limitations": [
+    "Original server dataset files, compiled CUDA binary and original approval preflight/acquisition files are not assumed present. Manifest binding verified; absent external bytes cannot be rehashed."
+  ],
+  "figures_decoded": 66,
+  "gpu": {
+    "duration_seconds": 65744.79200005531,
+    "max_gap_seconds": 5.098999977111816,
+    "min_device_mib": 1.0,
+    "monitor_error_text": "",
+    "monitor_status": {
+      "enabled": true,
+      "monitor_returncode": 0,
+      "note": "GPU samples are device-wide, not PyTorch allocator peaks; gaps/errors must be reviewed."
+    },
+    "peak_device_mib": 476.0,
+    "samples": 13147
+  },
+  "runs": [
+    {
+      "field_ranges": {
+        "pressure": [
+          -1.413807988166809,
+          1.994554042816162
+        ],
+        "velocity": [
+          -1.2601819038391113,
+          2.248934745788574
+        ]
+      },
+      "final_solver_clock_error": 0.000385284423828125,
+      "initial_domains": [
+        {
+          "idx": 0,
+          "mode": "EnvMode.TEST"
+        }
+      ],
+      "peak_torch_bytes": 13735936,
+      "run_id": "CylinderJet2D-easy-v0__benchmark__repeat-a",
+      "status": "complete",
+      "steps": 80,
+      "wall_seconds": 64.36139455251396
+    },
+    {
+      "field_ranges": {
+        "pressure": [
+          -1.413807988166809,
+          1.994554042816162
+        ],
+        "velocity": [
+          -1.2601819038391113,
+          2.248934745788574
+        ]
+      },
+      "final_solver_clock_error": 0.000385284423828125,
+      "initial_domains": [
+        {
+          "idx": 0,
+          "mode": "EnvMode.TEST"
+        }
+      ],
+      "peak_torch_bytes": 17994240,
+      "run_id": "CylinderJet2D-easy-v0__benchmark__repeat-b",
+      "status": "complete",
+      "steps": 80,
+      "wall_seconds": 63.92171781882644
+    },
+    {
+      "field_ranges": {
+        "pressure": [
+          -1.4241275787353516,
+          1.9947834014892578
+        ],
+        "velocity": [
+          -1.2693917751312256,
+          2.2438955307006836
+        ]
+      },
+      "final_solver_clock_error": 0.0003886222839355469,
+      "initial_domains": [
+        {
+          "idx": 1,
+          "mode": "EnvMode.TEST"
+        }
+      ],
+      "peak_torch_bytes": 22252544,
+      "run_id": "CylinderJet2D-easy-v0__benchmark__ic-1",
+      "status": "complete",
+      "steps": 80,
+      "wall_seconds": 63.5364033440128
+    },
+    {
+      "field_ranges": {
+        "pressure": [
+          -1.4193099737167358,
+          2.002317428588867
+        ],
+        "velocity": [
+          -1.2687197923660278,
+          2.250622510910034
+        ]
+      },
+      "final_solver_clock_error": 0.00038933753967285156,
+      "initial_domains": [
+        {
+          "idx": 7,
+          "mode": "EnvMode.TEST"
+        }
+      ],
+      "peak_torch_bytes": 22252544,
+      "run_id": "CylinderJet2D-easy-v0__benchmark__ic-2",
+      "status": "complete",
+      "steps": 80,
+      "wall_seconds": 63.736580207012594
+    },
+    {
+      "field_ranges": {
+        "pressure": [
+          -1.4119073152542114,
+          1.9959462881088257
+        ],
+        "velocity": [
+          -1.2668639421463013,
+          2.241344928741455
+        ]
+      },
+      "final_solver_clock_error": 0.0003895759582519531,
+      "initial_domains": [
+        {
+          "idx": 8,
+          "mode": "EnvMode.TEST"
+        }
+      ],
+      "peak_torch_bytes": 26510848,
+      "run_id": "CylinderJet2D-easy-v0__benchmark__ic-3",
+      "status": "complete",
+      "steps": 80,
+      "wall_seconds": 64.5517187686637
+    },
+    {
+      "field_ranges": {
+        "pressure": [
+          -1.4245810508728027,
+          1.996397852897644
+        ],
+        "velocity": [
+          -1.2694956064224243,
+          2.2491440773010254
+        ]
+      },
+      "final_solver_clock_error": 0.275390625,
+      "initial_domains": [
+        {
+          "idx": 0,
+          "mode": "EnvMode.TEST"
+        }
+      ],
+      "peak_torch_bytes": 30769152,
+      "run_id": "CylinderJet2D-easy-v0__extended__repeat-a",
+      "status": "complete",
+      "steps": 2400,
+      "wall_seconds": 1904.172865074128
+    },
+    {
+      "field_ranges": {
+        "pressure": [
+          -1.4245810508728027,
+          1.996397852897644
+        ],
+        "velocity": [
+          -1.2694956064224243,
+          2.2491440773010254
+        ]
+      },
+      "final_solver_clock_error": 0.275390625,
+      "initial_domains": [
+        {
+          "idx": 0,
+          "mode": "EnvMode.TEST"
+        }
+      ],
+      "peak_torch_bytes": 26510848,
+      "run_id": "CylinderJet2D-easy-v0__extended__repeat-b",
+      "status": "complete",
+      "steps": 2400,
+      "wall_seconds": 1908.0551092978567
+    },
+    {
+      "field_ranges": {
+        "pressure": [
+          -1.4264155626296997,
+          1.995934009552002
+        ],
+        "velocity": [
+          -1.2695162296295166,
+          2.249117136001587
+        ]
+      },
+      "final_solver_clock_error": 0.2755274772644043,
+      "initial_domains": [
+        {
+          "idx": 1,
+          "mode": "EnvMode.TEST"
+        }
+      ],
+      "peak_torch_bytes": 30769152,
+      "run_id": "CylinderJet2D-easy-v0__extended__ic-1",
+      "status": "complete",
+      "steps": 2400,
+      "wall_seconds": 2047.0828217053786
+    },
+    {
+      "field_ranges": {
+        "pressure": [
+          -1.4262608289718628,
+          2.002317428588867
+        ],
+        "velocity": [
+          -1.269514799118042,
+          2.250622510910034
+        ]
+      },
+      "final_solver_clock_error": 0.2755568027496338,
+      "initial_domains": [
+        {
+          "idx": 7,
+          "mode": "EnvMode.TEST"
+        }
+      ],
+      "peak_torch_bytes": 35027456,
+      "run_id": "CylinderJet2D-easy-v0__extended__ic-2",
+      "status": "complete",
+      "steps": 2400,
+      "wall_seconds": 2000.8784356424585
+    },
+    {
+      "field_ranges": {
+        "pressure": [
+          -1.4247395992279053,
+          1.996430516242981
+        ],
+        "velocity": [
+          -1.2695080041885376,
+          2.249152660369873
+        ]
+      },
+      "final_solver_clock_error": 0.27556657791137695,
+      "initial_domains": [
+        {
+          "idx": 8,
+          "mode": "EnvMode.TEST"
+        }
+      ],
+      "peak_torch_bytes": 39285760,
+      "run_id": "CylinderJet2D-easy-v0__extended__ic-3",
+      "status": "complete",
+      "steps": 2400,
+      "wall_seconds": 1963.6716963639483
+    },
+    {
+      "field_ranges": {
+        "pressure": [
+          -2.0350446701049805,
+          1.9489338397979736
+        ],
+        "velocity": [
+          -1.58876633644104,
+          2.3505547046661377
+        ]
+      },
+      "final_solver_clock_error": -0.000179290771484375,
+      "initial_domains": [
+        {
+          "idx": 0,
+          "mode": "EnvMode.TEST"
+        }
+      ],
+      "peak_torch_bytes": 46932992,
+      "run_id": "CylinderJet2D-medium-v0__benchmark__repeat-a",
+      "status": "complete",
+      "steps": 80,
+      "wall_seconds": 108.32629513461143
+    },
+    {
+      "field_ranges": {
+        "pressure": [
+          -2.0350446701049805,
+          1.9489338397979736
+        ],
+        "velocity": [
+          -1.58876633644104,
+          2.3505547046661377
+        ]
+      },
+      "final_solver_clock_error": -0.000179290771484375,
+      "initial_domains": [
+        {
+          "idx": 0,
+          "mode": "EnvMode.TEST"
+        }
+      ],
+      "peak_torch_bytes": 53895168,
+      "run_id": "CylinderJet2D-medium-v0__benchmark__repeat-b",
+      "status": "complete",
+      "steps": 80,
+      "wall_seconds": 108.60082783550024
+    },
+    {
+      "field_ranges": {
+        "pressure": [
+          -2.011284351348877,
+          1.9576928615570068
+        ],
+        "velocity": [
+          -1.5736101865768433,
+          2.3333866596221924
+        ]
+      },
+      "final_solver_clock_error": -0.00018358230590820312,
+      "initial_domains": [
+        {
+          "idx": 1,
+          "mode": "EnvMode.TEST"
+        }
+      ],
+      "peak_torch_bytes": 60857344,
+      "run_id": "CylinderJet2D-medium-v0__benchmark__ic-1",
+      "status": "complete",
+      "steps": 80,
+      "wall_seconds": 108.75887305662036
+    },
+    {
+      "field_ranges": {
+        "pressure": [
+          -1.9193683862686157,
+          1.8198702335357666
+        ],
+        "velocity": [
+          -1.5640552043914795,
+          2.3175647258758545
+        ]
+      },
+      "final_solver_clock_error": -0.00017333030700683594,
+      "initial_domains": [
+        {
+          "idx": 7,
+          "mode": "EnvMode.TEST"
+        }
+      ],
+      "peak_torch_bytes": 67819520,
+      "run_id": "CylinderJet2D-medium-v0__benchmark__ic-2",
+      "status": "complete",
+      "steps": 80,
+      "wall_seconds": 107.97857979033142
+    },
+    {
+      "field_ranges": {
+        "pressure": [
+          -1.915207028388977,
+          1.7994643449783325
+        ],
+        "velocity": [
+          -1.5704381465911865,
+          2.3009347915649414
+        ]
+      },
+      "final_solver_clock_error": -0.00016355514526367188,
+      "initial_domains": [
+        {
+          "idx": 8,
+          "mode": "EnvMode.TEST"
+        }
+      ],
+      "peak_torch_bytes": 60857344,
+      "run_id": "CylinderJet2D-medium-v0__benchmark__ic-3",
+      "status": "complete",
+      "steps": 80,
+      "wall_seconds": 107.8979219570756
+    },
+    {
+      "field_ranges": {
+        "pressure": [
+          -2.0350446701049805,
+          1.9489338397979736
+        ],
+        "velocity": [
+          -1.58876633644104,
+          2.360499382019043
+        ]
+      },
+      "final_solver_clock_error": 0.371826171875,
+      "initial_domains": [
+        {
+          "idx": 0,
+          "mode": "EnvMode.TEST"
+        }
+      ],
+      "peak_torch_bytes": 67819520,
+      "run_id": "CylinderJet2D-medium-v0__extended__repeat-a",
+      "status": "complete",
+      "steps": 2400,
+      "wall_seconds": 3042.971727608703
+    },
+    {
+      "field_ranges": {
+        "pressure": [
+          -2.0350446701049805,
+          1.9489338397979736
+        ],
+        "velocity": [
+          -1.58876633644104,
+          2.360499620437622
+        ]
+      },
+      "final_solver_clock_error": 0.371826171875,
+      "initial_domains": [
+        {
+          "idx": 0,
+          "mode": "EnvMode.TEST"
+        }
+      ],
+      "peak_torch_bytes": 24087040,
+      "run_id": "CylinderJet2D-medium-v0__extended__repeat-b",
+      "status": "complete",
+      "steps": 2400,
+      "wall_seconds": 3021.0586092006415
+    },
+    {
+      "field_ranges": {
+        "pressure": [
+          -2.033315658569336,
+          1.9576928615570068
+        ],
+        "velocity": [
+          -1.5828584432601929,
+          2.360430955886841
+        ]
+      },
+      "final_solver_clock_error": 0.3719019889831543,
+      "initial_domains": [
+        {
+          "idx": 1,
+          "mode": "EnvMode.TEST"
+        }
+      ],
+      "peak_torch_bytes": 31049216,
+      "run_id": "CylinderJet2D-medium-v0__extended__ic-1",
+      "status": "complete",
+      "steps": 2400,
+      "wall_seconds": 2985.1684786193073
+    },
+    {
+      "field_ranges": {
+        "pressure": [
+          -2.059227705001831,
+          1.9604412317276
+        ],
+        "velocity": [
+          -1.5833884477615356,
+          2.3603780269622803
+        ]
+      },
+      "final_solver_clock_error": 0.3718702793121338,
+      "initial_domains": [
+        {
+          "idx": 7,
+          "mode": "EnvMode.TEST"
+        }
+      ],
+      "peak_torch_bytes": 38011392,
+      "run_id": "CylinderJet2D-medium-v0__extended__ic-2",
+      "status": "complete",
+      "steps": 2400,
+      "wall_seconds": 2973.340326594189
+    },
+    {
+      "field_ranges": {
+        "pressure": [
+          -1.9995568990707397,
+          1.8293083906173706
+        ],
+        "velocity": [
+          -1.5834367275238037,
+          2.3604774475097656
+        ]
+      },
+      "final_solver_clock_error": 0.37194108963012695,
+      "initial_domains": [
+        {
+          "idx": 8,
+          "mode": "EnvMode.TEST"
+        }
+      ],
+      "peak_torch_bytes": 44973568,
+      "run_id": "CylinderJet2D-medium-v0__extended__ic-3",
+      "status": "complete",
+      "steps": 2400,
+      "wall_seconds": 3322.3568699769676
+    },
+    {
+      "field_ranges": {
+        "pressure": [
+          -2.7348175048828125,
+          1.912796139717102
+        ],
+        "velocity": [
+          -1.9394068717956543,
+          2.5191004276275635
+        ]
+      },
+      "final_solver_clock_error": -0.0005207061767578125,
+      "initial_domains": [
+        {
+          "idx": 0,
+          "mode": "EnvMode.TEST"
+        }
+      ],
+      "peak_torch_bytes": 51935744,
+      "run_id": "CylinderJet2D-hard-v0__benchmark__repeat-a",
+      "status": "complete",
+      "steps": 80,
+      "wall_seconds": 145.72506729327142
+    },
+    {
+      "field_ranges": {
+        "pressure": [
+          -2.7348175048828125,
+          1.912796139717102
+        ],
+        "velocity": [
+          -1.9394068717956543,
+          2.5191004276275635
+        ]
+      },
+      "final_solver_clock_error": -0.0005207061767578125,
+      "initial_domains": [
+        {
+          "idx": 0,
+          "mode": "EnvMode.TEST"
+        }
+      ],
+      "peak_torch_bytes": 58897920,
+      "run_id": "CylinderJet2D-hard-v0__benchmark__repeat-b",
+      "status": "complete",
+      "steps": 80,
+      "wall_seconds": 145.26280904281884
+    },
+    {
+      "field_ranges": {
+        "pressure": [
+          -2.7426598072052,
+          1.8999958038330078
+        ],
+        "velocity": [
+          -1.9808098077774048,
+          2.529160261154175
+        ]
+      },
+      "final_solver_clock_error": -0.0005440711975097656,
+      "initial_domains": [
+        {
+          "idx": 1,
+          "mode": "EnvMode.TEST"
+        }
+      ],
+      "peak_torch_bytes": 58897920,
+      "run_id": "CylinderJet2D-hard-v0__benchmark__ic-1",
+      "status": "complete",
+      "steps": 80,
+      "wall_seconds": 145.94968569651246
+    },
+    {
+      "field_ranges": {
+        "pressure": [
+          -2.7382891178131104,
+          1.9176212549209595
+        ],
+        "velocity": [
+          -2.0758025646209717,
+          2.516796827316284
+        ]
+      },
+      "final_solver_clock_error": -0.0005490779876708984,
+      "initial_domains": [
+        {
+          "idx": 7,
+          "mode": "EnvMode.TEST"
+        }
+      ],
+      "peak_torch_bytes": 65860096,
+      "run_id": "CylinderJet2D-hard-v0__benchmark__ic-2",
+      "status": "complete",
+      "steps": 80,
+      "wall_seconds": 145.33996481541544
+    },
+    {
+      "field_ranges": {
+        "pressure": [
+          -2.7217986583709717,
+          1.912592887878418
+        ],
+        "velocity": [
+          -1.9707005023956299,
+          2.5319314002990723
+        ]
+      },
+      "final_solver_clock_error": -0.0005507469177246094,
+      "initial_domains": [
+        {
+          "idx": 8,
+          "mode": "EnvMode.TEST"
+        }
+      ],
+      "peak_torch_bytes": 73532928,
+      "run_id": "CylinderJet2D-hard-v0__benchmark__ic-3",
+      "status": "complete",
+      "steps": 80,
+      "wall_seconds": 145.64016434829682
+    },
+    {
+      "field_ranges": {
+        "pressure": [
+          -2.7624120712280273,
+          1.9355701208114624
+        ],
+        "velocity": [
+          -2.090163230895996,
+          2.535168170928955
+        ]
+      },
+      "final_solver_clock_error": 0.43115234375,
+      "initial_domains": [
+        {
+          "idx": 0,
+          "mode": "EnvMode.TEST"
+        }
+      ],
+      "peak_torch_bytes": 66570752,
+      "run_id": "CylinderJet2D-hard-v0__extended__repeat-a",
+      "status": "complete",
+      "steps": 2400,
+      "wall_seconds": 4167.01587743219
+    },
+    {
+      "field_ranges": {
+        "pressure": [
+          -2.7624120712280273,
+          1.9355701208114624
+        ],
+        "velocity": [
+          -2.090163230895996,
+          2.535168170928955
+        ]
+      },
+      "final_solver_clock_error": 0.43115234375,
+      "initial_domains": [
+        {
+          "idx": 0,
+          "mode": "EnvMode.TEST"
+        }
+      ],
+      "peak_torch_bytes": 73532928,
+      "run_id": "CylinderJet2D-hard-v0__extended__repeat-b",
+      "status": "complete",
+      "steps": 2400,
+      "wall_seconds": 4127.323324623518
+    },
+    {
+      "field_ranges": {
+        "pressure": [
+          -2.7618749141693115,
+          1.9360533952713013
+        ],
+        "velocity": [
+          -2.0868239402770996,
+          2.5352160930633545
+        ]
+      },
+      "final_solver_clock_error": 0.4312891960144043,
+      "initial_domains": [
+        {
+          "idx": 1,
+          "mode": "EnvMode.TEST"
+        }
+      ],
+      "peak_torch_bytes": 80495104,
+      "run_id": "CylinderJet2D-hard-v0__extended__ic-1",
+      "status": "complete",
+      "steps": 2400,
+      "wall_seconds": 3999.081449317746
+    },
+    {
+      "field_ranges": {
+        "pressure": [
+          -2.761220932006836,
+          1.934704065322876
+        ],
+        "velocity": [
+          -2.092783212661743,
+          2.535031318664551
+        ]
+      },
+      "final_solver_clock_error": 0.4313185214996338,
+      "initial_domains": [
+        {
+          "idx": 7,
+          "mode": "EnvMode.TEST"
+        }
+      ],
+      "peak_torch_bytes": 87457280,
+      "run_id": "CylinderJet2D-hard-v0__extended__ic-2",
+      "status": "complete",
+      "steps": 2400,
+      "wall_seconds": 3854.3605812089518
+    },
+    {
+      "field_ranges": {
+        "pressure": [
+          -2.7615180015563965,
+          1.9334101676940918
+        ],
+        "velocity": [
+          -2.0926501750946045,
+          2.535220146179199
+        ]
+      },
+      "final_solver_clock_error": 0.43132829666137695,
+      "initial_domains": [
+        {
+          "idx": 8,
+          "mode": "EnvMode.TEST"
+        }
+      ],
+      "peak_torch_bytes": 94419456,
+      "run_id": "CylinderJet2D-hard-v0__extended__ic-3",
+      "status": "complete",
+      "steps": 2400,
+      "wall_seconds": 3853.4450424686074
+    },
+    {
+      "field_ranges": {
+        "pressure": [
+          -0.2690472900867462,
+          0.38247230648994446
+        ],
+        "temperature": [
+          0.009055379778146744,
+          0.9915404915809631
+        ],
+        "velocity": [
+          -0.5449277758598328,
+          0.5415734648704529
+        ]
+      },
+      "final_solver_clock_error": -0.0120697021484375,
+      "initial_domains": [
+        {
+          "idx": 0,
+          "mode": "EnvMode.TEST"
+        }
+      ],
+      "peak_torch_bytes": 95162368,
+      "run_id": "RBC2D-easy-v0__benchmark__repeat-a",
+      "status": "complete",
+      "steps": 200,
+      "wall_seconds": 130.45127071719617
+    },
+    {
+      "field_ranges": {
+        "pressure": [
+          -0.2690472900867462,
+          0.38247230648994446
+        ],
+        "temperature": [
+          0.009055379778146744,
+          0.9915404915809631
+        ],
+        "velocity": [
+          -0.5449277758598328,
+          0.5415734648704529
+        ]
+      },
+      "final_solver_clock_error": -0.0120697021484375,
+      "initial_domains": [
+        {
+          "idx": 0,
+          "mode": "EnvMode.TEST"
+        }
+      ],
+      "peak_torch_bytes": 97041920,
+      "run_id": "RBC2D-easy-v0__benchmark__repeat-b",
+      "status": "complete",
+      "steps": 200,
+      "wall_seconds": 130.33829023502767
+    },
+    {
+      "field_ranges": {
+        "pressure": [
+          -0.2711407244205475,
+          0.3824799060821533
+        ],
+        "temperature": [
+          0.009051429107785225,
+          0.9915531277656555
+        ],
+        "velocity": [
+          -0.5485288500785828,
+          0.5421338677406311
+        ]
+      },
+      "final_solver_clock_error": -0.012459397315979004,
+      "initial_domains": [
+        {
+          "idx": 1,
+          "mode": "EnvMode.TEST"
+        }
+      ],
+      "peak_torch_bytes": 98921472,
+      "run_id": "RBC2D-easy-v0__benchmark__ic-1",
+      "status": "complete",
+      "steps": 200,
+      "wall_seconds": 131.42102156672627
+    },
+    {
+      "field_ranges": {
+        "pressure": [
+          -0.27098625898361206,
+          0.3823360204696655
+        ],
+        "temperature": [
+          0.00904963631182909,
+          0.9915523529052734
+        ],
+        "velocity": [
+          -0.5455043911933899,
+          0.5416421294212341
+        ]
+      },
+      "final_solver_clock_error": -0.012325644493103027,
+      "initial_domains": [
+        {
+          "idx": 7,
+          "mode": "EnvMode.TEST"
+        }
+      ],
+      "peak_torch_bytes": 100801024,
+      "run_id": "RBC2D-easy-v0__benchmark__ic-2",
+      "status": "complete",
+      "steps": 200,
+      "wall_seconds": 131.09139651898295
+    },
+    {
+      "field_ranges": {
+        "pressure": [
+          -0.27037909626960754,
+          0.38422560691833496
+        ],
+        "temperature": [
+          0.009056523442268372,
+          0.9915513396263123
+        ],
+        "velocity": [
+          -0.5454591512680054,
+          0.5410582423210144
+        ]
+      },
+      "final_solver_clock_error": -0.012532353401184082,
+      "initial_domains": [
+        {
+          "idx": 8,
+          "mode": "EnvMode.TEST"
+        }
+      ],
+      "peak_torch_bytes": 102680576,
+      "run_id": "RBC2D-easy-v0__benchmark__ic-3",
+      "status": "complete",
+      "steps": 200,
+      "wall_seconds": 131.76101342588663
+    },
+    {
+      "field_ranges": {
+        "pressure": [
+          -0.2690472900867462,
+          0.38247230648994446
+        ],
+        "temperature": [
+          0.009055379778146744,
+          0.9915404915809631
+        ],
+        "velocity": [
+          -0.5449277758598328,
+          0.5415734648704529
+        ]
+      },
+      "final_solver_clock_error": 0.58349609375,
+      "initial_domains": [
+        {
+          "idx": 0,
+          "mode": "EnvMode.TEST"
+        }
+      ],
+      "peak_torch_bytes": 104560128,
+      "run_id": "RBC2D-easy-v0__extended__repeat-a",
+      "status": "complete",
+      "steps": 1200,
+      "wall_seconds": 779.7317298036069
+    },
+    {
+      "field_ranges": {
+        "pressure": [
+          -0.2690472900867462,
+          0.38247230648994446
+        ],
+        "temperature": [
+          0.009055379778146744,
+          0.9915404915809631
+        ],
+        "velocity": [
+          -0.5449277758598328,
+          0.5415734648704529
+        ]
+      },
+      "final_solver_clock_error": 0.58349609375,
+      "initial_domains": [
+        {
+          "idx": 0,
+          "mode": "EnvMode.TEST"
+        }
+      ],
+      "peak_torch_bytes": 104560128,
+      "run_id": "RBC2D-easy-v0__extended__repeat-b",
+      "status": "complete",
+      "steps": 1200,
+      "wall_seconds": 779.0505509702489
+    },
+    {
+      "field_ranges": {
+        "pressure": [
+          -0.2711407244205475,
+          0.3824799060821533
+        ],
+        "temperature": [
+          0.009051429107785225,
+          0.9915531277656555
+        ],
+        "velocity": [
+          -0.5485288500785828,
+          0.5421338677406311
+        ]
+      },
+      "final_solver_clock_error": 0.5850595235824585,
+      "initial_domains": [
+        {
+          "idx": 1,
+          "mode": "EnvMode.TEST"
+        }
+      ],
+      "peak_torch_bytes": 106439680,
+      "run_id": "RBC2D-easy-v0__extended__ic-1",
+      "status": "complete",
+      "steps": 1200,
+      "wall_seconds": 780.6974936723709
+    },
+    {
+      "field_ranges": {
+        "pressure": [
+          -0.27098625898361206,
+          0.3823360204696655
+        ],
+        "temperature": [
+          0.00904963631182909,
+          0.9915523529052734
+        ],
+        "velocity": [
+          -0.5455043911933899,
+          0.5416421294212341
+        ]
+      },
+      "final_solver_clock_error": 0.5845218896865845,
+      "initial_domains": [
+        {
+          "idx": 7,
+          "mode": "EnvMode.TEST"
+        }
+      ],
+      "peak_torch_bytes": 108319232,
+      "run_id": "RBC2D-easy-v0__extended__ic-2",
+      "status": "complete",
+      "steps": 1200,
+      "wall_seconds": 781.8050165250897
+    },
+    {
+      "field_ranges": {
+        "pressure": [
+          -0.27037909626960754,
+          0.38422560691833496
+        ],
+        "temperature": [
+          0.009056523442268372,
+          0.9915513396263123
+        ],
+        "velocity": [
+          -0.5454591512680054,
+          0.5414829254150391
+        ]
+      },
+      "final_solver_clock_error": 0.5853527784347534,
+      "initial_domains": [
+        {
+          "idx": 8,
+          "mode": "EnvMode.TEST"
+        }
+      ],
+      "peak_torch_bytes": 110198784,
+      "run_id": "RBC2D-easy-v0__extended__ic-3",
+      "status": "complete",
+      "steps": 1200,
+      "wall_seconds": 780.3856198927388
+    },
+    {
+      "field_ranges": {
+        "pressure": [
+          -0.27877098321914673,
+          0.4227824807167053
+        ],
+        "temperature": [
+          0.010735468938946724,
+          0.991017758846283
+        ],
+        "velocity": [
+          -0.6331624388694763,
+          0.6245778203010559
+        ]
+      },
+      "final_solver_clock_error": -0.02032470703125,
+      "initial_domains": [
+        {
+          "idx": 0,
+          "mode": "EnvMode.TEST"
+        }
+      ],
+      "peak_torch_bytes": 112078336,
+      "run_id": "RBC2D-medium-v0__benchmark__repeat-a",
+      "status": "complete",
+      "steps": 200,
+      "wall_seconds": 212.3278740728274
+    },
+    {
+      "field_ranges": {
+        "pressure": [
+          -0.27877098321914673,
+          0.4227824807167053
+        ],
+        "temperature": [
+          0.010735468938946724,
+          0.991017758846283
+        ],
+        "velocity": [
+          -0.6331624388694763,
+          0.6245778203010559
+        ]
+      },
+      "final_solver_clock_error": -0.02032470703125,
+      "initial_domains": [
+        {
+          "idx": 0,
+          "mode": "EnvMode.TEST"
+        }
+      ],
+      "peak_torch_bytes": 113957888,
+      "run_id": "RBC2D-medium-v0__benchmark__repeat-b",
+      "status": "complete",
+      "steps": 200,
+      "wall_seconds": 212.29073151294142
+    },
+    {
+      "field_ranges": {
+        "pressure": [
+          -0.30851176381111145,
+          0.44560450315475464
+        ],
+        "temperature": [
+          0.006664671469479799,
+          0.9945763945579529
+        ],
+        "velocity": [
+          -0.5628381371498108,
+          0.5656925439834595
+        ]
+      },
+      "final_solver_clock_error": -0.005104780197143555,
+      "initial_domains": [
+        {
+          "idx": 1,
+          "mode": "EnvMode.TEST"
+        }
+      ],
+      "peak_torch_bytes": 115837440,
+      "run_id": "RBC2D-medium-v0__benchmark__ic-1",
+      "status": "complete",
+      "steps": 200,
+      "wall_seconds": 173.01607534382492
+    },
+    {
+      "field_ranges": {
+        "pressure": [
+          -0.27904120087623596,
+          0.4230384826660156
+        ],
+        "temperature": [
+          0.01073055062443018,
+          0.9919971823692322
+        ],
+        "velocity": [
+          -0.637707531452179,
+          0.6277569532394409
+        ]
+      },
+      "final_solver_clock_error": -0.02102351188659668,
+      "initial_domains": [
+        {
+          "idx": 7,
+          "mode": "EnvMode.TEST"
+        }
+      ],
+      "peak_torch_bytes": 117716992,
+      "run_id": "RBC2D-medium-v0__benchmark__ic-2",
+      "status": "complete",
+      "steps": 200,
+      "wall_seconds": 213.4251494957134
+    },
+    {
+      "field_ranges": {
+        "pressure": [
+          -0.2780857980251312,
+          0.42290130257606506
+        ],
+        "temperature": [
+          0.01070729736238718,
+          0.9911424517631531
+        ],
+        "velocity": [
+          -0.6355137825012207,
+          0.6259803771972656
+        ]
+      },
+      "final_solver_clock_error": -0.02057349681854248,
+      "initial_domains": [
+        {
+          "idx": 8,
+          "mode": "EnvMode.TEST"
+        }
+      ],
+      "peak_torch_bytes": 117716992,
+      "run_id": "RBC2D-medium-v0__benchmark__ic-3",
+      "status": "complete",
+      "steps": 200,
+      "wall_seconds": 214.10943090356886
+    },
+    {
+      "field_ranges": {
+        "pressure": [
+          -0.27889636158943176,
+          0.42299968004226685
+        ],
+        "temperature": [
+          0.010708845220506191,
+          0.991239607334137
+        ],
+        "velocity": [
+          -0.6356531381607056,
+          0.6263638138771057
+        ]
+      },
+      "final_solver_clock_error": 0.162353515625,
+      "initial_domains": [
+        {
+          "idx": 0,
+          "mode": "EnvMode.TEST"
+        }
+      ],
+      "peak_torch_bytes": 119596544,
+      "run_id": "RBC2D-medium-v0__extended__repeat-a",
+      "status": "complete",
+      "steps": 1200,
+      "wall_seconds": 1271.956990241073
+    },
+    {
+      "field_ranges": {
+        "pressure": [
+          -0.27889636158943176,
+          0.42299968004226685
+        ],
+        "temperature": [
+          0.010708845220506191,
+          0.991239607334137
+        ],
+        "velocity": [
+          -0.6356531381607056,
+          0.6263638138771057
+        ]
+      },
+      "final_solver_clock_error": 0.162353515625,
+      "initial_domains": [
+        {
+          "idx": 0,
+          "mode": "EnvMode.TEST"
+        }
+      ],
+      "peak_torch_bytes": 121476096,
+      "run_id": "RBC2D-medium-v0__extended__repeat-b",
+      "status": "complete",
+      "steps": 1200,
+      "wall_seconds": 1271.460405819118
+    },
+    {
+      "field_ranges": {
+        "pressure": [
+          -0.30851176381111145,
+          0.44560450315475464
+        ],
+        "temperature": [
+          0.006664671469479799,
+          0.9945763945579529
+        ],
+        "velocity": [
+          -0.5628381371498108,
+          0.5656925439834595
+        ]
+      },
+      "final_solver_clock_error": 0.40036702156066895,
+      "initial_domains": [
+        {
+          "idx": 1,
+          "mode": "EnvMode.TEST"
+        }
+      ],
+      "peak_torch_bytes": 123355648,
+      "run_id": "RBC2D-medium-v0__extended__ic-1",
+      "status": "complete",
+      "steps": 1200,
+      "wall_seconds": 1028.5163265680894
+    },
+    {
+      "field_ranges": {
+        "pressure": [
+          -0.27904120087623596,
+          0.423242449760437
+        ],
+        "temperature": [
+          0.010705975815653801,
+          0.9919971823692322
+        ],
+        "velocity": [
+          -0.637707531452179,
+          0.6277569532394409
+        ]
+      },
+      "final_solver_clock_error": 0.14396977424621582,
+      "initial_domains": [
+        {
+          "idx": 7,
+          "mode": "EnvMode.TEST"
+        }
+      ],
+      "peak_torch_bytes": 125235200,
+      "run_id": "RBC2D-medium-v0__extended__ic-2",
+      "status": "complete",
+      "steps": 1200,
+      "wall_seconds": 1270.1149053070694
+    },
+    {
+      "field_ranges": {
+        "pressure": [
+          -0.27888748049736023,
+          0.4230976104736328
+        ],
+        "temperature": [
+          0.010695361532270908,
+          0.99120032787323
+        ],
+        "velocity": [
+          -0.6355799436569214,
+          0.626826822757721
+        ]
+      },
+      "final_solver_clock_error": 0.15566551685333252,
+      "initial_domains": [
+        {
+          "idx": 8,
+          "mode": "EnvMode.TEST"
+        }
+      ],
+      "peak_torch_bytes": 127114752,
+      "run_id": "RBC2D-medium-v0__extended__ic-3",
+      "status": "complete",
+      "steps": 1200,
+      "wall_seconds": 1273.1211240040138
+    },
+    {
+      "field_ranges": {
+        "pressure": [
+          -0.27604013681411743,
+          0.4343237578868866
+        ],
+        "temperature": [
+          0.01168572437018156,
+          0.9907585978507996
+        ],
+        "velocity": [
+          -0.6602515578269958,
+          0.6541194915771484
+        ]
+      },
+      "final_solver_clock_error": -0.021697998046875,
+      "initial_domains": [
+        {
+          "idx": 0,
+          "mode": "EnvMode.TEST"
+        }
+      ],
+      "peak_torch_bytes": 128994304,
+      "run_id": "RBC2D-hard-v0__benchmark__repeat-a",
+      "status": "complete",
+      "steps": 200,
+      "wall_seconds": 216.27709825523198
+    },
+    {
+      "field_ranges": {
+        "pressure": [
+          -0.27604013681411743,
+          0.4343237578868866
+        ],
+        "temperature": [
+          0.01168572437018156,
+          0.9907585978507996
+        ],
+        "velocity": [
+          -0.6602515578269958,
+          0.6541194915771484
+        ]
+      },
+      "final_solver_clock_error": -0.021697998046875,
+      "initial_domains": [
+        {
+          "idx": 0,
+          "mode": "EnvMode.TEST"
+        }
+      ],
+      "peak_torch_bytes": 130873856,
+      "run_id": "RBC2D-hard-v0__benchmark__repeat-b",
+      "status": "complete",
+      "steps": 200,
+      "wall_seconds": 216.3244908740744
+    },
+    {
+      "field_ranges": {
+        "pressure": [
+          -0.3096238374710083,
+          0.45380279421806335
+        ],
+        "temperature": [
+          0.007301974110305309,
+          0.9938164949417114
+        ],
+        "velocity": [
+          -0.5905824899673462,
+          0.5919027924537659
+        ]
+      },
+      "final_solver_clock_error": -0.005104780197143555,
+      "initial_domains": [
+        {
+          "idx": 1,
+          "mode": "EnvMode.TEST"
+        }
+      ],
+      "peak_torch_bytes": 132753408,
+      "run_id": "RBC2D-hard-v0__benchmark__ic-1",
+      "status": "complete",
+      "steps": 200,
+      "wall_seconds": 174.18990653939545
+    },
+    {
+      "field_ranges": {
+        "pressure": [
+          -0.27372097969055176,
+          0.4333420991897583
+        ],
+        "temperature": [
+          0.01169722992926836,
+          0.9907732009887695
+        ],
+        "velocity": [
+          -0.6631835699081421,
+          0.6463521122932434
+        ]
+      },
+      "final_solver_clock_error": -0.02236640453338623,
+      "initial_domains": [
+        {
+          "idx": 7,
+          "mode": "EnvMode.TEST"
+        }
+      ],
+      "peak_torch_bytes": 134632960,
+      "run_id": "RBC2D-hard-v0__benchmark__ic-2",
+      "status": "complete",
+      "steps": 200,
+      "wall_seconds": 217.9077559672296
+    },
+    {
+      "field_ranges": {
+        "pressure": [
+          -0.27620524168014526,
+          0.4353542625904083
+        ],
+        "temperature": [
+          0.011649856343865395,
+          0.9908439517021179
+        ],
+        "velocity": [
+          -0.6623469591140747,
+          0.6520662903785706
+        ]
+      },
+      "final_solver_clock_error": -0.022741317749023438,
+      "initial_domains": [
+        {
+          "idx": 8,
+          "mode": "EnvMode.TEST"
+        }
+      ],
+      "peak_torch_bytes": 136512512,
+      "run_id": "RBC2D-hard-v0__benchmark__ic-3",
+      "status": "complete",
+      "steps": 200,
+      "wall_seconds": 219.11991308350116
+    },
+    {
+      "field_ranges": {
+        "pressure": [
+          -0.27604013681411743,
+          0.4343237578868866
+        ],
+        "temperature": [
+          0.011656413786113262,
+          0.9908281564712524
+        ],
+        "velocity": [
+          -0.6631351709365845,
+          0.654152512550354
+        ]
+      },
+      "final_solver_clock_error": 0.143310546875,
+      "initial_domains": [
+        {
+          "idx": 0,
+          "mode": "EnvMode.TEST"
+        }
+      ],
+      "peak_torch_bytes": 138392064,
+      "run_id": "RBC2D-hard-v0__extended__repeat-a",
+      "status": "complete",
+      "steps": 1200,
+      "wall_seconds": 1293.0937279956415
+    },
+    {
+      "field_ranges": {
+        "pressure": [
+          -0.27604013681411743,
+          0.4343237578868866
+        ],
+        "temperature": [
+          0.011656413786113262,
+          0.9908281564712524
+        ],
+        "velocity": [
+          -0.6631351709365845,
+          0.654152512550354
+        ]
+      },
+      "final_solver_clock_error": 0.143310546875,
+      "initial_domains": [
+        {
+          "idx": 0,
+          "mode": "EnvMode.TEST"
+        }
+      ],
+      "peak_torch_bytes": 138392064,
+      "run_id": "RBC2D-hard-v0__extended__repeat-b",
+      "status": "complete",
+      "steps": 1200,
+      "wall_seconds": 1298.1647510062903
+    },
+    {
+      "field_ranges": {
+        "pressure": [
+          -0.3096238374710083,
+          0.45380279421806335
+        ],
+        "temperature": [
+          0.007301974110305309,
+          0.9938164949417114
+        ],
+        "velocity": [
+          -0.5905824899673462,
+          0.5919027924537659
+        ]
+      },
+      "final_solver_clock_error": 0.40036702156066895,
+      "initial_domains": [
+        {
+          "idx": 1,
+          "mode": "EnvMode.TEST"
+        }
+      ],
+      "peak_torch_bytes": 140271616,
+      "run_id": "RBC2D-hard-v0__extended__ic-1",
+      "status": "complete",
+      "steps": 1200,
+      "wall_seconds": 1034.0611134814098
+    },
+    {
+      "field_ranges": {
+        "pressure": [
+          -0.27616214752197266,
+          0.4363778531551361
+        ],
+        "temperature": [
+          0.01164435874670744,
+          0.9909701943397522
+        ],
+        "velocity": [
+          -0.6631835699081421,
+          0.6544162034988403
+        ]
+      },
+      "final_solver_clock_error": 0.14653313159942627,
+      "initial_domains": [
+        {
+          "idx": 7,
+          "mode": "EnvMode.TEST"
+        }
+      ],
+      "peak_torch_bytes": 142151168,
+      "run_id": "RBC2D-hard-v0__extended__ic-2",
+      "status": "complete",
+      "steps": 1200,
+      "wall_seconds": 1304.4416676424444
+    },
+    {
+      "field_ranges": {
+        "pressure": [
+          -0.27620524168014526,
+          0.4353542625904083
+        ],
+        "temperature": [
+          0.011645730584859848,
+          0.9909905791282654
+        ],
+        "velocity": [
+          -0.6628308296203613,
+          0.6536012291908264
+        ]
+      },
+      "final_solver_clock_error": 0.14919471740722656,
+      "initial_domains": [
+        {
+          "idx": 8,
+          "mode": "EnvMode.TEST"
+        }
+      ],
+      "peak_torch_bytes": 144030720,
+      "run_id": "RBC2D-hard-v0__extended__ic-3",
+      "status": "complete",
+      "steps": 1200,
+      "wall_seconds": 1305.2496207216755
+    }
+  ],
+  "snapshots": 2970,
+  "steps": 58200,
+  "termination": {
+    "child_returncode": 0,
+    "finished_unix": 1792105668.5240533,
+    "kill_sent": false,
+    "reason": "SUCCESS",
+    "status": "complete",
+    "wall_seconds": 65745.71255922318
+  },
+  "verified_file_hashes": 3213
+}
